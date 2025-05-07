@@ -9,6 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(182, 155, 169);
 }
 .wrapper {
     padding: 30px;
