@@ -15,3 +15,12 @@ body{
     padding: 30px;
     border: 1px solid gray;
 }
+.description {
+    width: 560px;
+}
+p {
+    color: rgb(94, 20, 32);
+}
+h1 {
+    color:rgb(94, 20, 32);
+}
