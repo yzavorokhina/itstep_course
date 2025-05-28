@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;  
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+<form align="center" action="/HTML/Lesson5/forms.html" method="GET">
+    <div>
+        <label for="">Введите ФИО</label>
+        <input type="text" name="fio" placeholder="Введите ФИО" required/>    <!--fio = Федоров Майкл Васильевич--> 
+    </div>
+    <div>
+        <label for="">Введите email </label>
+        <input type="email" name="email" required/> 
+    </div>
+     
+   <div>
+        <label for="">Введите дату</label>
+        <input type="date" name="birthday"/>  
+   </div>
+   
+
+    <div>
+        <label for="">Введите дату</label>
+        <input type="url" name="github"/>  
+    </div> 
+
+    <div>
+        <label for="">Выберете файл</label>
+        <input type="file" name="cv"/>    
+    </div>
+
+    <div>
+        <label for="">Ваш пол</label>
+        <input type="radio" name="gender" value="male"/>Мужской
+        <input type="radio" name="gender" value="male"/>Женский 
+    </div>
+        
+    <br>  
+    <div>
+        <label for=""></label> 
+    <input type="checkbox" name="grade[]" value="Базовое" checked/>Базовое <br>    
+    <input type="checkbox" name="grade[]" value="Среднее"/>Среднее <br>  
+    <input type="checkbox" name="grade[]" value="Высшее"/>Высшее <br> 
+    </div>
+
+    <br>
+    <div>
+        <label for=""></label> 
+    <input type="password" name="password" required/>Введите пароль<br> 
+    <input type="color" name="color" value="Color"/>Выберете цвет <br> 
+    </div>
+    <div>
+        <label for="">Расскажите о себе</label>
+        <textarea name="about" cols="30" rows="10" >
+        </textarea>
+    </div>
+    <div>
+        <label for="Выберете желаемую должность"></label>
+        <select name="rank">
+            <optgroup label="high">
+                <option value="director">Director</option>
+                <option value="manager">Manager</option>
+            </optgroup>
+                
+            <optgroup label="low"></optgroup>
+                <option value="master">Master</option>
+                <option value="cleaner">Cleaner</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <!--<input type="submit" value="Send"/> -->
+    <button type="submit">
+        Отправить
+    </button>
+    
+</form>
+
+</body>
+</html>
