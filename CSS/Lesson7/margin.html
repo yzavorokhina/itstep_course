@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+</head>
+<style>
+
+    div{
+        width:992px;
+        margin: 0 auto;
+        color: pink;
+    }
+
+    #block1{
+        background-color: brown;
+       
+    }
+
+    #block2{
+        background-color: cornflowerblue;
+        height: 100px;
+        font-size: 20px;
+        color:blue;  /*color по селектору id в приоритете, class в меньшем приоритете*/
+        font-weight: 700;
+        font-style: italic;
+
+        border: 2px solid red; /* Граница элемента (размера, трансформации и ссылки) не наследуется*/
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+/* Специфичные стили в приоритете поэтому указание важности переопределит приоритет*/
+    a{
+        /*color:red !important;*/
+    }
+
+/* Специфичные стили в приоритете*/
+    #block1 a{
+        /*color:darkmagenta;*/
+    }
+
+    #block1 ul li a {
+        /*color:darkslateblue;*/
+    }
+
+    #block2 a{
+        /*color:darkturquoise;*/
+    }
+    .color_red{
+        color:red;
+    }
+    .color_yellow{
+        color:yellow;
+    }
+    .color_green{
+        color:green;
+    }
+    .color_pink{
+        color:pink !important;
+    }
+    .big_text{
+        font-size: 30px;
+    }
+    #block1 a.color_green{
+        font-size: 20px;
+    }
+    .decoration_none{
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div id ="block1">
+        <ul>
+            <li><a href="https://www.youtube.com/@LofiGirl" class="color_red big_text decoration_none">Lofi Girl Music</a></li>
+            <li><a href="https://www.youtube.com/@LofiGirl" class="color_yellow">Lofi Girl Music</a></li>
+            <li><a href="https://www.youtube.com/@LofiGirl" class="color_green">Lofi Girl Music</a></li>
+            <li><a href="https://www.youtube.com/@LofiGirl" class="color_pink">Lofi Girl Music</a></li>
+            <li><a href="https://www.youtube.com/@LofiGirl">Lofi Girl Music</a></li>
+        </ul> 
+    </div>
+    <div id ="block2" class="color_pink">
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia id deleniti, dignissimos ducimus delectus accusamus tempore ab iste! Illo reprehenderit minima cumque laboriosam doloribus labore soluta laudantium aspernatur illum ducimus.</li>
+        </ul>
+        <a href="https://www.youtube.com/@LofiGirl">New Lofi Girl Music</a>
+        <a href="https://www.youtube.com/@LofiGirl">New colored Lofi Girl Music link</a>
+    </div>
+    <a href="https://www.youtube.com/@LofiGirl">New Lofi Girl Music</a>
+</body>
+</html>

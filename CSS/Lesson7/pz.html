@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Tasks</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    .main-border{
+        border: 5px solid white;
+    }
+
+    .main-frame{
+        background-color: rgb(250, 250, 250);
+    }
+    .outer-frame{
+        border-color: yellow;
+        border-left: none;
+        border-top: none;
+    }
+
+    .inner-frame{
+       border-color: orange;
+       border-bottom: none;
+       border-right: none;
+       padding: 10px 15px;
+    }
+    .background-links{
+        width: 100%;
+        background-color: black;
+        color:white;
+        padding: 5px;
+    }
+    .color-red{
+        color:red;
+    }
+    .color-blue{
+        color:blue;
+    }
+    .color-yellow{
+        color:yellow;
+    }
+    .container{
+        width: 400px;
+    }
+    .box1{
+        background-color: rgb(100, 160, 140);
+        color:white;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .box2{
+        background-color: rgb(180, 180, 180);
+        margin-top: -10px;
+        margin-left: 30px;
+        color:black;
+        padding: 10px;
+        border: 1px solid white;
+    }
+    .square{
+        width: 100px;
+        height: 100px;
+        border: 2px solid grey;
+        background-color: white;
+    }
+    .square-padding{
+        padding: 2px;
+    }
+    .square div{
+        background-color: black;
+        height: 100%;
+    }
+    .square-margin{
+        margin-top: -50px;
+        margin-left: 50px;
+    }
+    /*Task5 styles*/
+#task5 img{
+    width: 200px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+#task5 div{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin: 10px;
+    float: left;
+    /* или display: inline-block;*/
+}
+#task5 div.bg-blue{
+    background-color: blue;
+}
+    /*Task5 styles end*/
+    </style>
+</head>
+<body>
+    <!--Task1-->
+    <selection id ="task1">
+        <div class="main-border outer-frame">
+            <div class="main-border main-frame">
+                <div class="main-border inner-frame">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+            </div>
+        </div>
+    <section>
+    <!--Task1 end-->
+    <!--Task2-->
+    <selection id ="task2">
+            <div class="background-links">
+                <a href="https://www.youtube.com/@LofiGirl" class="color-red">Ссылка 1</a>&nbsp;|&nbsp;
+                <a href="https://www.youtube.com/@LofiGirl" class="color-blue">Ссылка 2</a>&nbsp;|&nbsp;
+                <a href="https://www.youtube.com/@LofiGirl" class="color-yellow">Ссылка 3</a>
+            </div>
+    <section>
+    <!--Task2 end-->
+    <!--Task3-->
+    <selection id ="task3">
+        <div class="container">
+            <div class="box1">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nesciunt
+            </div>
+            <div class="box2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nesciunt
+            </div>
+        </div>
+    <section>
+    <!--Task3 end-->
+    <!--Task4-->
+    <selection id ="task4">
+            <div class="square square-padding">
+                <div></div>
+            </div>
+            <div class="square square-margin"></div>
+    <section>
+    <!--Task4 end-->
+    <!--Task5-->
+    <selection id ="task5">
+         
+                <img src="https://img.freepik.com/free-photo/sunset-beach-ai-generated_268835-11222.jpg?semt=ais_hybrid&w=740">  
+                <img src="https://img.freepik.com/free-photo/sunset-beach-ai-generated_268835-11222.jpg?semt=ais_hybrid&w=740"> 
+
+                <div></div> 
+                <div class="bg-blue"></div> 
+                <div></div> 
+                <div></div> 
+                <div></div> 
+                <br>
+                <div></div> 
+                <div></div> 
+                <div></div> 
+                <div></div> 
+                <div></div> 
+    <section>
+    <!--Task5 end-->
+</body>
+</html>
