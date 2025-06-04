@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+#block{
+    height: 100vh;
+    background-image: url('./bg.webp');
+    background-repeat:inherit;
+    background-position: center top;
+    /*background-position: 50px 100px;*/
+    /*background-size: 100% 100%; */ /*по высоте и по ширине-плющит*/
+    background-size: cover;
+    /*background-size: contain;*/ /*помещает в блок*/
+    /*background-color: contain;*/
+    background-color: coral;
+    /*background-size: 100%;*/
+
+
+    /*background:url('./bg.webp') center center no-repeat coral;
+    background-size: cover;*/
+}
+
+#block2{
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    background-color: #d2cece;
+    background-color:rgb(152,154,166);
+    background-color: rgba(23,44,233,0.5);
+    margin-top: -50vh;
+    border: none;
+    opacity: 40%;
+}
+
+#block3{
+    width: 10rem;
+    background-image: url('./bg3.jpg');
+}
+
+.bordered{
+    border: 1px solid black;
+    margin-bottom: 15px;
+    height: 50px;
+}
+.container{
+    margin: 0 auto;
+    width: 1320px;
+    border:1px solid black;
+    padding: 15px;
+}
+.container::after{   /*Псевдоэлемент пустой после элемента*/
+    content: " ";
+    display: table;
+    clear: both;      /*останавливает влияние float*/
+}
+.column{
+    width: 33.3333%;
+    height: 300px;
+    border: 1px solid red;
+    /*display: inline-block;*/
+    margin: 0;
+    float: left; 
+    padding: 15px;
+    font-size: 1em;
+}
+.column nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.column a{
+    text-decoration: none;
+    display: block;
+    padding-top: 7%;  /*От ширины родит. контейнера li*/
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 1em;
+}
