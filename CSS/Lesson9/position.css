@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width:960px;
+    margin:0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    position: relative;
+    z-index: 9;
+}
+
+.container p {
+    border: 2px solid blue;
+    background-color: yellow;
+    padding: 5px;
+    margin-top: 0;
+}
+
+/*специфичный класс*/
+.container p.bg_red{
+    background-color: red;
+    width:800px;
+}
+
+.positioned{
+    position: absolute;
+    width:50%;
+    left:68%;            /*только для этого элемента*/
+    top:50%;
+    margin-left: -250px;
+    margin-top: -37.5px !important;
+    z-index: 1;
+}
+
+.fixed{
+    background-color: violet !important;
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    z-index: 8;
+}
+
+
