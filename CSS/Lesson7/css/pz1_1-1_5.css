@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Task1 styles*/
+.main-border {
+    border: 5px solid white;
+}
+
+.main-frame {
+    background-color: rgb(250, 250, 250);
+}
+
+.outer-frame {
+    border-color: yellow;
+    border-left: none;
+    border-top: none;
+}
+
+.inner-frame {
+    border-color: orange;
+    border-bottom: none;
+    border-right: none;
+    padding: 10px 15px;
+}
+
+/*Task2 styles*/
+.background-links {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-blue {
+    color: blue;
+}
+
+.color-yellow {
+    color: yellow;
+}
+
+/*Task3 styles*/
+.container {
+    width: 400px;
+}
+
+.box1 {
+    background-color: rgb(100, 160, 140);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.box2 {
+    background-color: rgb(180, 180, 180);
+    margin-top: -10px;
+    margin-left: 30px;
+    color: black;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+/*Task4 styles*/
+.square {
+    width: 100px;
+    height: 100px;
+    border: 2px solid grey;
+    background-color: white;
+}
+
+.square-padding {
+    padding: 2px;
+}
+
+.square div {
+    background-color: black;
+    height: 100%;
+}
+
+.square-margin {
+    margin-top: -50px;
+    margin-left: 50px;
+}
+
+/*Task5 styles*/
+#task5 img {
+    width: 200px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#task5 div {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin: 10px;
+    float: left;
+    /* или display: inline-block;*/
+}
+
+#task5 div.bg-blue {
+    background-color: blue;
+}
