@@ -1,0 +1,93 @@
+:root{
+    --color-black:#363636;
+    --position:relative;
+    --size:200px;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.container div{
+    border: 2px solid var(--color-black);
+    width: var(--size,100px);    /*100px defoult*/
+    height: var(--size,100px);
+    /*margin-top: 15px;*/
+    /*margin-top: -2px;*/
+    /*border-bottom: none;*/
+    border-radius: 50%;
+}
+
+/*
+.bottom{
+    border-bottom: 2px solid black !important;
+}
+*/
+
+.container div:last-child{  /*:ntn-child(3)*/
+    --color-black:blue;
+    border-radius: 2px solid var(--color-black);
+    background-color: green;
+}
+
+.container div:first-child{ /*:ntn-child(1)*/
+    background-color:red;
+}
+
+.container div:nth-child(3){
+    background-color: blue;
+}
+
+/*для каждого четного потомка*/
+/*.container div:nth-child(even){
+    border-radius: 0;
+}
+*/
+/*для каждого нечетного потомка*/
+/*.container div:nth-child(odd){
+    position: relative;
+    left:50px;
+}
+*/
+
+/*иначе:*/
+.container div:nth-child(2n){
+    border-radius: 0;
+}
+
+.container div:nth-child(2n-1){
+    border-radius: 0;
+}
+
+/*для каждого первого*/
+/*n starts from 0-1-2-3-4-5-6(счетчик кол-ва всех потомков)*/
+.container div:nth-child(n+2){
+    display: inline-block;
+}
+
+.container div:nth-child(n){
+    display: inline-block;
+}
+
+.container div:nth-child(0){
+    display: inline-block;
+}
+
+.container div:nth-child(1){
+    display: inline-block;
+}
+
+.container div:nth-child(3){
+    display: inline-block;
+}
+
+/*до 4-го*/
+.container div:nth-child(-n+3){
+    display: inline-block;
+}
+
+/*от 4-го*/
+.container div:nth-child(n+4){
+    display: inline-block;
+}

@@ -1,0 +1,46 @@
+:root{
+    --color-black:#000000;
+    --color-white:#ffffff;
+}
+
+header{
+    background: var(--color-black, #000000);
+    position: fixed;
+    padding: 10px;
+    left:0;
+    top:0;
+    width: 100%;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-white, #ffffff);
+    font-size: 35px;
+    font-family:sans-serif;
+}
+
+.menu-toggler{
+    width: 35px;
+    border:none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin: -17px;
+}
+
+.menu-togger hr{
+    border:none;
+    border-top: 2px solid black;
+}
+
+.background{
+    height: 100vh;
+    background-image: url();
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
