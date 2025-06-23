@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "ComingSoon";
+  font-weight: normal;
+  src: url("./fonts/ComingSoon-Regular.ttf") format("truetype"),
+    url("./fonts/ComingSoon-Regular.otf"), url("./fonts/ComingSoon-Regular.eot"),
+    url("./fonts/ComingSoon-Regular.woff"),
+    url("./fonts/ComingSoon-Regular.woff2"); /*для разных браузеров*/
+}
+
+div {
+  border: 3px solid rgb(0, 255, 42);
+  padding: 15px;
+  width: 920px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+div:first-child {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div:nth-child(2) {
+  font-family: "ComingSoon", cursive;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
