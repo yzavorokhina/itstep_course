@@ -1,3 +1,13 @@
+/* Connecting fonts by downloading */
+@font-face {
+  font-family: "Trebuchet_MS";
+  font-weight: normal;
+  src: url("../../fonts/Trebuchet_MS/trebuchetms.ttf") format("truetype");
+}
+
+body {
+   font:'trebuchetms', Arial, Helvetica;}
+
 .container {
     width: 960px;
     margin: 0 auto;
@@ -40,7 +50,7 @@ nav>ul>li>a {
     color: #999;
     font-size: 12px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'trebuchetms', Arial, Helvetica;
     /*Add some style*/
     text-shadow: 0 1px 0 #000;
 }
@@ -100,7 +110,7 @@ nav li.subMenu ul:first-child a {
 nav li.subMenu ul li>a {
     background-color: transparent;
     color: #999;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'trebuchetms', Arial, Helvetica;
     font-size: 12px;
     font-weight: bold;
     border: 1px solid #3d3d3d;

@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Anton";
+    font-weight: normal;
+    src: url("../../fonts/Anton/Anton-Regular.ttf"),
+        /*For different browsers, convert on cloudconvert.com*/
+        url("./fonts/Anton-Regular.otf"),
+        url("./fonts/Anton-Regular.eot"),
+        url("./fonts/Anton-Regular.woff"),
+        url("./fonts/Anton-Regular.woff2"),
+        url("./fonts/Anton-Regular.svg");
+}
+
 :root {
     --color-black: #212529;
     --color-white: #ffffff;
@@ -18,11 +30,10 @@ header {
 }
 
 .logo {
-    text-transform: uppercase;
     font-weight: bold;
     color: var(--color-white, #ffffff);
     font-size: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", sans-serif;
     font-weight: 100;
 }
 
