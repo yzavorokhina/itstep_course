@@ -1,0 +1,60 @@
+body{
+    height: 100%;
+    margin: 0;
+    display: block;
+}
+
+.background_img{
+    background-image: url("../../img/L11_pz3_5_web.jpg");
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    color:white; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+div{
+    display: block;
+}
+
+h1{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+hr{
+    display: block;
+    width: 120px;
+    border-width: 1px;
+    color:white;
+}
+
+p{
+    display: block;
+}
+
+.logo_top{
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.content_middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.info_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
