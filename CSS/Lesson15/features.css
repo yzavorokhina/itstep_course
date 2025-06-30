@@ -1,0 +1,126 @@
+section{
+    box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 10px 16px -5px rgba(0,0,0,0.57);
+    padding: 50px o;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+body{
+    background-color: rgb(226, 225, 225);
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.section-header{
+    font-size: 30px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 7px;
+}
+
+.cards{
+    display: flex;
+    gap:55px;  
+    margin-top: 55px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards .icon{
+    background-color: #0d6efd;;
+    color:white;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.card a{
+    color:rgb(4,95,231);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(4,95,231,0.5) ;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+.card a:hover{
+    color:rgb(4,95,231);
+    /*text-decoration: underline;
+    text-underline-offset: 3px;*/
+    text-decoration-color: rgba(4,95,231,0.5) ;
+}
+
+.card a:after{
+    content:" ";
+    color:rgb(4,95,231);
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid rgb(4,95,231);
+    border-right: 1px solid rgb(4,95,231);
+    transform: rotate(45deg);
+}
+
+.card h3{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.card p{
+    margin-top: 10px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.card button{
+    background-color: rgb(4,95,231);
+    color: white;
+    border-radius: 5px;
+    border-color: rgb(4,95,231);
+}
+
+.flex-derection-row{
+    flex-direction: row !important;
+}
+
+.hanging-icons .icon{
+    flex-shrink: 0;
+}
+
+.hanging-icons .card{
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.hanging-icons .card h3{
+    margin-top: 0;
+}
+
+.hanging-icons .card p{
+   text-align: left;
+}
+
+.hanging-icons .card .icon{
+    background-color: lightgrey;
+    width: 55px;
+    height: 55px;
+    color: black;
+}
