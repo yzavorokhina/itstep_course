@@ -1,0 +1,42 @@
+.paragraph{
+    width: 700px;
+    height: 400px;
+    background-image: url('../../img/pz_2block_pz2-1.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 0 auto;
+}
+
+.paragraph h1{
+   color:green;
+   font-size: 2.5rem;
+   margin-top: 10px;
+   margin-bottom: 0;
+}
+
+.paragraph h2{
+    color:rgb(96, 122, 85);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.paragraph p{
+    color:rgb(35, 39, 35);
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.paragraph a{
+    color:rgb(26, 9, 255);
+    font-size: 1rem;
+    text-decoration: underline;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+}

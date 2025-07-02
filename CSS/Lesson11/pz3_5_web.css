@@ -1,44 +1,44 @@
-body{
+body {
     height: 100%;
     margin: 0;
     display: block;
 }
 
-.background_img{
+.background_img {
     background-image: url("../../img/L11_pz3_5_web.jpg");
     height: 100vh;
     position: relative;
     background-position: center;
     background-size: cover;
-    color:white; 
+    color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
 }
 
-div{
+div {
     display: block;
 }
 
-h1{
+h1 {
     display: block;
     font-family: 'Courier New', Courier, monospace;
-    color:white;
+    color: white;
     font-size: 2em;
     font-weight: bold;
 }
 
-hr{
+hr {
     display: block;
     width: 120px;
     border-width: 1px;
-    color:white;
+    color: white;
 }
 
-p{
+p {
     display: block;
 }
 
-.logo_top{
+.logo_top {
     position: absolute;
     top: 0;
     left: 16px;
@@ -50,10 +50,9 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
 }
 
-.info_bottom{
+.info_bottom {
     position: absolute;
     bottom: 0;
     left: 16px;

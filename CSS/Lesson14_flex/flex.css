@@ -10,7 +10,8 @@ body {
     display: flex;
 
     /*Направление основной оси флекс-контейнера*/
-    flex-direction: row;}
+    flex-direction: row;
+}
 
     /*Оновная справа-налево. Направление наоборот*/
     /*flex-direction: row-reverse; 
