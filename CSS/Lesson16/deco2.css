@@ -1,0 +1,21 @@
+body{
+    background-color: pink;
+}
+
+.wrapper{
+    background-color: white;
+    width: 600px;
+    height: 2997px;
+    margin: 0 auto;
+}
+
+.wrapper header a{
+    font-size: 1.5rem;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main{
+    height: 2700px;
+    border-bottom: 2px solid black;
+}
