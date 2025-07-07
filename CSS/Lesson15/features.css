@@ -15,7 +15,8 @@ body{
     font-family: "Roboto", sans-serif;
 }
 .container{
-    width: 1320px;
+    max-width: 1320px; /*adaptive*/
+    width: 100%;  /*adaptive*/
     margin: 0 auto;
     display: flex;
 }
