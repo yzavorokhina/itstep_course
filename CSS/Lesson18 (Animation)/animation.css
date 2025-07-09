@@ -1,0 +1,102 @@
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+button {
+  border: 1px solid black;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(81, 255, 0);
+  transition: all 0.3s /*cubic-bezier(1, 0.01, 0.2, 0.99);*/ linear; /* linear function for speed of transition*/
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  /* display: none; /*does not animate*/
+  /*opacity: 0;*/
+  font-size: 24px;
+  border: 1px solid red;
+}
+
+.transformed {
+  margin-top: 30px;
+  margin-left: 60px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid red;
+  background-color: blue;
+  transform: rotate(45deg); /*just rotate it*/
+  /*transform: rotateX(70deg); /*along the X axis*/
+  transform: scale(-2.1); /*the minus sign is not important*/
+  overflow: hidden; /*if content does not fit within the element*/
+}
+
+.transformed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.transformed img:hover {
+  transform: scale(1.2);
+}
+
+.translate {
+  /*transform: translate(50%);  /*50px-by X  50px-by Y*/
+  /*transform: perspective(50px) translateZ(10px);
+  /*transform: skewX(10deg);*/
+}
+
+.transformed.translate {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.3s linear;
+}
+
+.transformed:hover + .transformed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transformed.animated {
+  animation: rot 1s infinite normal linear both; /*name duration iteration direction timing delay play-stay fill-mode*/
+}
+
+@keyframes rot{
+  /*0%{
+    transform: rotate(0);
+  }*/
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.process-bar{
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.process-bar div{
+  background-color: black;
+  animation: process 3s linear both 1;
+  height: 10px;
+}
+
+/*from->0 10% */
+@keyframes process{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 100%;
+    background-color: teal;
+  }
+}
+
