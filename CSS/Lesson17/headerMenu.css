@@ -1,9 +1,9 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-    max-height: 60px;
+header {
+    max-height: 70px;
     width: 100%;
     background-color: black;
     display: flex;
@@ -12,38 +12,41 @@ header{
     padding: 5px 15px;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
 }
 
-header nav > ul{
+header nav>ul {
     display: flex;
     gap: 15px;
 }
 
-header .logo a{
-    color:white;
-    font-size: 24px;
+header .logo a {
+    color: white;
+    font-size: 1.25rem;
     padding-right: 15px;
 }
 
-header nav a{
+header nav a {
     color: rgb(151, 151, 151);
 }
 
-header nav a:hover{
+header nav a:hover {
     color: rgb(183, 183, 183);
 }
 
-header input{
+header input {
     height: 40px;
     border-radius: 7px;
-    border:none;
+    border: none;
     margin-left: auto;
+    padding-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
-header nav li ul{
+header nav li ul {
     display: none;
 }
 
@@ -53,38 +56,102 @@ nav ul ul {
     visibility: hidden;
 }
 
-
-.sandwich{
-display:none;
-width: 45px;
-height: 40px;
-border: 1px solid grey;
-border-radius: 5px;
-background: none;
-/*display: flex;*/
-align-items: center;
-justify-content: center;
-gap:6px;
-flex-direction: column;
-cursor: pointer;
+nav ul ul a:hover {
+    display: block;
+    visibility: visible;
 }
 
-.sandwich span{
+.sandwich {
+    display: none;
+    width: 45px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: none;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sandwich span {
     background-color: grey;
     height: 2px;
     width: 25px;
     display: block;
 }
 
-@media(max-width:992px){
-    header nav{
+@media(max-width:992px) {
+    header nav {
         display: none;
     }
-    header input{
+
+    header input {
         display: none;
     }
-    .sandwich{
+
+    .sandwich {
         display: flex;
         margin-left: auto;
     }
+}
+
+nav li.subMenu:hover>ul {
+    display: block;
+    visibility: visible;
+}
+
+nav ul.subMenu>li {
+    display: none;
+}
+
+nav ul.subMenu:hover>li {
+    display: block;
+}
+
+.navbar{
+position: relative;
+}
+
+.subMenu {
+    position: absolute;
+    z-index: 3;
+    min-width: 10rem;
+  min-height: 180px;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-color: var(--bs-body-color);
+  --bs-dropdown-bg: var(--bs-body-bg);
+  --bs-dropdown-border-width: var(--bs-border-width);
+  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs-border-width));
+  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-divider-margin-y: 0.5rem;
+  --bs-dropdown-box-shadow: var(--bs-box-shadow);
+  --bs-dropdown-link-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-dropdown-header-color: #6c757d;
+  --bs-dropdown-header-padding-x: 1rem;
+  --bs-dropdown-header-padding-y: 0.5rem;
+ 
+ 
+  padding: 5px;
+  margin: 20;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+  list-style: none;
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
