@@ -324,7 +324,7 @@ h4 {
 .contacts {
   display: flex;
   flex-direction: row;
-  padding-bottom: 52px;
+  padding-top: 52px;
   margin-bottom: 52px;
   border-bottom: 1px solid #979797;
 }
@@ -358,7 +358,6 @@ footer .vertical-separator {
   display: flex;
   flex-direction: row;
   padding-bottom: 24px;
-
 }
 
 .footer-menu-block {
@@ -441,7 +440,7 @@ footer .vertical-separator {
   height: 33px;
   width: 33px;
   background-color: #FFD723;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 footer .container {

@@ -27,8 +27,8 @@
 // alert(`Результат вычисления ${result}`);
 
 /*Task8*/
-let div = 5 % 2;
-let userNumber = +prompt('Введите трехзначное число');
+//let div = 5 % 2;
+//let userNumber = +prompt('Введите трехзначное число');
 
 
 
