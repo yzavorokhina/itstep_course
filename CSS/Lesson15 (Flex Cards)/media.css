@@ -20,12 +20,16 @@
         font-size: 14px;
         color:rgb(167, 107, 162);
     }
+    .cards{
+        flex-direction: column;
+    }
 }
 
 @media(max-width: 690.98px){  /*что-то с пикселями, поэтому добавляем такой хак*/
     .cards{
         flex-direction: column;
     }
+
     h3{
         color:coral;
     }
