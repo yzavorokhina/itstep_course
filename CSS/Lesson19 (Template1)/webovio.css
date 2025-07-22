@@ -300,8 +300,6 @@ h4 {
 }
 
 .background-footer {
-  height: 100vh;
-  width: 100vw;
   background-image: url("../../img/webovio_footer_bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -333,6 +331,10 @@ h4 {
   margin-right: 100px;
 }
 
+.contacts-block a {
+  color: #ffffff;
+}
+
 .horizontal-separator {
   color: rgba(33, 56, 66, 0.6);
   height: 1px;
@@ -358,6 +360,11 @@ footer .vertical-separator {
   display: flex;
   flex-direction: row;
   padding-bottom: 24px;
+  gap: 20px;
+}
+
+.footer-menu .social-media {
+  margin-right: 0;
 }
 
 .footer-menu-block {
@@ -373,14 +380,26 @@ footer .vertical-separator {
   margin-bottom: 21px;
 }
 
-.footer-menu-block span {
+.footer-menu-block a {
   font-size: 1rem;
   line-height: 40px;
+  color: #B6C197;
 }
 
 .footer-menu-block .social-media {
   margin-right: 164.5px;
   padding-right: 164.5px;
+}
+
+.social-media h2 a {
+  margin-bottom: 21px;
+  color: #ffffff;
+}
+
+.social-media span {
+  font-size: 1rem;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .social-buttons button {
@@ -390,6 +409,15 @@ footer .vertical-separator {
   width: 33px;
   background-color: #444A34;
   color: #B6C197;
+}
+
+.social-buttons button:hover {
+  border-radius: 16.5px;
+  border: none;
+  height: 33px;
+  width: 33px;
+  background-color: #FFD723;
+  color: #ffffff;
 }
 
 /*.facebook{
@@ -424,25 +452,6 @@ footer .vertical-separator {
   background-size: auto;
 }*/
 
-.social-media h3 {
-  margin-bottom: 21px;
-}
-
-.social-media span {
-  font-size: 1rem;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.social-buttons button:hover {
-  border-radius: 16.5px;
-  border: none;
-  height: 33px;
-  width: 33px;
-  background-color: #FFD723;
-  color: #ffffff;
-}
-
 footer .container {
   display: flex;
   justify-content: space-between;
@@ -476,10 +485,14 @@ footer .container a {
     gap: 100px;
   }
 
-  .footer-menu,
-  .contacts {
-    margin-left: 164.5px;
-    margin-right: 164.5px;
+  .footer-menu {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+    gap: 100px;
   }
 
+  .social-media {
+    margin-right: 0;
+  }
 }
