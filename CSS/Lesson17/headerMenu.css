@@ -121,8 +121,6 @@ nav ul ul a:hover {
     transform: rotate3d(180deg);
 }
 
-
-
 .dropdown > a{
     display: flex;
     align-items: center;
