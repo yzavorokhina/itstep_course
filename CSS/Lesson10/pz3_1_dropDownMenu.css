@@ -1,12 +1,13 @@
 /* Connecting fonts by downloading */
 @font-face {
-  font-family: "Trebuchet_MS";
-  font-weight: normal;
-  src: url("../../fonts/Trebuchet_MS/trebuchetms.ttf") format("truetype");
+    font-family: "Trebuchet_MS";
+    font-weight: normal;
+    src: url("../../fonts/Trebuchet_MS/trebuchetms.ttf") format("truetype");
 }
 
 body {
-   font:'trebuchetms', Arial, Helvetica;}
+    font: 'trebuchetms', Arial, Helvetica;
+}
 
 .container {
     width: 960px;
@@ -72,14 +73,6 @@ nav li.subMenu:hover>ul {
     visibility: visible;
 }
 
-nav ul.subMenu2>li {
-    display: none;
-}
-
-nav ul.subMenu2:hover>li {
-    display: block;
-}
-
 nav li.subMenu ul {
     position: absolute;
     /*Add some style*/
@@ -120,6 +113,11 @@ nav li.subMenu ul li>a {
     box-shadow: 0 1px 0 #111, 0 2px 0 #666;
 }
 
+/*nav li.submenu ul li:hover > a{
+    background: #1077d8;
+    color: white;
+}*/
+
 nav li.subMenu ul li>a:hover {
     background-color: #0186ba;
     color: white;
@@ -145,6 +143,14 @@ nav li.subMenu ul li:hover>ul {
     left: 100%;
     top: 0;
 }
+
+/*nav ul.subMenu2 > li {
+    display: none;
+}
+
+nav ul.subMenu2:hover > li {
+    display: block;
+}*/
 
 /*triangles in the drop-down menu*/
 .triangle::after {
@@ -184,6 +190,7 @@ nav li.subMenu ul li:hover>ul {
     border-right: 6px solid #3d3d3d;
     border-bottom: 6px solid transparent;
     position: absolute;
+    /*top: calc(50% - 6px);*/
     top: 12px;
     left: -12px;
     box-sizing: border-box;
