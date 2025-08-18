@@ -1,33 +1,31 @@
-
+// Theory:
+// Variables and constants:
 //let message;
 //let message = 'Это сообщение';
 //let m1 = '123';
 //let $ = '123drefe';
 //let _ = '123dfrgr';
 //message = 'Что-то другое';
-
 //num = num + 10;
-
 //alert(message);
+/*-----------------------------------------------*/
 
 //Сonstants
-//значение известно сначала
+//значение известно сначала:
 //const COLOR = '#ffffff';
-
-//значение определяется позже
+//значение определяется позже:
 //const color;
-
 //color = 2+3;
+/*-----------------------------------------------*/
 
-//Naming
+//Naming:
 //let firstSuperMessage = 'First message';
-
-//устаревшее
+//устаревшее:
 //var name = 'dhcdhsvbdh';
+/*-----------------------------------------------*/
 
 //Variable types:
 //primitive:
-
 //1 Number - числа отрицательные -Infinity, положительные -Infinity (макс. для 64 битн.компьютеров +-(2*53-1)) и NaN (вычислительная ошибка)
 //let age = 40;
 //alert("не число"/ 2-1) //любая мат.операция с NaN возвращает NaN, кроме NaN**0=1
@@ -54,20 +52,19 @@
 //зарезервировать место для имени значение равно ничего
 //let money = null;
 
-//6 underfined ("значение не было присвоено") без значения 
+//6 underfined ("значение не было присвоено") без значения
 //let happyDay;
 
 //7 symbol (для создания уникальных идентификаторов в объектах)
 //let $;
 
 //not primitive:
-
 //8 object - комплексный не примитивный тип, содержит несколько разных типов, для более сложных структур данных
 //let parameters = {};
 //age = 'ghfuuvhdfu';
+/*-----------------------------------------------*/
 
-
-//Оператор typeof (возвращает тип аргумента)
+//Оператор typeof (возвращает тип аргумента):
 // Обычный синтаксис
 //typeof 5 // Выведет "number"
 // Синтаксис, напоминающий вызов функции (встречается реже)
@@ -82,15 +79,15 @@
 //typeof "foo" // "string"
 //typeof Symbol("id") // "symbol"
 //typeof Math // "object"  (1)  //Math - special object
-//typeof null // "object"  (2)  //null as object in js but it is not object 
+//typeof null // "object"  (2)  //null as object in js but it is not object
 //typeof alert // "function"  (3) //all function - objects in js
+/*-----------------------------------------------*/
 
+//Alert, prompt, confirm (взаимодействие):
 //alert(typeof money);
-
-//alert, prompt, confirm (взаимодействие):
-//promt - принимает два аргумента, один из поля ввода модального окна. 
+//promt - принимает два аргумента, один из поля ввода модального окна.
 // Возвращает напечатанный в поле ввода текст или null, если была нажата кнопка «Отмена» или Esc с клавиатуры.
-//result = prompt(title, [default]-необязательный для всех браузеров кроме IE, он вставит в строку "underfined" в поле ввода);  
+//result = prompt(title, [default]-необязательный для всех браузеров кроме IE, он вставит в строку "underfined" в поле ввода);
 //let test = prompt("Test", ''); // <-- для IE
 
 // let age = promt ('Введите свой возраст', 100);
@@ -102,3 +99,4 @@
 
 //let result = confirm('Вам уже есть 18 лет?');
 //alert(result);
+/*-----------------------------------------------*/
