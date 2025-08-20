@@ -1,4 +1,4 @@
-/* Task1 */
+/* Task Example */
 //  function summ(start, end) {
 
 //  let result = 0;
@@ -17,7 +17,7 @@
 //  summ(1,50);
 
 //  const summ = function(start,end) {
-     
+
 //  let result = 0;
 
 //  for (let i = start; i <= end ; i++){
@@ -29,15 +29,14 @@
 
 // }
 //summ(1,5);
+/*---------------------------------------------------------------------------*/
 
-
+/* Theory */
 /*  Стрелочная функция без ключевого слова this */
 // const arr = (name) => {
 //     console.log('Hello, ${name}')
 // }
 // arr('Edgar');
-
-/* Theory */
 // const user = {
 //     "first name": 'Ivan',  //если с пробелом, то в кавычках
 //     age: 35,
@@ -45,12 +44,13 @@
 //         name: 'Developer',
 //         experience: 15
 //     },
+
 //     gender: "man", // висячая запятая приводит свойства к одиннаковому вида
 //     //hello(){  //другая запись метода без function
 //     //стрелочная функция
-//     //hello() => { 
+//     //hello() => {
 //         // console.log(`Hello!! My name is ${this.name}. I'm ${this.age} years old.`);
-//         // console.log(`I have a ${car.name}. I's ${car.type}.`);        
+//         // console.log(`I have a ${car.name}. I's ${car.type}.`);
 //     //}
 //     hello: function(){
 //         console.log(`Hello!! My name is ${this.name}. I'm ${this.age} years old.`);
@@ -68,7 +68,6 @@
 // // }
 
 // user.hello();
-
 
 // const car = {
 //     name: "Mersedes",
@@ -106,14 +105,44 @@
 // }
 
 //функции и методы
-
+/*---------------------------------------------------------------------------*/
 
 /* Task1 */
-
+/* Напишите код, выполнив задание из каждого пункта отдельной строкой:
+    Создайте пустой объект user.
+    Добавьте свойство name со значением John.
+    Добавьте свойство surname со значением Smith.
+    Измените значение свойства name на Pete.
+    Удалите свойство name из объекта.
+*/
+// const user = {
+//     name: 'John',
+//     surname: 'Smith',
+// }
+// user.name = "Pete";
+// console.log(JSON.stringify(user));
+// console.log({ ...user });    //copy
+// console.log(user);           //link
+// delete user.name;
+// console.log(JSON.stringify(user));
+// console.log({ ...user });
+// console.log(user);
+// user.name = "David";
+// console.log(JSON.stringify(user));
+// console.log({ ...user });
+// console.log(user);
+/*------------------------------------------------------*/
 
 /* Task2 */
 /*Напишите функцию isEmpty(obj),
- которая возвращает true, если у объекта нет свойств, иначе false.*/
+которая возвращает true, если у объекта нет свойств, иначе false.
+Должно работать так:
+let schedule = {};
+alert( isEmpty(schedule) ); // true
+schedule["8:30"] = "get up";
+alert( isEmpty(schedule) ); // false
+ */
+
 // let isEmpty = function(obj){
 //     for (key in obj){
 //         result = false;
@@ -156,6 +185,22 @@
 //     obj2[key] = obj1[key];
 // }
 // Object.assign(obj2, obj1);
+/*------------------------------------------------------*/
+
+/* Task3 */
+/* Можно ли изменить объект, объявленный с помощью const? Как вы думаете?
+const user = {
+  name: "John"
+};
+// это будет работать?           //будет
+user.name = "Pete"; */
+/*----*/
+// Работает!
+//user.name = "Pete";
+
+// Ошибка
+//user = 123;
+/*------------------------------------------------------*/
 
 /* Task3 */
 // У нас есть объект, в котором хранятся зарплаты нашей команды:
@@ -164,35 +209,73 @@
 //   Ann: 160,
 //   Pete: 130
 // }
-// // Напишите код для суммирования всех зарплат и сохраните результат в переменной sum.
-// // Должно получиться 390.
+// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum.
+// Должно получиться 390.
 
 //  function summSalary(salaries) {
 //     let result = 0;
-
 //     for(key in salaries) {
 //          result += salaries[key];
 //     }
 //     return result;
 // }
 //  console.log(`Сумма равна ${summSalary(salaries)}`);
+/*------------------------------------------------------*/
 
-/* Task */
-let ladder = {
-    step: 0,
-    up() {
-      this.step++;
-      return this;
-    },
-    down() {
-      this.step--;
-      return this;
-    },
-    showStep: function() { // показывает текущую ступеньку
-      alert( this.step );
-      return this;
-    }
-  };
+/* Task 4 */
+/* Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+Например:
+
+// до вызова функции
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+multiplyNumeric(menu);
+
+// после вызова функции
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+}; */
+
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+// };
+
+// function multiplyNumeric(menu) {
+//     for (let key in menu) {
+//         if (typeof menu[key] == 'number') {
+//             menu[key] *= 2;
+//         }
+//     }
+// }
+// multiplyNumeric(menu);
+// console.log({ result: menu });
+/*------------------------------------------------------*/
+
+/* Task X */
+// let ladder = {
+//     step: 0,
+//     up() {
+//       this.step++;
+//       return this;
+//     },
+//     down() {
+//       this.step--;
+//       return this;
+//     },
+//     showStep: function() { // показывает текущую ступеньку
+//       alert( this.step );
+//       return this;
+//     }
+//   };
 
 // ladder.up();
 // ladder.up();
@@ -201,4 +284,5 @@ let ladder = {
 // ladder.down();
 // ladder.showStep(); // 0
 
-ladder.up().up().down().showStep().down().showStep(); // показывает 1 затем 0
+// ladder.up().up().down().showStep().down().showStep(); // показывает 1 затем 0
+/*------------------------------------------------------*/
