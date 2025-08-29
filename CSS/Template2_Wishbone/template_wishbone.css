@@ -1,0 +1,396 @@
+/* Screen in mockup 1440px * 6411px */
+
+/* Connecting fonts by downloading */
+@font-face {
+    font-family: "Poppins";
+    font-weight: normal;
+    src: url("../../fonts/Poppins/Poppins-Regular.ttf") format("truetype"),
+        /*For different browsers, convert on cloudconvert.com*/
+        url("../../fonts/Poppins/Poppins-Regular.otf"),
+        url("../../fonts/Poppins/Poppins-Regular.eot"),
+        url("../../fonts/Poppins/Poppins-Regular.woff"),
+        url("../../fonts/Poppins/Poppins-Regular.woff2"),
+        url("../../fonts/Poppins/Poppins-Regular.svg");
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Poppins", normal;
+    max-width: 1440px;
+    max-height: 6411px;
+}
+
+
+/*-------------header----------------*/
+header {
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+}
+
+.container {
+    max-width: 1440px;
+    max-height: 90px;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+
+header .container a {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    /*загадка дыры - почему все ломает если поставить нужный отступ*/
+    /* padding-left: 152px;   */
+}
+
+/*-----------------------------------------*/
+
+/* menu*/
+.containerMenu {
+    min-width: 585px;
+    /* margin: 0 auto; */
+    padding-right: 140px;
+}
+
+nav {
+    background-color: transparent;
+    margin-right: 0;
+}
+
+nav ul ul {
+    display: none;
+    visibility: hidden;
+}
+
+nav>ul>li {
+    display: inline-block;
+    margin-right: -4px;
+    padding-left: 32px;
+}
+
+nav>ul>li:hover {
+    color: #FFF;
+}
+
+nav>ul>li>a {
+    display: block;
+    padding: 10px 32px;
+    font-size: 15px;
+    font-family: "Poppins", normal;
+    letter-spacing: 0.4px;
+    /* color: white; */
+}
+
+/* nav>ul>li>a:hover {
+    display: flex;
+    width: auto;
+    height: 46px;
+    font-size: 1rem;
+    border-radius: 16px;
+    background-color: #1B1A1A;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+} */
+
+nav a {
+    color: #1B1A1A;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav li {
+    position: relative;
+}
+
+/* nav li:hover {
+    position: relative;
+    color: white;
+} */
+
+.menuButton {
+    display: flex;
+    max-width: auto;
+    height: 46px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    border: none;
+    color: white;
+    /* gap: 32px; */
+    border-radius: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menuButton:hover {
+    display: flex;
+    max-width: auto;
+    height: 46px;
+    font-size: 1rem;
+    background-color: #1B1A1A;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+    /* gap: 32px; */
+    border-radius: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* .menuButton a {
+    color: #FFF;
+} */
+
+/*-----------------------------------------*/
+
+/* block1 */
+main .block1 {
+    min-width: 1440px;
+    min-height: 720px;
+    text-align: left;
+    padding-left: 240px;
+    padding-right: 240x;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+main .halfOfBlock1 {
+    min-width: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+}
+
+main .halfOfBlock1 h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 70.4px;
+    font-weight: normal;
+    font-size: 64px;
+    font-family: "Poppins", normal;
+}
+
+main .halfOfBlock1 h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Poppins", normal;
+}
+
+main .halfOfBlock1 p {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    /*странный способ сместить блок - придумать как лучше сделать*/
+    padding-right: 214px;
+}
+
+main .block1 button {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: black;
+}
+
+/*-----------------------------------------*/
+
+/* block2 */
+main .block2 {
+    min-width: 1440px;
+    min-height: 102px;
+    text-align: left;
+    padding-left: 336px;
+    padding-right: 336x;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+main .halfOfBlock2 {
+    min-width: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+}
+
+main .halfOfBlock2 h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 38px;
+    font-weight: normal;
+    font-size: 32px;
+    font-family: "Poppins", normal;
+    color: #403E3B;
+}
+
+/*-------------------------------------------------------------------*/
+/* block3 */
+
+main .block3 {
+    background-image: url("../../img/template_wishbone/IMAGE4.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+/* block4 */
+main .block4 {
+
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+
+/* block5 */
+main .block5 {
+    background-image: url("../../img/template_wishbone/IMAGE8.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+
+
+/*-------------------------------------------------------------------*/
+
+
+/* block6 */
+main .block6 {
+    min-width: 1440px;
+    min-height: 600px;
+    background-color: #403E3B;
+    color: #ECE7E4;
+}  
+
+main .block6 img{
+    padding: 20px;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+/* block7 */
+main .block7 {
+    background-image: url("../../img/template_wishbone/IMAGE13.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+/* block8 */
+main .block8 {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+/* block9 */
+main .block9 {
+
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+/* block10 */
+main .block10 {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1440px;
+    min-height: 600px;
+}
+
+
+
+/* footer */
+footer {
+    background-color: #ffffff;
+    width: 100%;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.container {
+    max-width: 1440px;
+    max-height: 90px;
+    margin: 0 auto;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+
+footer .container a {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    /*загадка дыры - почему все ломает если поставить нужный отступ*/
+    /* padding-left: 152px;   */
+}
