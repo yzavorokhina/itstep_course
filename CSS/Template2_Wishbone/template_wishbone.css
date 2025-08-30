@@ -14,27 +14,24 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
-    font-family: "Poppins", normal;
     max-width: 1440px;
     max-height: 6411px;
-}
-
-
-/*-------------header----------------*/
-header {
     background-color: #ffffff;
-    width: 100%;
-    position: fixed;
+    font-family: "Poppins", normal;
 }
 
-.container {
-    max-width: 1440px;
-    max-height: 90px;
-    margin: 0 auto;
+/*----------------------------header----------------------------*/
+header {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    background-color: #ffffff;
 }
 
 header .container {
+    max-width: 1440px;
+    max-height: 90px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,16 +41,15 @@ header .container {
 header .container a {
     padding-top: 35px;
     padding-bottom: 35px;
-    /*загадка дыры - почему все ломает если поставить нужный отступ*/
+    /*TODO добавить нужный отступ*/
     /* padding-left: 152px;   */
 }
 
-/*-----------------------------------------*/
+/*---------------------------------------------------------------*/
 
 /* menu*/
 .containerMenu {
     min-width: 585px;
-    /* margin: 0 auto; */
     padding-right: 140px;
 }
 
@@ -62,61 +58,37 @@ nav {
     margin-right: 0;
 }
 
-nav ul ul {
-    display: none;
-    visibility: hidden;
-}
-
-nav>ul>li {
+nav li {
     display: inline-block;
-    margin-right: -4px;
+    /* margin-right: -4px; */
+    /* spacing between buttons: */
     padding-left: 32px;
+    position: relative;
+    right: 160px;
 }
 
-nav>ul>li:hover {
-    color: #FFF;
+nav li:hover {
+    color: #ffffff;
+    position: relative;
 }
 
-nav>ul>li>a {
+nav a {
     display: block;
-    padding: 10px 32px;
+    /* padding: 10px 32px; */
     font-size: 15px;
     font-family: "Poppins", normal;
     letter-spacing: 0.4px;
-    /* color: white; */
-}
-
-/* nav>ul>li>a:hover {
-    display: flex;
-    width: auto;
-    height: 46px;
-    font-size: 1rem;
-    border-radius: 16px;
-    background-color: #1B1A1A;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    border: none;
-    color: #FFF;
-} */
-
-nav a {
     color: #1B1A1A;
 }
 
 nav a:hover {
-    color: white;
+    display: block;
+    /* padding: 10px 32px; */
+    font-size: 15px;
+    font-family: "Poppins", normal;
+    letter-spacing: 0.4px;
+    color: #ffffff;
 }
-
-nav li {
-    position: relative;
-}
-
-/* nav li:hover {
-    position: relative;
-    color: white;
-} */
 
 .menuButton {
     display: flex;
@@ -129,8 +101,7 @@ nav li {
     flex-direction: row;
     cursor: pointer;
     border: none;
-    color: white;
-    /* gap: 32px; */
+    color: #ffffff;
     border-radius: 16px;
     padding-left: 10px;
     padding-right: 10px;
@@ -147,30 +118,26 @@ nav li {
     flex-direction: row;
     cursor: pointer;
     border: none;
-    color: #FFF;
-    /* gap: 32px; */
+    color: #ffffff;
     border-radius: 16px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-/* .menuButton a {
-    color: #FFF;
-} */
-
-/*-----------------------------------------*/
+/*---------------------------------------------------------------*/
 
 /* block1 */
 main .block1 {
     min-width: 1440px;
     min-height: 720px;
-    text-align: left;
     padding-left: 240px;
+    padding-top: 90px;
     padding-right: 240x;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
+    text-align: left;
 }
 
 main .halfOfBlock1 {
@@ -208,7 +175,7 @@ main .halfOfBlock1 p {
     line-height: 24px;
     font-weight: normal;
     font-size: 16px;
-    /*странный способ сместить блок - придумать как лучше сделать*/
+    /* TODO придумать как лучше сделать смещение изображения*/
     padding-right: 214px;
 }
 
@@ -221,23 +188,34 @@ main .block1 button {
     color: black;
 }
 
-/*-----------------------------------------*/
+/* main .block1 img {
+
+} */
+
+/*---------------------------------------------------------------*/
 
 /* block2 */
 main .block2 {
     min-width: 1440px;
-    min-height: 102px;
-    text-align: left;
+    min-height: 782px;
     padding-left: 336px;
     padding-right: 336x;
-    padding-top: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
+    text-align: left;
 }
 
-main .halfOfBlock2 {
+main .contentFrame {
+    min-width: 582px;
+    min-height: 768px;
+    margin: 100px auto 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+main .halfOfBlock2Left {
     min-width: auto;
     text-align: left;
     display: flex;
@@ -245,9 +223,21 @@ main .halfOfBlock2 {
     align-items: flex-start;
     align-content: flex-start;
     gap: 16px;
+    padding-right: 133px;
 }
 
-main .halfOfBlock2 h3 {
+main .halfOfBlock2Right {
+    min-width: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+    padding-right: 0;
+}
+
+main .halfOfBlock2Left h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 38px;
@@ -257,131 +247,149 @@ main .halfOfBlock2 h3 {
     color: #403E3B;
 }
 
-/*-------------------------------------------------------------------*/
-/* block3 */
+main .author {
+    min-width: 502px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+}
 
+.personInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.personInfo .name {
+    line-height: 26px;
+    font-weight: normal;
+    font-size: 17px;
+    font-family: "Poppins", normal;
+    color: #1B1A1A;
+    padding-left: 30px;
+}
+
+.personInfo .position {
+    line-height: 14px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Poppins", normal;
+    color: #645C55;
+    padding-left: 30px;
+}
+
+/*-------------------------------------------------------------------*/
+
+/* block3 */
 main .block3 {
+    min-width: 1440px;
+    min-height: 600px;
     background-image: url("../../img/template_wishbone/IMAGE4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1440px;
-    min-height: 600px;
 }
 
 /*-------------------------------------------------------------------*/
-
 
 /* block4 */
 main .block4 {
-
-    background-size: cover;
     min-width: 1440px;
-    min-height: 600px;
+    min-height: 582px;
+    background-size: cover;
 }
 
 /*-------------------------------------------------------------------*/
 
-
-
 /* block5 */
 main .block5 {
+    min-width: 1440px;
+    min-height: 600px;
     background-image: url("../../img/template_wishbone/IMAGE8.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1440px;
-    min-height: 600px;
+
 }
 
-
-
 /*-------------------------------------------------------------------*/
-
 
 /* block6 */
 main .block6 {
     min-width: 1440px;
-    min-height: 600px;
+    min-height: 410px;
     background-color: #403E3B;
     color: #ECE7E4;
-}  
+}
 
-main .block6 img{
+main .block6 img {
     padding: 20px;
 }
 
-
 /*-------------------------------------------------------------------*/
-
 
 /* block7 */
 main .block7 {
+    min-width: 1440px;
+    min-height: 600px;
     background-image: url("../../img/template_wishbone/IMAGE13.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1440px;
-    min-height: 600px;
+
 }
 
-
 /*-------------------------------------------------------------------*/
-
 
 /* block8 */
 main .block8 {
-
+    min-width: 1440px;
+    min-height: 918px;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1440px;
-    min-height: 600px;
+
 }
 
-
 /*-------------------------------------------------------------------*/
-
 
 /* block9 */
 main .block9 {
-
-    background-size: cover;
     min-width: 1440px;
-    min-height: 600px;
-}
+    min-height: 592px;
+    background-size: cover;
 
+}
 
 /*-------------------------------------------------------------------*/
 
-
 /* block10 */
 main .block10 {
-
+    min-width: 1440px;
+    min-height: 314px;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1440px;
-    min-height: 600px;
 }
 
-
+/*-------------------------------------------------------------------*/
 
 /* footer */
 footer {
-    background-color: #ffffff;
     width: 100%;
-    /* position: fixed; */
+    height: 204px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
     border: 1px solid red;
 }
 
-.container {
-    max-width: 1440px;
-    max-height: 90px;
-    margin: 0 auto;
-}
-
 footer .container {
+    width: 1168px;
+    height: 84px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -391,6 +399,6 @@ footer .container {
 footer .container a {
     padding-top: 35px;
     padding-bottom: 35px;
-    /*загадка дыры - почему все ломает если поставить нужный отступ*/
-    /* padding-left: 152px;   */
+    /*TODO добавить нужный отступ*/
+    /* padding-left: 136px;   */
 }
