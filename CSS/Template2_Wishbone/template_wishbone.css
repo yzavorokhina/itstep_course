@@ -14,13 +14,16 @@
 }
 
 body {
-    max-width: 1440px;
+    width: 100%;
     max-height: 6411px;
     background-color: #ffffff;
     font-family: "Poppins", normal;
+    overflow-x: hidden;
 }
 
-/*----------------------------header----------------------------*/
+/*-------------------------------------------------------------*/
+
+/* header */
 header {
     width: 100%;
     height: 90px;
@@ -41,8 +44,10 @@ header .container {
 header .container a {
     padding-top: 35px;
     padding-bottom: 35px;
-    /*TODO добавить нужный отступ*/
-    /* padding-left: 152px;   */
+}
+
+.logo {
+    padding-left: 152px;
 }
 
 /*---------------------------------------------------------------*/
@@ -63,8 +68,6 @@ nav li {
     /* margin-right: -4px; */
     /* spacing between buttons: */
     padding-left: 32px;
-    position: relative;
-    right: 160px;
 }
 
 nav li:hover {
@@ -128,38 +131,44 @@ nav a:hover {
 
 /* block1 */
 main .block1 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 720px;
-    padding-left: 240px;
+    margin: 0 auto;
+    padding-left: 100px;
     padding-top: 90px;
     padding-right: 240x;
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: center;
+    align-content: space-between;
     text-align: left;
+    border: 1px solid red;
+    background-color: #ECE7E4;
 }
 
-main .halfOfBlock1 {
-    min-width: auto;
+main .halfOfBlock1Left {
+    min-width: 39%;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
     gap: 16px;
+    /*padding for image*/
+    /* margin-right: 7%; */
 }
 
-main .halfOfBlock1 h1 {
+main .halfOfBlock1Left h1 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 70.4px;
     font-weight: normal;
     font-size: 64px;
     font-family: "Poppins", normal;
+    color: #1B1A1A;
 }
 
-main .halfOfBlock1 h4 {
+main .halfOfBlock1Left h4 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 20px;
@@ -167,16 +176,16 @@ main .halfOfBlock1 h4 {
     font-weight: normal;
     font-size: 14px;
     font-family: "Poppins", normal;
+    color: #403E3B;
 }
 
-main .halfOfBlock1 p {
+main .halfOfBlock1Left p {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 24px;
     font-weight: normal;
     font-size: 16px;
-    /* TODO придумать как лучше сделать смещение изображения*/
-    padding-right: 214px;
+    color: #403E3B;
 }
 
 main .block1 button {
@@ -185,29 +194,37 @@ main .block1 button {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.4px;
-    color: black;
+    color: #1B1A1A;
+    border: none;
 }
 
-/* main .block1 img {
-
-} */
+main .block1 .halfOfBlock1Right img {
+    max-width: 720px;
+    max-height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
+    position: relative;
+    left: 96px;
+}
 
 /*---------------------------------------------------------------*/
 
 /* block2 */
 main .block2 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 782px;
-    padding-left: 336px;
-    padding-right: 336x;
+    margin: 0 auto;
+    text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: center;
-    text-align: left;
+    align-content: space-between;
+    border: 1px solid red;
 }
 
-main .contentFrame {
+main .contentblock2 {
     min-width: 582px;
     min-height: 768px;
     margin: 100px auto 120px;
@@ -284,44 +301,129 @@ main .author {
 
 /* block3 */
 main .block3 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 600px;
+    margin: 0 auto;
     background-image: url("../../img/template_wishbone/IMAGE4.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    border: 1px solid red;
+}
+
+main .block3 .textArea {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 1080px;
+}
+
+main .block3 .textArea h4 {
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Poppins", normal !important;
+    color: #403E3B;
+}
+
+main .block3 .textArea p {
+    margin: 0;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "Poppins", normal !important;
+    color: #645C55;
 }
 
 /*-------------------------------------------------------------------*/
 
 /* block4 */
 main .block4 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 582px;
-    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
+    border: 1px solid red;
 }
 
 /*-------------------------------------------------------------------*/
 
 /* block5 */
 main .block5 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 600px;
+    margin: 0 auto;
     background-image: url("../../img/template_wishbone/IMAGE8.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    gap: 60px;
+    text-align: left;
+    border: 1px solid red;
+}
 
+main .block5 .textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    align-content: right;
+    position: relative;
+    left: 1080px;
+}
+
+main .block5 .textArea h4 {
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Poppins", normal !important;
+    color: #403E3B;
+
+}
+
+main .block5 .textArea p {
+    margin: 0;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "Poppins", normal !important;
+    color: #645C55;
 }
 
 /*-------------------------------------------------------------------*/
 
 /* block6 */
 main .block6 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 410px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 90px;
+    padding-right: 240x;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
     background-color: #403E3B;
     color: #ECE7E4;
+    border: 1px solid red;
 }
 
 main .block6 img {
@@ -332,23 +434,63 @@ main .block6 img {
 
 /* block7 */
 main .block7 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 600px;
+    margin: 0 auto;
     background-image: url("../../img/template_wishbone/IMAGE13.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
+    border: 1px solid red;
+}
 
+main .block7 .textArea {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 60px;
+}
+
+main .block7 .textArea h4 {
+    margin: 0;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Poppins", normal !important;
+    color: #403E3B;
+}
+
+main .block7 .textArea p {
+    margin: 0;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "Poppins", normal !important;
+    color: #645C55;
 }
 
 /*-------------------------------------------------------------------*/
 
 /* block8 */
 main .block8 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 918px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 90px;
+    padding-right: 240x;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
+    border: 1px solid red;
 
 }
 
@@ -356,28 +498,164 @@ main .block8 {
 
 /* block9 */
 main .block9 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 592px;
-    background-size: cover;
+    margin: 0 auto;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid red;
 
 }
 
+main .block9 .contentblock9 {
+    width: 1168px;
+    height: 392px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
+}
+
+.about_team {
+    padding-right: 40px;
+}
+
+main .block9 h3 {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38px;
+    color: #403E3B;
+    font-family: "Poppins", normal !important;
+}
+
+main .block9 p {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #645C55;
+    font-family: "Poppins", normal !important;
+    padding-right: 225px;
+}
+
+main .block9 button {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #1B1A1A;
+    background-color: #ffffff;
+    border: none;
+    padding-left: 25px;
+}
+
+.team_people{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-direction: row;
+    align-items:stretch;
+    align-content: space-between;
+    
+    text-align: left;
+    
+    /* justify-content: center; */
+}
+
+/* from block2:*/
+/* main .author {
+    min-width: 502px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+}
+
+.personInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.personInfo .name {
+    line-height: 26px;
+    font-weight: normal;
+    font-size: 17px;
+    font-family: "Poppins", normal;
+    color: #1B1A1A;
+    padding-left: 30px;
+}
+
+.personInfo .position {
+    line-height: 14px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Poppins", normal;
+    color: #645C55;
+    padding-left: 30px;
+} */
 /*-------------------------------------------------------------------*/
 
 /* block10 */
 main .block10 {
-    min-width: 1440px;
+    max-width: 1440px;
     min-height: 314px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 90px;
+    padding-right: 240x;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+    text-align: left;
+    background-color: #CEC4BC;
+    color: #1B1A1A;
+    border: 1px solid red;
 }
 
+main .block10 h4 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #645C55;
+    font-family: "Poppins", normal !important;
+}
+
+main .block10 h2 {
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 42px;
+    color: #1B1A1A;
+    font-family: "Poppins", normal !important;
+}
+
+main .block10 button {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #1B1A1A;
+    background-color: transparent;
+    border: none;
+    padding-left: 25px;
+}
 /*-------------------------------------------------------------------*/
 
 /* footer */
 footer {
     width: 100%;
     height: 204px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
