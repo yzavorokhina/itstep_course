@@ -552,19 +552,33 @@ main .block5 .textArea p {
     align-items: center;
     align-content: center;
     text-align: left;
-    gap: 94px;
+    gap: 96px;
 }
 
 .block6 .halfOfBlock6Right img {
-    margin: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: normal;
     align-content: space-around;
-    text-align: left;
-    gap: 94px;
+    gap: 96px;
+}
+
+.logos1-2 .logo1 {
+    margin-bottom: 70px;
+}
+
+.logos1-2 .logo2 {
+    margin-bottom: 0px;
+}
+
+.logos3-4 .logo3 {
+    margin-bottom: 60px;
+}
+
+.logos3-4 .logo4 {
+    margin-bottom: 50px;
 }
 
 /*-------------------------------------------------------------------*/
@@ -677,6 +691,8 @@ main .block8 {
     height: 46px;
     position: absolute;
     z-index: 2;
+    bottom: -4370px;
+    left: 658px;
     background-color: #1B1A1A;
     color: #ffffff;
     border-radius: 14px;
@@ -705,6 +721,31 @@ main .block8 {
     color: #1B1A1A;
     cursor: pointer;
 }
+.block8 .imageText{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap:8px;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 45px;
+}
+
+.block8 .imageText .location{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-family: "Poppins", normal !important;
+    color: #645C55;
+}
+
+.block8 .imageText span{
+    font-size: 23px;
+    line-height: 30px;
+    font-family: "Poppins", normal !important;
+    color: #403E3B;
+}
 
 /*-------------------------------------------------------------------*/
 
@@ -721,12 +762,11 @@ main .block9 {
     text-align: left;
     background-color: #ffffff;
     border: 1px solid red;
-
 }
 
 main .block9 .contentblock9 {
-    width: 1168px;
-    height: 392px;
+    min-width: 1168px;
+    min-height: 392px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -735,7 +775,17 @@ main .block9 .contentblock9 {
 }
 
 .about_team {
-    padding-right: 40px;
+    width: 378px;
+    height: 392px;
+    /* padding-top: 100px; */
+    /* padding-right: 40px; */
+    /*padding for image*/
+    /* margin-right: 27%; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* align-content: space-between; */
+    text-align: left;
 }
 
 main .block9 h3 {
@@ -744,18 +794,23 @@ main .block9 h3 {
     line-height: 38px;
     color: #403E3B;
     font-family: "Poppins", normal !important;
+    margin-bottom: 14px;
 }
 
 main .block9 p {
+    width: 358px;
+    height: 72px;
     font-weight: normal;
     font-size: 15px;
     line-height: 24px;
     color: #645C55;
     font-family: "Poppins", normal !important;
-    padding-right: 225px;
+    /* padding-right: 225px; */
+    margin: 0px;
 }
 
 main .block9 button {
+    width: 100px;
     text-align: center;
     font-weight: normal;
     font-size: 16px;
@@ -765,10 +820,13 @@ main .block9 button {
     background-color: #ffffff;
     border: none;
     padding-left: 25px;
+    padding-top: 40px;
+    cursor: pointer;
 }
 
 /* TODO flex с аватарками плиткой*/
 .team_people {
+    margin-left: 200px;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -819,9 +877,8 @@ main .block10 {
     max-width: 1440px;
     min-height: 314px;
     margin: 0px auto;
-    padding-left: 100px;
     padding-top: 90px;
-    padding-right: 240x;
+    padding-right: 160x;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -832,7 +889,19 @@ main .block10 {
     border: 1px solid red;
 }
 
+main .block10 .textArea{
+display: flex;
+    flex-direction: column;
+    align-items: left;
+    align-content: left;
+    text-align: left;
+    padding-bottom: 112px;
+    padding-left: 136px;
+
+}
+
 main .block10 h4 {
+    margin: 0px;
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
@@ -842,7 +911,9 @@ main .block10 h4 {
 }
 
 main .block10 h2 {
+    margin: 0px;
     font-weight: normal;
+    text-align: left;
     font-size: 40px;
     line-height: 42px;
     color: #1B1A1A;
@@ -858,7 +929,8 @@ main .block10 button {
     color: #1B1A1A;
     background-color: transparent;
     border: none;
-    padding-left: 25px;
+    position: relative;
+    left: 500px;
 }
 
 /*-------------------------------------------------------------------*/
