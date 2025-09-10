@@ -96,7 +96,7 @@
 
 /* или через else if */
 
-/* цикл - кусок программы, которsq должен выполниться определенное кол-во раз */
+/* цикл - кусок программы, который должен выполниться определенное кол-во раз */
 // let hello = "Hello";
 // console.log(hello);
 // console.log(hello);
@@ -188,6 +188,7 @@
 // console.log(elem);
 // console.log(new_elem);
 
+/* ------------------------------------------------------- */
 // let mersedes = {
 //   name: "Mersedes",
 //   year: 1995,
@@ -209,7 +210,7 @@
 
 // console.log(`${mazda.factory.name}, ${mazda.factory.address}`);
 
-/* классическая функция */
+// // классическая функция
 // function car(name, year) {
 //   let obj = {};
 
@@ -219,14 +220,14 @@
 //   return obj;
 // }
 // let mersedes = Car ("Mersedes", 1995);
-console.log(mersedes);
-console.log(mazda);
+// console.log(mersedes);
+// console.log(mazda);
 
-let str = "Hello";
-let num = 3;
-console.log(str.length);
-console.log('Это число' + num. toString());
-console.log(str.toUpperCase());
+// let str = "Hello";
+// let num = 3;
+// console.log(str.length);
+// console.log('Это число' + num. toString());
+// console.log(str.toUpperCase());
 
-let n = new Number(3.365463);
-console.log(n.toFixed(2));
+// let n = new Number(3.365463);
+// console.log(n.toFixed(2));
