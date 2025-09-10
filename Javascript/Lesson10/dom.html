@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #page-body{
+            background-color: aqua;
+        }
+        .normalized{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .underlined li{
+            text-decoration: underline;
+        }
+        .bordered{
+            border: 1px solid red;
+        }
+        .padding-10{
+            padding: 10px;
+        }
+        .d-flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello from DOM!!</h1>
+
+    <!-- <a href = "https://google.com">Это ссылка на Google.com</a> -->
+
+    <div>Пользователи:</div>
+    <ul id="list">
+    <!-- <ul id="list" class="normalized"> -->
+      <li>Джон</li>
+      <li>Пит</li>
+    </ul>
+
+
+    <div id="flexbox" class="example"></div>
+
+    <script src="./dom.js"></script>
+</body>
+</html>
