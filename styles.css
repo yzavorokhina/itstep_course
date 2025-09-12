@@ -9,26 +9,26 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(109, 96, 22);
+    background-color: rgb(235, 140, 51);
 }
 .wrapper {
     padding: 30px;
-    border: 1px solid rgb(224, 137, 5);
+    border: 1px solid rgb(224, 67, 5);
 }
 .description {
     width: 560px;
 }
 
 h1 {
-    color:rgba(231, 140, 3, 0.911);
+    color:rgba(180, 43, 2, 0.911);
 }
 
 h2{
-  color: rgba(248, 120, 0, 0.911);
+  color: rgba(204, 71, 9, 0.911);
 }
 
 h3{
-  color: rgba(248, 92, 2, 0.911);
+  color: rgba(224, 65, 17, 0.911);
 }
 
 p {
