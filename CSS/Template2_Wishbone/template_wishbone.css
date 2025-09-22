@@ -540,7 +540,6 @@ main .block5 .textArea p {
     color: #ECE7E4;
 }
 
-/* TODO одним flex с логотипами ОДНОЙ строкой с переносом wrap*/
 .block6 .halfOfBlock6Right {
     margin: 0px;
     display: flex;
@@ -627,18 +626,21 @@ main .block7 .textArea p {
 
 /*-------------------------------------------------------------------*/
 
-/* block8 */
+
+/*block8 */
 main .block8 {
     max-width: 1440px;
     min-height: 918px;
     margin: 0px auto;
-    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
 }
 
 .block8 .container {
-    /*adaptive*/
+    /* /adaptive/ */
     max-width: 1168px;
-    /*adaptive*/
+    /* /adaptive/ */
     width: 100%;
     margin: 0px auto;
     padding-top: 0px;
@@ -674,28 +676,68 @@ main .block8 {
     color: #645C55;
 }
 
-.block8 .container .img {
+.block8 .container .project {
+    width: 33.3333%;
+    aspect-ratio: 2/3;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 40px;
+}
+
+.block8 .container img {
+    position: absolute;
     z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*не надо так делать:
+    position: relative;*/
 }
 
 .block8 .container .imageText {
-    position: absolute;
+    position: relative;
     z-index: 2;
+    /*не надо так делать:
+    position: absolute;*/
 }
 
-/*TODO позиционирование черной кнопки*/
+.block8 .imageText {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 8px;
+    text-align: left;
+    /*не надо так делать:
+    padding-left: 40px;
+    padding-top: 45px;*/
+}
+
+.block8 .imageText .location {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-family: "Poppins", normal !important;
+    color: #645C55;
+}
+
+.block8 .imageText span {
+    font-size: 23px;
+    line-height: 30px;
+    font-family: "Poppins", normal !important;
+    color: #403E3B;
+}
+
 .block8 .container .blackButton {
     width: 132px;
     height: 46px;
-    position: absolute;
+    position: relative;
     z-index: 2;
-
-    /*not adaptive at smaller size:*/
-    bottom: -4370px;
-    left: 893px;
-
     background-color: #1B1A1A;
+    border: none;
     color: #ffffff;
     border-radius: 14px;
     font-size: 16px;
@@ -704,6 +746,26 @@ main .block8 {
     text-align: center;
     padding-left: 24px;
     padding-right: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+
+    /* не надо так делать:
+    position: absolute;
+
+    /*not adaptive at smaller size:*/
+    /*bottom: -4370px;
+    left: 893px;*/
+}
+
+.view-all {
+    background: none;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Poppins", normal !important;
+    margin-top: 50px;
 }
 
 .block8 button {
@@ -720,32 +782,6 @@ main .block8 {
     line-height: 24px;
     color: #1B1A1A;
     cursor: pointer;
-}
-
-.block8 .imageText {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    gap: 8px;
-    text-align: left;
-    padding-left: 40px;
-    padding-top: 45px;
-}
-
-.block8 .imageText .location {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    font-family: "Poppins", normal !important;
-    color: #645C55;
-}
-
-.block8 .imageText span {
-    font-size: 23px;
-    line-height: 30px;
-    font-family: "Poppins", normal !important;
-    color: #403E3B;
 }
 
 /*-------------------------------------------------------------------*/
