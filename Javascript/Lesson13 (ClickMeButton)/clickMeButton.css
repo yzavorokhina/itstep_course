@@ -1,0 +1,54 @@
+*{
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:5px solid #85768d;
+  border-radius: 15px;
+  gap: 60px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: #232323;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.animated{
+  animation: rot 0.9s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-delay: none;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rot{
+  0%{
+    transform: rotateX(0);
+  }
+  100%{
+    transform: rotateX(360deg);
+  }
+}
