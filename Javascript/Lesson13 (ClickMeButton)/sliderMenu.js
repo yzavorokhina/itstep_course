@@ -5,7 +5,7 @@ nav.addEventListener('click', function(event){
 
      this.style.borderColor = "pink";   
 
-//toggle - если класс существует, то будет удален, если не существует, то будет создана и удалена
+//toggle - если класс существует, то будет удален, если не существует, то будет создан и удален
      if(event.target.tagName.toLowerCase() == 'button'){
          //console.log("Мы нажали на кнопку");
          event.target.classList.toggle("opened");
