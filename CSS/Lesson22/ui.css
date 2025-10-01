@@ -1,0 +1,15 @@
+.block{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+.block div{
+    width: 60px;
+    height: 60px;
+}
+
+p{
+    width: 600px;
+    height: auto;
+}
