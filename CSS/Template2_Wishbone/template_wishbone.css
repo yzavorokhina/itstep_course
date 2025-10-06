@@ -92,7 +92,7 @@ nav a:hover {
 
 .menuButton {
     display: flex;
-    max-width: auto;
+    max-width: 126px;
     height: 46px;
     font-size: 1rem;
     background-color: #ffffff;
@@ -109,7 +109,7 @@ nav a:hover {
 
 .menuButton:hover {
     display: flex;
-    max-width: auto;
+    max-width: 126px;
     height: 46px;
     font-size: 1rem;
     background-color: #1B1A1A;
@@ -133,7 +133,7 @@ main .block1 {
     margin: 0px auto;
     padding-left: 100px;
     padding-top: 90px;
-    padding-right: 240x;
+    padding-right: 240px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -459,8 +459,8 @@ main .block5 {
 main .block5 .textArea {
     display: flex;
     flex-direction: column;
-    align-items: right;
-    align-content: right;
+    align-items: flex-end;
+    align-content: flex-end;
     position: relative;
     /*not adaptive at smaller size:*/
     left: 1080px;
@@ -707,7 +707,7 @@ main .block8 {
 .block8 .imageText {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     justify-content: left;
     gap: 8px;
     text-align: left;
@@ -811,7 +811,7 @@ main .block9 .contentblock9 {
     padding-top: 100px;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     align-content: space-between;
     text-align: left;
 }
@@ -906,7 +906,7 @@ main .block10 {
     min-height: 314px;
     margin: 0px auto;
     padding-top: 90px;
-    padding-right: 160x;
+    padding-right: 160px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -920,8 +920,8 @@ main .block10 {
 main .block10 .textArea {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    align-content: left;
+    align-items: flex-start;
+    align-content: flex-start;
     text-align: left;
     padding-bottom: 112px;
     padding-left: 136px;
