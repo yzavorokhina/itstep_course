@@ -178,3 +178,74 @@ transition: var(--transition-time);
   padding-top: 60px;
 
 }
+
+.card{
+  background: none;
+  border: none;
+  color: var(--color-grey);
+  line-height: 150%;
+}
+
+.card .card-image{
+  background-color: var(--color-background-shade);
+  padding: 30px 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-image img{
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.card .card-image span{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--color-grey);
+  font-family: var(--font-cormorant);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  text-align: center;
+  line-height: 100%;
+  font-weight: 700;
+  padding-top: 1px;
+}
+
+.card .card-content{
+  border: 1px solid var(--color-background-shade);
+  padding: 16px 16px 24px 16px;
+}
+
+.card .card-content h3{
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.button{
+  border:1px solid var(--color-green-hover);
+  color: var(--color-green-hover);
+  border-radius: 0;
+  font-size: 16px;
+  padding: 10.5px 28.5px;
+  display: inline-block; /*ссылка строчный элемент будет вести себя как блочный*/
+}
+
+.button:hover{
+  color: var(--color-background-shade);
+  background: var(--color-green-text);
+}
+
+.button:focus{
+  color: var(--color-background-shade);
+  background: var(--color-green-active-click);
+  border: 1px solid var(--color-green-active-click);
+}
