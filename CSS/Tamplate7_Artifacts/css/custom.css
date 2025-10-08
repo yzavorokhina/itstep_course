@@ -1,0 +1,180 @@
+:root {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-cormorant: "Cormorant", serif;
+  --color-white: #ffffff;
+  --color-grey: #899d9d;
+  --color-background: #1d2f30;
+  --color-background-shade: #0b1919;
+  --color-green-text: #506829;
+  --color-primary-green: #bae249;
+  --color-green-active-click: #688b05;
+  --color-green-focus: #83a440;
+  --color-green-hover: #91ac46;
+  --color-red: #e24949;
+
+  --transition-time: all 0.2s linear;
+}
+
+body {
+  background-color: var(--color-background); /*не наследуется*/
+  font-family: var(--font-open-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-cormorant);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition-time);
+}
+
+.footer-copiright {
+  font-size: 12px;
+  line-height: auto;
+  color: var(--color-grey);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: var(--color-background);
+}
+
+.footer-social {
+  background-color: var(--color-background-shade);
+  padding: 18px 0;
+}
+
+.footer-social nav {
+  gap: 30px;
+}
+
+.footer-social nav a:hover svg path {
+  fill: var(--color-green-hover);
+}
+
+.footer-social nav a svg path {
+  transition: all var(--transition-time);
+}
+
+header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.menu {
+  gap: 64px;
+  margin-left: 125px;
+  background-color: var(--color-background);
+}
+
+.menu a {
+  color: var(--color-white);
+}
+
+.menu a:hover {
+  color: var(--color-green-hover);
+}
+
+.menu a:focus {
+  color: var(--color-green-active-click);
+}
+
+.header-tools {
+  gap: 64px;
+}
+
+.header-tools button {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+}
+
+.header-tools button:hover svg path {
+  stroke: var(--color-green-hover);
+}
+
+.header-tools button:hover svg path {
+  stroke: var();
+}
+
+#main-banner {
+  background-image: url("../img/1_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 175px;
+  padding-bottom: 115px;
+  position: relative;
+}
+
+#main-banner:after {
+  color: " ";
+  display: block;
+  opacity: 0.7;
+  background-color: var(--color-background-shade);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#main-banner .conteiner {
+  z-index: 5;
+  position: relative;
+  color: var(--color-white);
+}
+
+#main-banner h1 {
+  font-size: 60px;
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+
+#main-banner p {
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+
+#main-banner a {
+  color: var(--color-green-text);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#main-banner a svg path{
+transition: var(--transition-time);
+}
+
+#main-banner a:hover, #main-banner a:hover svg path {
+  color: var(--color-green-hover);
+  fill: var(--color-green-hover)
+}
+
+#main-banner a:focus, #main-banner a:hover svg path {
+  color: var(--color-green-active-click);
+  fill: var(--color-green-active-click);
+}
+
+#main-banner a svg {
+    width: 51px;
+}
+
+#main-banner a:hover svg, 
+#main-banner a:focus svg{
+    width: 51px;
+    height: 16px;
+}
+/*---------------------------*/
+
+#carousel{
+  padding-top: 60px;
+
+}
