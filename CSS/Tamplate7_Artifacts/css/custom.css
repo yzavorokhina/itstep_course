@@ -184,6 +184,7 @@ transition: var(--transition-time);
   border: none;
   color: var(--color-grey);
   line-height: 150%;
+  border-radius: 0;
 }
 
 .card .card-image{
@@ -223,11 +224,17 @@ transition: var(--transition-time);
 .card .card-content{
   border: 1px solid var(--color-background-shade);
   padding: 16px 16px 24px 16px;
+  flex-grow: 1; /*соотношение элементов в частях*/
 }
 
 .card .card-content h3{
   font-weight: 700;
   color: var(--color-white);
+}
+
+/*прибить блок к началу флекс-контейнера*/
+.card .card-content .button{
+  align-self: flex-start;
 }
 
 .button{
@@ -248,4 +255,38 @@ transition: var(--transition-time);
   color: var(--color-background-shade);
   background: var(--color-green-active-click);
   border: 1px solid var(--color-green-active-click);
+}
+
+.owl-carousel .owl-stage{
+  display: flex;
+  align-items: stretch;
+}
+
+.owl-carousel .owl-stage .owl-item .card{
+  height: 100%;
+  flex-direction: column;
+}
+
+/*при уведличении текста в параграфе текст перекроет кнопку*/
+/* .button-pos{
+  position: absolute;
+  bottom: 24px;
+  left:16px;
+} */
+
+.slider-nav{
+  font-size: 24px;
+  color: var(--color-white);
+  font-family: var(--font-cormorant);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 16px;
+  margin-bottom: 57px;
+}
+
+.slider-nav button{
+  background: none;
+  border: none;
+  padding: 0;
 }
