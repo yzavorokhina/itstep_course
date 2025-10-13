@@ -12,11 +12,12 @@
   --color-green-hover: #91ac46;
   --color-red: #e24949;
 
-  --transition-time: all 0.2s linear;
+  --transition: all 0.2s linear;
 }
 
 body {
-  background-color: var(--color-background); /*не наследуется*/
+  background-color: var(--color-background);
+  /*не наследуется*/
   font-family: var(--font-open-sans);
 }
 
@@ -29,16 +30,15 @@ h4 {
 
 a {
   text-decoration: none;
-  transition: var(--transition-time);
+  transition: var(--transition);
 }
 
 .footer-copiright {
   font-size: 12px;
-  line-height: auto;
+  /* line-height: auto; */
   color: var(--color-grey);
   padding-top: 3px;
   padding-bottom: 3px;
-  background-color: var(--color-background);
 }
 
 .footer-social {
@@ -50,27 +50,34 @@ a {
   gap: 30px;
 }
 
+.footer-social nav a svg path {
+  transition: all var(--transition);
+}
+
 .footer-social nav a:hover svg path {
   fill: var(--color-green-hover);
 }
 
-.footer-social nav a svg path {
-  transition: all var(--transition-time);
-}
-
 header {
-  padding: 20px 0;
+  height: 60px;
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 99;
+  background-color: var(--color-background);
+}
+
+.menu-container {
+  height: 60px;
+  margin-left: 165px;
+  margin-right: 165px;
 }
 
 .menu {
   gap: 64px;
   margin-left: 125px;
-  background-color: var(--color-background);
 }
 
 .menu a {
@@ -100,8 +107,8 @@ header {
   stroke: var(--color-green-hover);
 }
 
-.header-tools button:hover svg path {
-  stroke: var();
+.header-tools button:focus svg path {
+  stroke: var(--color-green-focus);
 }
 
 #main-banner {
@@ -111,22 +118,24 @@ header {
   padding-top: 175px;
   padding-bottom: 115px;
   position: relative;
+  /* z-index: -2; */
 }
-
+/*todo разместить затеняющий слой между другими слоями*/
 #main-banner:after {
-  color: " ";
+  content: " ";
   display: block;
   opacity: 0.7;
-  background-color: var(--color-background-shade);
+  background-color: var(--color-background);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 
 #main-banner .conteiner {
-  z-index: 5;
+  /* z-index: 15; */
   position: relative;
   color: var(--color-white);
 }
@@ -135,51 +144,56 @@ header {
   font-size: 60px;
   line-height: 100%;
   margin-bottom: 16px;
+  color: var(--color-white);
 }
 
 #main-banner p {
   font-size: 16px;
-  line-height: 100%;
+  line-height: 150%;
   margin-bottom: 24px;
+  color: var(--color-white);
 }
 
 #main-banner a {
-  color: var(--color-green-text);
+  color: var(--color-primary-green);
   font-weight: bold;
   font-size: 16px;
 }
 
-#main-banner a svg path{
-transition: var(--transition-time);
+#main-banner a svg path {
+  transition: var(--transition);
 }
 
-#main-banner a:hover, #main-banner a:hover svg path {
+#main-banner a:hover,
+#main-banner a:hover svg path {
   color: var(--color-green-hover);
-  fill: var(--color-green-hover)
+  fill: var(--color-green-hover);
 }
 
-#main-banner a:focus, #main-banner a:hover svg path {
+#main-banner a:focus,
+#main-banner a:hover svg path {
   color: var(--color-green-active-click);
   fill: var(--color-green-active-click);
 }
 
 #main-banner a svg {
-    width: 51px;
+  transition: var(--transition);
 }
 
-#main-banner a:hover svg, 
-#main-banner a:focus svg{
-    width: 51px;
-    height: 16px;
+#main-banner a:hover svg,
+#main-banner a:focus svg {
+  width: 51px;
+  height: 16px;
 }
+
 /*---------------------------*/
 
-#carousel{
+#carousel {
   padding-top: 60px;
 
 }
 
-.card{
+.card {
   background: none;
   border: none;
   color: var(--color-grey);
@@ -187,7 +201,7 @@ transition: var(--transition-time);
   border-radius: 0;
 }
 
-.card .card-image{
+.card .card-image {
   background-color: var(--color-background-shade);
   padding: 30px 16px;
   position: relative;
@@ -196,14 +210,14 @@ transition: var(--transition-time);
   justify-content: center;
 }
 
-.card .card-image img{
+.card .card-image img {
   height: 100%;
   max-width: 100%;
   width: auto;
   object-fit: cover;
 }
 
-.card .card-image span{
+.card .card-image span {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -221,48 +235,50 @@ transition: var(--transition-time);
   padding-top: 1px;
 }
 
-.card .card-content{
+.card .card-content {
   border: 1px solid var(--color-background-shade);
   padding: 16px 16px 24px 16px;
-  flex-grow: 1; /*соотношение элементов в частях*/
+  flex-grow: 1;
+  /*соотношение элементов в частях*/
 }
 
-.card .card-content h3{
+.card .card-content h3 {
   font-weight: 700;
   color: var(--color-white);
 }
 
 /*прибить блок к началу флекс-контейнера*/
-.card .card-content .button{
+.card .card-content .button {
   align-self: flex-start;
 }
 
-.button{
-  border:1px solid var(--color-green-hover);
+.button {
+  border: 1px solid var(--color-green-hover);
   color: var(--color-green-hover);
   border-radius: 0;
   font-size: 16px;
   padding: 10.5px 28.5px;
-  display: inline-block; /*ссылка строчный элемент будет вести себя как блочный*/
+  display: inline-block;
+  /*ссылка строчный элемент будет вести себя как блочный*/
 }
 
-.button:hover{
+.button:hover {
   color: var(--color-background-shade);
   background: var(--color-green-text);
 }
 
-.button:focus{
+.button:focus {
   color: var(--color-background-shade);
   background: var(--color-green-active-click);
   border: 1px solid var(--color-green-active-click);
 }
 
-.owl-carousel .owl-stage{
+.owl-carousel .owl-stage {
   display: flex;
   align-items: stretch;
 }
 
-.owl-carousel .owl-stage .owl-item .card{
+.owl-carousel .owl-stage .owl-item .card {
   height: 100%;
   flex-direction: column;
 }
@@ -274,7 +290,7 @@ transition: var(--transition-time);
   left:16px;
 } */
 
-.slider-nav{
+.slider-nav {
   font-size: 24px;
   color: var(--color-white);
   font-family: var(--font-cormorant);
@@ -285,7 +301,7 @@ transition: var(--transition-time);
   margin-bottom: 57px;
 }
 
-.slider-nav button{
+.slider-nav button {
   background: none;
   border: none;
   padding: 0;
