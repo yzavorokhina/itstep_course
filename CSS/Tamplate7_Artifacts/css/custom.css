@@ -120,8 +120,13 @@ header {
   position: relative;
   /* z-index: -2; */
 }
-/*todo разместить затеняющий слой между другими слоями*/
-#main-banner:after {
+
+.shadowed-bg .container {
+  z-index: 15;
+  position: relative;
+}
+
+.shadowed-bg:after {
   content: " ";
   display: block;
   opacity: 0.7;
@@ -131,12 +136,10 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
-#main-banner .conteiner {
-  /* z-index: 15; */
-  position: relative;
+#main-banner .container {
   color: var(--color-white);
 }
 
@@ -171,17 +174,17 @@ header {
 }
 
 #main-banner a:focus,
-#main-banner a:hover svg path {
+#main-banner a:focus svg path {
   color: var(--color-green-active-click);
   fill: var(--color-green-active-click);
 }
 
-#main-banner a svg {
+.arrowed a svg {
   transition: var(--transition);
 }
 
-#main-banner a:hover svg,
-#main-banner a:focus svg {
+.arrowed a:hover svg,
+.arrowed a:focus svg {
   width: 51px;
   height: 16px;
 }
@@ -190,7 +193,6 @@ header {
 
 #carousel {
   padding-top: 60px;
-
 }
 
 .card {
@@ -305,4 +307,136 @@ header {
   background: none;
   border: none;
   padding: 0;
+}
+
+/* section articles*/
+
+.block-header {
+  font-style: italic;
+  color: var(--color-white);
+  font-size: 48px;
+  padding-bottom: 30px;
+  line-height: 100%;
+}
+
+#articles {
+  padding-bottom: 60px;
+}
+
+.article-prewiev {
+  background-color: var(--color-primary-green);
+  padding: 16px;
+  padding-bottom: 24px;
+}
+
+.article-prewiev h3 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.article-prewiev p {
+  color: var(--color-green-text);
+}
+
+.article-prewiev a {
+  color: var(--color-background);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.article-prewiev a svg path {
+  transition: var(--transition);
+}
+
+.article-prewiev a:hover,
+.article-prewiev a:hover svg path {
+  color: var(--color-green-active-click);
+  fill: var(--color-green-active-click);
+}
+
+/* .article-prewiev a:focus,
+.article-prewiev a:focus svg path {
+  color: var(--color-green-active-click);
+  fill: var(--color-green-active-click);
+} */
+
+/*form section*/
+
+#contact-form {
+  background-image: url("../img/form_bg_1_1.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contact-form p {
+  color: var(--color-white);
+}
+
+#contact-form .block-header {
+  margin-bottom: 16px;
+}
+
+.contact-form .col-4 {
+  gap: 24px;
+}
+
+.contact-form .form-control {
+  border-radius: 0;
+  height: 45px;
+}
+
+.contact-form button.button {
+  background-color: var(--color-primary-green);
+  font-weight: 700;
+  color: var(--color-background-shade);
+  align-self: flex-start;
+  border: none;
+  transition: var(--transition);
+}
+
+.contact-form button.button:hover {
+  background-color: var(--color-green-hover);
+  border-color: var(--color-green-hover);
+}
+
+.contact-form .form-control:hover{
+  background: var(--color-grey);
+  border-color: var(--color-grey);
+  color: var(--color-white);
+}
+
+/* .contact-form .form-control:hover::placeholder{
+  color: var(--color-white);
+}
+
+.contact-form .form-control:hover::-moz-placeholder{
+  color: var(--color-white);
+}
+
+.contact-form .form-control:hover::-webkit-input-placeholder{
+  color: var(--color-white);
+} */
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-radius: 0;
+  outline-color: var(--color-green-focus);
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 2px;
+}
+
+.invalid-feedback{
+  color: var(--color-red);
+}
+
+.contact-form .form-control ~ .invalid-feedback{
+  display: none;
+}
+
+.contact-form .form-control.is-invalid ~ .invalid-feedback{
+display: block;
 }
