@@ -1,0 +1,186 @@
+:root {
+    --font-source-serif: "Source Serif 4", serif;
+    --font-source-code-pro: "Source Code Pro", monospace;
+
+    --color-background: #ffffff;
+    --color-text1: #000000;
+    --color-text2: #0034AD;
+    --color-text3: #AB0782;
+    --color-text4: #6E660A;
+    --color-text5: #5F00AD;
+}
+.color1{
+    color: var(--color-text1);
+}
+.color2{
+    color: var(--color-text2);
+}
+.color3{
+    color: var(--color-text3);
+}
+.color4{
+    color: var(--color-text4);
+}
+.color5{
+    color: var(--color-text5);
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-source-serif);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-cormorant);
+  }
+  
+  a {
+    font-family: var(--font-source-code-pro);
+  }
+/* header */
+  header {
+    height: 180px;
+    width: 1320px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .menu-container {
+    height: 180px;
+    width: 100%;
+    /* margin-left: 1064px; */
+    margin-top: 46.8px;
+    margin-right: 50px;
+    margin-bottom: 116.8px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .menu-container .logoLine{
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+  }
+
+  .menu-container .logo{
+    height: 40px;
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 36.8px;
+    margin-bottom: 100px;
+    margin-right: 800px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .menu-container .photo{
+    height: 50px;
+    width: 50px;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 116.8px;
+    display: flex;
+  }
+  
+  .menu {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-items: end;
+    margin-top: 46.8px;
+  }
+  
+  .menu a .color3{
+    color: var(--color-text3);
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 103%;
+    letter-spacing: -4.5%;
+  }
+  
+  .menu a .color4{
+    color: var(--color-text4);
+    font-size: 1rem;
+    line-height: 103%;
+    letter-spacing: -4.5%;
+  }
+  
+  .menu a .color5{
+    color: var(--color-text5);
+    font-size: 1rem;
+    line-height: 103%;
+    letter-spacing: -4.5%;
+  }
+  
+  .menu a:hover {
+    color: var(--color-text1);
+    font-size: 1rem;
+    line-height: 103%;
+    letter-spacing: -4.5%;
+  }
+  
+  .menu a:focus {
+    color: var(--color-text1);
+    font-size: 1rem;
+    line-height: 103%;
+    letter-spacing: -4.5%;
+  }
+
+  /* footer */
+  footer{
+      height: 380px;
+  }
+
+  .footer-copiright {
+    font-size: 12px;
+    color: var(--color-text1);
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  
+  .footer-social {
+    background-color: var(--color-background);
+    /* padding: 18px 0; */
+  }
+
+  .footer-social .color2{
+    color: var(--color-text2);
+    background-color: var(--color-background);
+    /* padding: 18px 0; */
+  }
+  
+  .footer-social .color3{
+    color: var(--color-text3);
+    background-color: var(--color-background);
+    /* padding: 18px 0; */
+  }
+  
+  .footer-social .color5{
+    color: var(--color-text5);
+    background-color: var(--color-background);
+    /* padding: 18px 0; */
+  }
+  
+  .footer-social nav {
+    gap: 30px;
+  }
+
+  /* main */
+
+  main #1 p{
+      font-size: 50px;
+  }
+  
