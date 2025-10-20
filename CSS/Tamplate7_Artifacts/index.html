@@ -218,8 +218,8 @@
                     <p>Равным образом, экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения прогресса профессионального сообщества. Как принято считать, элементы политического процесса рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
                     </div>
 
-                    <div class="col-4 d-flex flex-column">
-
+                    <div class="col-4">
+                  
                         <!-- <div class="col-md-6">
                             <label for="validationServer03" class="form-label">City</label>
                             <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
@@ -228,7 +228,7 @@
                             </div>
                         </div> -->
 
-                        <form action="" class="d-flex flex-column" onsubmit="return validate()">
+                        <form novalidate action="" class="d-flex flex-column" onsubmit="return validate()">
                                 <div>
                                     <input type="text" class="form-control" placeholder="Имя">
                                     <div class="invalid-feedback">Недопустимый формат</div>
@@ -236,7 +236,7 @@
 
                                 <div>
                                 <input type="email" class="form-control" placeholder="Email">
-                                    <div>
+                                    <div class="">
                                         <input type="text" class="form-control is-invalid">
                                         Недопустимый email
                                     </div>
@@ -340,23 +340,32 @@
 <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5">Войти в личный кабинет</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-          <button type="button" class="btn btn-primary">Войти</button>
-        </div>
+
+
+        <form novalidate action="" id="form-login">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Войти в личный кабинет</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control mb-3" placeholder="Логин" name="login" required minlength="2">
+                <div class="invalid-feedback">Некорректный логин</div>
+                <input type="password" class="form-control" placeholder="Пароль" name="password" required minlength="8">
+                <div class="invalid-feedback">Недопустимый формат</div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button> -->
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </div>
+        </form>
+
       </div>
     </div>
   </div>
 
 <script src="./js/jquery/jquery.min.js"></script>
 <script src="./js/owl_carousel/owl.carousel.min.js"></script>
+<script src="./js/jquery_validate/jquery.validate.min.js"></script>
 <script src="./js/custom.js"></script>
 </body>
 </html>
