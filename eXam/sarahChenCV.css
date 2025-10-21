@@ -56,15 +56,17 @@ a {
   padding-left: 0;
   padding-right: 0;
 
-  border: 1px solid rgb(35, 221, 206);
+  border: 1px solid rgb(51, 255, 0);
 }
+
 /*--------------------------------------------------------*/
 
 /* header */
 /* structure */
 header {
   height: 180px;
-  width: 100%;   /* if width: 100vw / max-width: 100% - fixed header will not be the full width */
+  width: 100%;
+  /* if width: 100vw / max-width: 100% - fixed header will not be the full width */
   margin: 0 auto;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-text2);
@@ -78,7 +80,7 @@ header {
 header .container {
   height: 180px;
   max-width: 1180px;
-  padding: 0 50px 0 50px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,7 +112,7 @@ header .container {
   max-width: 280px;
   display: flex;
   flex-direction: row;
-  align-items: center;  
+  align-items: center;
   gap: 10px;
 }
 
@@ -140,7 +142,7 @@ header .container {
   height: 30px;
   max-width: 200px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   gap: 12px;
 
   /* without flex: */
@@ -149,7 +151,7 @@ header .container {
   margin-bottom: 116px; */
 }
 
-.menu a{
+.menu a {
   filter: grayscale(0%);
   transition: filter 0.3s ease;
 }
@@ -192,22 +194,26 @@ header .container {
   line-height: 103%;
   letter-spacing: -4.5%;
 }
+
 /*--------------------------------------------------------*/
 
-
-
 /* main */
-/* .container{
-    max-width: 1180px;
-    margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  } */
-
 main {
-  border: 1px solid red;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-background);
+}
+
+main .container {
+  max-width: 1180px;
+  padding: 0;
+}
+
+main .portfolio{
+  display: grid;
+  grid-template-columns: repeat(2, 568px);
+  gap: 44px;
+  justify-content: space-between;
 }
 
 main img {
@@ -233,6 +239,8 @@ main h2 {
   line-height: 125%;
   letter-spacing: -4.5%;
   font-weight: 300;
+  margin-top: 26px;
+  margin-bottom: 22px;
 }
 
 main button {
@@ -314,111 +322,131 @@ button {
   border-color: var(--color-text1);
 }
 
+/* block1 & block7 */
 /* block1 */
-#block1 p {
-  font-size: 50px;
-  align-items: start;
-  text-align: start;
-  font-family: var(--font-source-serif);
-  line-height: 120%;
-  letter-spacing: -4.5%;
-  font-weight: 300;
-}
-
-/* block7 */
-
-#block7 {
+#block1 .intro-container {
+  height: 298px;
   max-width: 1180px;
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid magenta;
+}
+
+#block1 p {
+  margin-top: 26px;
+  margin-bottom: 40px;
+  font-family: var(--font-source-serif);
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -4.5%;
 }
 
 /* block7 */
+#block7 .outro-container {
+  height: 390px;
+  max-width: 1180px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+  border: 1px solid magenta;
+}
+
 #block7 p {
-  font-size: 50px;
-  align-items: start;
-  text-align: start;
+  margin-top: 20px;
+  margin-bottom: 52px;
   font-family: var(--font-source-serif);
+  font-size: 50px;
+  font-weight: 300;
   line-height: 120%;
   letter-spacing: -4.5%;
-  font-weight: 300;
 }
 
 #block7 button {
   height: 27px;
-  width: 296px;
-  font-size: 15px;
-  align-items: start;
-  text-align: start;
-  font-family: var(--font-source-serif);
-  line-height: 125%;
+  width: 300px;
+  padding: 4px 10px 7px 10px;
+  margin-bottom: 120px;
+  border: 1px solid var(--color-text1);
+  font-family: var(--font-source-code-pro);
+  font-size: 16px;
+  line-height: 103%;
   letter-spacing: -4.5%;
-  font-weight: 400;
+  font-weight: 300;
 }
+
 /*--------------------------------------------------------*/
 
 /* footer */
 /* structure */
 footer {
   height: 380px;
-  max-width: 1180px;
-  /* padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0; */
+  width: 100%;
   margin: 0 auto;
+  padding: 0;
+
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-text1);
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+}
+
+footer .container {
+  height: 380px;
+  max-width: 1180px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-social {
   height: 190px;
-  max-width: 1180px;
+  width: 1180px;
   padding-top: 36px;
 
-  background-color: var(--color-background);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid rgb(49, 216, 188);
 }
 
 .footer-social nav {
-  max-width: 393px;
-  display: inline-flex;
-  flex-direction: row;
-  /* align-items: flex-start; */
-  /* gap: 300px; */
+  /* TODO узнать когда-нибудь почему не применяется space-between c авто-расстояниями,
+   а надо вручную подбирать gap в пикселях или так оно и работает*/
+  /* display: grid;
+  grid-template-columns: repeat(3, 186px);
+  gap: 310px;
+  justify-content: space-between; */
+
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
-
+  gap: 370px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer-social nav a {
+  display: block;
+  width: auto;
+
   text-decoration: underline;
   font-family: var(--font-source-serif);
   font-size: 50px;
   font-weight: 300;
   line-height: 125%;
   letter-spacing: -4.5%;
-  display: inline-flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
 }
 
 .footer-copiright {
   height: 190px;
-  max-width: 1180px;
+  width: 1180px;
   padding-bottom: 82px;
 
   display: flex;
   flex-direction: row;
   align-items: end;
-  border: 1px solid rgb(107, 107, 107);
 
   color: var(--color-text1);
   font-family: var(--font-source-serif);
