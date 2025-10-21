@@ -1,4 +1,8 @@
-/* TODO разобраться с базой: без бутстрапа и флексов */
+/* TODO разобраться с: 
+- базой: без бутстрапа и флексов
+- как сохранить разбивку текста <p> без <br>, который мешает при адаптации
+  (ограничением ширины абзаца или как-то ещё)
+*/
 
 :root {
   --font-source-serif: "Source Serif 4", serif;
@@ -47,6 +51,11 @@ h5 {
 
 a {
   font-family: var(--font-source-code-pro);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -156,7 +165,6 @@ header .container {
   transition: filter 0.3s ease;
 }
 
-
 /* colors */
 .menu a .color3 {
   color: var(--color-text3);
@@ -209,7 +217,7 @@ main .container {
   padding: 0;
 }
 
-main .portfolio{
+main .portfolio {
   display: grid;
   grid-template-columns: repeat(2, 568px);
   gap: 44px;
@@ -334,6 +342,7 @@ button {
 }
 
 #block1 p {
+  max-width: 1080px;
   margin-top: 26px;
   margin-bottom: 40px;
   font-family: var(--font-source-serif);
@@ -413,8 +422,8 @@ footer .container {
 }
 
 .footer-social nav {
-  /* TODO узнать когда-нибудь почему не применяется space-between c авто-расстояниями,
-   а надо вручную подбирать gap в пикселях или так оно и работает*/
+  /* TODO вычислить почему не применяется space-between c авто-расстояниями,
+   и надо вручную подбирать gap в пикселях или так и должно быть*/
   /* display: grid;
   grid-template-columns: repeat(3, 186px);
   gap: 310px;
