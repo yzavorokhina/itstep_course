@@ -99,4 +99,175 @@
 }
 
 
-@media (max-width: 799.99px) {}
+@media (max-width: 799.99px) {
+
+  .container {
+    max-width: 335px;
+    border: 1px solid rgb(51, 255, 0);
+  }
+
+  /* header */
+  header {
+    height: 188px;
+  }
+
+  header .container {
+    height: 188px;
+    max-width: 335px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo-container {
+    height: 188px;
+    max-width: 114px;
+    padding-top: 26px;
+    padding-bottom: 72px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .logo-container img {
+    height: 50px;
+    width: auto;
+    padding-left: 38px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 50%;
+  }
+
+  .logo-container span {
+    margin-left: 38px;
+  }
+
+  .logo-container .logo-text {
+    height: 90px;
+    width: 118px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-container {
+    height: 188px;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-container .menu {
+    height: 188px;
+    padding-top: 20px;
+  }
+
+  .menu-container nav {
+    height: 104px;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+  }
+
+  /* main */
+  main .container {
+    max-width: 335px;
+    padding: 0;
+  }
+
+  main .portfolio {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main h2 {
+    font-weight: 100;
+    font-size: 28px;
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+
+  main button {
+    line-height: 103%;
+    margin-bottom: 0;
+  }
+
+  /* block1 & block7 */
+  #block1 .intro-container {
+    height: 464px;
+    max-width: 335px;
+    border: 1px solid magenta;
+  }
+
+  #block1 p {
+    max-width: 620px;
+    margin-top: 85px;
+    margin-bottom: 83px;
+    padding-right: 18px;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 125%;
+    letter-spacing: -3%;
+  }
+
+  #block7 .outro-container {
+    height: 456px;
+    max-width: 335px;
+    border: 1px solid magenta;
+  }
+
+  #block7 p {
+    margin-top: 74px;
+    margin-bottom: 54px;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 135%;
+    letter-spacing: -3%;
+  }
+
+  #block7 button {
+    height: 27px;
+    width: 298px;
+    margin-left: 20px;
+    margin-right: 60px;
+    font-weight: 100;
+  }
+
+  /* footer */
+  footer {
+    height: 530px;
+  }
+
+  footer .container {
+    height: 530px;
+    max-width: 335px;
+  }
+
+  .footer-social {
+    height: 245px;
+    width: 335px;
+  }
+
+  .footer-social nav {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-social nav a {
+    font-size: 28px;
+    font-weight: 100;
+  }
+
+  .footer-copiright {
+    padding-bottom: 90px;
+    height: 245px;
+    font-size: 28px;
+    width: 335px;
+    font-weight: 100;
+  }
+
+}
