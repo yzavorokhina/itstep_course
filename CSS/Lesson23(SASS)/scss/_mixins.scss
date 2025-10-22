@@ -1,0 +1,13 @@
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+// @mixin mult_transform($property1, $property2) {
+//   -webkit-transform: $property1, $property2;
+//   -ms-transform: $property1;
+//   transform: $property1;
+// }
+

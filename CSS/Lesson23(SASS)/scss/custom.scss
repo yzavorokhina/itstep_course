@@ -1,0 +1,54 @@
+$body-color: pink;
+
+@import "vars";
+@import "normalize";
+@import "body";
+@import "mixins";
+
+ul {
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 100px;
+  margin: 0;
+  @include transform(translateX(50px));
+  li {
+    a {
+      text-decoration: none;
+    }
+  }
+    li:first-child {
+        a {
+        color: black;
+        }
+        &:first-child{
+            a{
+                color:blue;
+            }
+    }
+  }
+}
+
+%display_flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%square_block {
+  width: 200px;
+  height: 200px;
+}
+
+.block {
+  @extend %square_block;
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  @include transform(rotate(30deg));
+}
+
+.blue-block {
+  @extend %square_block;
+  @extend %display_flex_center;
+  background-color: rgb(204, 0, 255);
+}
