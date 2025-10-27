@@ -1,0 +1,49 @@
+@media (max-width: 319.99px) {
+
+  .container {
+    max-width: 320px;
+    border: 1px solid rgb(207, 42, 194);
+  }
+
+  /* header */
+  header {
+    height: 60px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--color-background);
+  }
+
+  .menu-container {
+    height: 60px;
+    width: 100px;
+    margin-left: 32px;
+    margin-right: 0;
+  }
+
+  .menu-container nav a {
+    display: none;
+  }
+
+  .header-tools {
+    gap: 32px;
+    margin-right: 32px;
+  }
+
+  #main-banner p{
+    display: none;
+  }
+
+  #contact-form {
+    display: none;
+
+  }
+
+  footer {
+    display: none;
+  }
+
+}

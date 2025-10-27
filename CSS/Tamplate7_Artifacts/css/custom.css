@@ -33,31 +33,9 @@ a {
   transition: var(--transition);
 }
 
-.footer-copiright {
-  font-size: 12px;
-  /* line-height: auto; */
-  color: var(--color-grey);
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
 
-.footer-social {
-  background-color: var(--color-background-shade);
-  padding: 18px 0;
-}
-
-.footer-social nav {
-  gap: 30px;
-}
-
-.footer-social nav a svg path {
-  transition: all var(--transition);
-}
-
-.footer-social nav a:hover svg path {
-  fill: var(--color-green-hover);
-}
-
+/********************************************************************/
+/* header */
 header {
   height: 60px;
   padding: 0;
@@ -111,6 +89,8 @@ header {
   stroke: var(--color-green-focus);
 }
 
+/********************************************************************/
+/* main */
 #main-banner {
   background-image: url("../img/1_1.jpg");
   background-repeat: no-repeat;
@@ -189,8 +169,8 @@ header {
   height: 16px;
 }
 
-/*---------------------------*/
-
+/********************************************************************/
+/* owl-carousel */
 #carousel {
   padding-top: 60px;
 }
@@ -228,9 +208,6 @@ header {
   border-radius: 50%;
   border: 1px solid var(--color-grey);
   font-family: var(--font-cormorant);
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   text-align: center;
   line-height: 100%;
   font-weight: 700;
@@ -285,7 +262,7 @@ header {
   flex-direction: column;
 }
 
-/*при уведличении текста в параграфе текст перекроет кнопку*/
+/*при увеличении текста в параграфе текст перекроет кнопку*/
 /* .button-pos{
   position: absolute;
   bottom: 24px;
@@ -309,8 +286,8 @@ header {
   padding: 0;
 }
 
+/********************************************************************/
 /* section articles*/
-
 .block-header {
   font-style: italic;
   color: var(--color-white);
@@ -360,8 +337,8 @@ header {
   fill: var(--color-green-active-click);
 } */
 
+/********************************************************************/
 /*form section*/
-
 #contact-form {
   background-image: url("../img/form_bg_1_1.jpg");
   background-position: 0 0;
@@ -369,14 +346,20 @@ header {
   background-size: cover;
   padding-top: 60px;
   padding-bottom: 60px;
+  /* сво-во для срабатывания класса затенения:*/
+  position: relative;
+}
+
+#contact-form .block-header {
+  margin-bottom: 20px !important;
+  padding-bottom: 0 !important;
 }
 
 .contact-form p {
   color: var(--color-white);
-}
-
-#contact-form .block-header {
-  margin-bottom: 16px;
+  width: 825px;
+  height: 72px;
+  margin-bottom: 26px;
 }
 
 .contact-form .col-4 {
@@ -386,6 +369,8 @@ header {
 .contact-form .form-control {
   border-radius: 0;
   height: 45px;
+  width: 350px;
+  margin-bottom: 24px;
 }
 
 .contact-form button.button {
@@ -395,6 +380,7 @@ header {
   align-self: flex-start;
   border: none;
   transition: var(--transition);
+  margin-bottom: 60px;
 }
 
 .contact-form button.button:hover {
@@ -402,7 +388,7 @@ header {
   border-color: var(--color-green-hover);
 }
 
-.contact-form .form-control:hover{
+.contact-form .form-control:hover {
   background: var(--color-grey);
   border-color: var(--color-grey);
   color: var(--color-white);
@@ -429,14 +415,40 @@ header {
   outline-offset: 2px;
 }
 
-.invalid-feedback{
+.invalid-feedback {
   color: var(--color-red);
 }
 
-.contact-form .form-control ~ .invalid-feedback{
+.contact-form .form-control~.invalid-feedback {
   display: none;
 }
 
-.contact-form .form-control.is-invalid ~ .invalid-feedback{
-display: block;
+.contact-form .form-control.is-invalid~.invalid-feedback {
+  display: block;
+}
+
+/********************************************************************/
+.footer-copiright {
+  font-size: 12px;
+  /* line-height: auto; */
+  color: var(--color-grey);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.footer-social {
+  background-color: var(--color-background-shade);
+  padding: 18px 0;
+}
+
+.footer-social nav {
+  gap: 30px;
+}
+
+.footer-social nav a svg path {
+  transition: all var(--transition);
+}
+
+.footer-social nav a:hover svg path {
+  fill: var(--color-green-hover);
 }
