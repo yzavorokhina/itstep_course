@@ -5,6 +5,7 @@
 
 import _ from 'lodash';
 import showAlert from './alert';
+import '../scss/custom.scss';
 
 
 function component() {
