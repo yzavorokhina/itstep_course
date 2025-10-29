@@ -28,18 +28,66 @@
     display: none;
   }
 
+  /********************************************************************/
+  /* main */
+  #main-banner {
+    background-image: url("../img/1_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 175px;
+    padding-bottom: 115px;
+    position: relative;
+    /* z-index: -2; */
+  }
+
+  .shadowed-bg .container {
+    z-index: 15;
+    position: relative;
+  }
+
+  .shadowed-bg:after {
+    content: " ";
+    display: block;
+    opacity: 0.7;
+    background-color: var(--color-background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: 0; */
+  }
+
+  #main-banner .container {
+    color: var(--color-white);
+  }
+
+  #main-banner h1 {
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: 800;
+    padding-bottom: 30px !important;
+    margin-bottom: 0;
+    color: var(--color-white);
+  }
+
+  #main-banner a {
+    color: var(--color-primary-green);
+    font-weight: bold;
+    font-size: 16px;
+  }
+
   .header-tools {
     gap: 32px;
     margin-right: 32px;
   }
 
-  #main-banner p{
+  #main-banner p {
     display: none;
   }
 
   #contact-form {
     display: none;
-
   }
 
   footer {
