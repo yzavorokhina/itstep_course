@@ -7,7 +7,6 @@
   ],
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack build",

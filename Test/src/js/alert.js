@@ -1,6 +1,8 @@
 function showAlert(message){
     alert(message);
 }
-module.exports = {
-    myFunction: showAlert
-}
+// module.exports = {
+//     myFunction: showAlert
+// }
+
+export default showAlert;
