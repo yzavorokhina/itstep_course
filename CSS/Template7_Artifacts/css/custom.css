@@ -288,12 +288,38 @@ header {
 
 /********************************************************************/
 /* section articles*/
+
+#articles .row {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
 .block-header {
   font-style: italic;
   color: var(--color-white);
   font-size: 48px;
   padding-bottom: 30px;
   line-height: 100%;
+}
+
+.image-slider {
+  width: 825px;
+  height: 492px;
+  background-image: url("../img/card_5.jpg");
+  /* background-position: center center; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: auto;
+}
+
+.image-slider a {
+  display: none;
+}
+
+.article-prewiev {
+  height: 492px;
 }
 
 #articles {

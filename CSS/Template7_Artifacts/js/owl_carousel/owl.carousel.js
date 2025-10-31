@@ -175,6 +175,8 @@
 			});
 		}, this));
 
+		console.log({ shit: 1 });
+
 		this.setup();
 		this.initialize();
 	}
@@ -474,6 +476,8 @@
 	 */
 	Owl.prototype.initializeItems = function() {
 		var $items = this.$element.find('.owl-item');
+
+		console.log({ items: $items });
 
 		// if the items are already in the DOM, grab them and skip item initialization
 		if ($items.length) {

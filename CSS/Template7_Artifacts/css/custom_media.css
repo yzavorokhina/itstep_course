@@ -30,14 +30,19 @@
 
   /********************************************************************/
   /* main */
+  /* TODO кадрировать фоновое изображение */
   #main-banner {
     background-image: url("../img/1_1.jpg");
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 175px;
-    padding-bottom: 115px;
+    background-size: auto;
+    /* padding-top: 175px;
+    padding-bottom: 115px; */
     position: relative;
-    /* z-index: -2; */
+    padding: auto;
+    margin: 0 auto;
+    /* width: 100%;
+    height: 492px; */
   }
 
   .shadowed-bg .container {
@@ -84,6 +89,52 @@
 
   #main-banner p {
     display: none;
+  }
+
+  .block-header {
+    font-style: italic;
+    color: var(--color-white);
+    font-size: 48px;
+    padding: 30px 30px 24px 30px;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: var(--font-cormorant);
+  }
+
+ 
+  #articles .row {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-slider {
+    width: 256px;
+    height: 492px;
+    background-image: url("../img/card_5.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: auto;
+    margin: 0 auto;
+  }
+
+  .image-slider a{
+    color: #899d9d;
+    display: block;
+    margin-top: 458px;
+    padding-top: 458px;
+  }
+
+  .article-prewiev {
+    width: 256px;
+    height: 492px;
+    padding-top: 24px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    margin: 30px 20px 30px 20px;
   }
 
   #contact-form {
