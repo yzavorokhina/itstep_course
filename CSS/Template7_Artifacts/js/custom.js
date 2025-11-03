@@ -34,9 +34,13 @@ $(document).ready(function(){
     var brouserWidth = $(window).width();
         console.log({ brouserWidth });
 
+    //TODO Отображать навигацию кружочками по 4 шт
     if(brouserWidth <= mobileWidth) {
         options.items = 1;
         options.slideBy = 1;
+        options.dots = true;
+        options.dotsEach = 1;
+        options.navText = false;
         console.log({ options });
         owl.owlCarousel(options);
     } else {

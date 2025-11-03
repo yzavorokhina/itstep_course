@@ -91,6 +91,14 @@
     display: none;
   }
 
+  .slider-nav{
+    display: none;
+  }
+
+  .slider-pagination{
+    display: none;
+  }
+
   .block-header {
     font-style: italic;
     color: var(--color-white);
