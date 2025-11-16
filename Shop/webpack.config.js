@@ -42,6 +42,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[fullhash].css',
+      linkType: 'text/css',
     })
   ],
 };
