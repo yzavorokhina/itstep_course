@@ -1,9 +1,9 @@
 {
   "name": "ajax",
   "version": "1.0.0",
-  "description": "ajax",
+  "description": "ajax - PunkAPI by @alxiw",
   "keywords": [
-    "test"
+    "test", "ajax", "PunkAPI"
   ],
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
