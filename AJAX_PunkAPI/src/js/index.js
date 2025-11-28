@@ -52,6 +52,10 @@ setInterval( () => {
     changeRandomBackground();
 }, 5000);
 
+// TODO: use fetch for response:
+// let response = fetch ('https://punkapi.online/v3/beers/random');
+// console.log(response);
+
 // функция отрисовки карточки с продуктом:
 function renderBeerCard(randomBeer){
     console.log(randomBeer);
