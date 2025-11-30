@@ -17,6 +17,7 @@ el.addStyles({
 //     transform:"rotate(45deg)"
 // });
 //el.deleteStyles('transform');
+//el.render(document.body);
 
 const link = new Element('a');
 const img = new ImageElement('img');

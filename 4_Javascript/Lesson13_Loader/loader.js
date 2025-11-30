@@ -59,6 +59,9 @@ setTimeout(async () => {
     }
 }, 1000);
 
+// TODO: add "Next One / Next Beer / Skip" button (?)
+
+
 // let promise = new Promise(function(resolve, reject){
 //     let time = 7;
     

@@ -46,14 +46,6 @@ body {
     }
 }
 
-.text {
-    position: absolute;
-    top: 210px;
-    color: blue;
-    font-size: 1rem;
-    text-align: center;
-}
-
 .beerImg {
     width: auto;
     height: 400px;
