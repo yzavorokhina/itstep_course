@@ -1,9 +1,9 @@
 {
-  "name": "visitka_only_js",
+  "name": "vizitka",
   "version": "1.0.0",
-  "description": "",
+  "description": "page builded by js only",
   "keywords": [
-    "visitka"
+    "vizitka"
   ],
   "license": "ISC",
   "author": "Yuliya Zavorokhina",

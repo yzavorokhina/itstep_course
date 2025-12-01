@@ -2,6 +2,7 @@ class Element {
     constructor(elementName){
         this.name = elementName;
         this.id = null;
+        this.innerText = null;
         this.classes = [];
         //this.classes = [1,2,3];
         this.children = [];
@@ -10,6 +11,10 @@ class Element {
 
     setId(id){
         this.id = id;
+    }
+
+    setInnerText(innerText){
+        this.innerText = innerText;
     }
 
     addClasses(...classes){  // ["class1", "class2"]
@@ -77,43 +82,47 @@ class Element {
    //parentElement.append(document.createElement(this.name));
 
     createDomElement(){
-    let el = document.createElement(this.name);
+        let el = document.createElement(this.name);
+        
+        if (this.id){
+            el.id = this.id;
+        }
+
+        if (this.innerText) {
+            el.innerText = this.innerText;
+        }
+
+        for (let c of this.classes){
+            el.classList.add(c);
+        }
+
+        //el.style.border = "1px solid black";
+        //el.style['border'] = "1px solid black";
+
+        //console.dir(el);
+        
+        // let elStyles = document.createElement(this.css);
+        // el.css= this.css;
+
+        /* 
+        this.css = {
+            width: "100px"
+        }
+        */
+
+        for (let key in this.css){
+            //let styleName = key;               // width
+            //let styleValue = this.css[key];    //this.css[width];
+            //console.log(key);
+            //console.log(this.css[key]);
+            el.style[key] = this.css[key];    // el.style['width'] = this.css['width'] => el.style['width'] = '100px'; 
+        }
+
+        for (let child of this.children){
+            el.append(child.createDomElement());
+        }
     
-    if (this.id){
-        el.id = this.id;
-    }
-
-    for (let c of this.classes){
-        el.classList.add(c);
-    }
-
-    //el.style.border = "1px solid black";
-    //el.style['border'] = "1px solid black";
-
-    //console.dir(el);
-    
-    // let elStyles = document.createElement(this.css);
-    // el.css= this.css;
-
-    /* 
-    this.css = {
-        width: "100px"
-    }
-    */
-
-    for (let key in this.css){
-        //let styleName = key;               // width
-        //let styleValue = this.css[key];    //this.css[width];
-        //console.log(key);
-        //console.log(this.css[key]);
-        el.style[key] = this.css[key];    // el.style['width'] = this.css['width'] => el.style['width'] = '100px'; 
-    }
-
-    for (let child of this.children){
-        el.append(child.createDomElement());
-    }
-   
-    return el;
+        return el;
     }
 }
 
