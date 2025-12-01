@@ -1,0 +1,164 @@
+/* html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.block {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid grey; */
+/* position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+} */
+
+/* for svg: */
+/* .animated {
+    animation: loader 16s linear infinite both;
+} */
+
+/* .loader {
+    animation: loader 16s linear infinite both;
+}
+
+@keyframes loader {
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.beerImg {
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: beerfadeIn 1.5s ease-in both;
+}
+
+@keyframes beerfadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h5 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #ff00ff;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+p {
+    width: 400px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+} */
+*/ html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background: #1e2ad3;
+  background: linear-gradient(
+    90deg,
+    rgb(238, 147, 94) 0%,
+    rgb(91, 89, 216) 99%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency-list {
+  width: 500px;
+  border: 2px solid #1e2ad3;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.currency li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: rgb(167, 37, 4);
+}
+
+li {
+  color: rgb(201, 64, 30);
+}
+
+input {
+  width: 225px;
+  height: 30px;
+  background: #bdc1f8;
+  border: 2px solid rgb(29, 108, 226);
+  color: black;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.currency-input button {
+  height: 30px;
+  background: #bdc1f8;
+  border: 2px solid rgb(29, 108, 226);
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+span {
+  font-weight: 600;
+}
