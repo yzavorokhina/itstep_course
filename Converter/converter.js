@@ -1,93 +1,146 @@
-let currencyList = document.querySelector(".currency-list");
+// let myHeaders = new Headers();
+// myHeaders.append("apikey", "zzWFU0fTvMU39qWWBGbt9pvoY0ILBOlo");
 
-let div = document.createElement('div');
-div.classList.add('currency-input');
-div.alt = 'currency';
+// const requestOptions = {
+//     method: 'GET',
+//     redirect: 'follow',
+//     headers: myHeaders
+//   };
 
-let span = document.createElement('span');
-span.classList.add('loaderMessage');
-span.innerText = "USD";
+// fetch("https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR,RUB,BYN", requestOptions)
+//   .then(response => response.json())
+//   .then(result => console.log(result));
 
-currencyList.append(div);
-currencyList.append(span);
+const usdInput = document.getElementById("usdInput");
+const eurInput = document.getElementById("eurInput");
+const bynInput = document.getElementById("bynInput");
+const rubInput = document.getElementById("rubInput");
+const cnyInput = document.getElementById("cnyInput");
 
-let myHeaders = new Headers();
-myHeaders.append("apikey", "zzWFU0fTvMU39qWWBGbt9pvoY0ILBOlo");
+function setDefaultValue() {
+    const usdValue = 1;
+    const eurValue = currencyExchange.USD.EUR * usdValue;
+    const bynValue = currencyExchange.USD.BYN * usdValue;
+    const rubValue = currencyExchange.USD.RUB * usdValue;
+    const cnyValue = currencyExchange.USD.CNY * usdValue;
 
-const requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-    headers: myHeaders
-  };
+    console.log({ usdValue, eurValue, bynValue, rubValue, cnyValue});
 
-fetch("https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR,RUB,BYN", requestOptions)
-  .then(response => response.json())
-  .then(result => console.log(result));
+    usdInput.value = usdValue.toFixed(2);
+    eurInput.value = eurValue.toFixed(2);
+    bynInput.value = bynValue.toFixed(2);
+    rubInput.value = rubValue.toFixed(2);
+    cnyInput.value = cnyValue.toFixed(2);
+}	
 
+const currencyExchange = {
+  USD: {
+    EUR: 0.8583,
+    BYN: 2.895,
+    RUB: 77.51,
+    CNY: 6.8929
+  },
+  BYN: {
+    USD: 0.3454,
+    EUR: 0.2965,
+    RUB: 26.7763,
+    CNY: 2.381
+  },
+  EUR: {
+    USD: 1.1651,
+    BYN: 3.373,
+    RUB: 90.3079,
+    CNY: 8.031
+  },
+  RUB: {
+    USD: 0.0129,
+    EUR: 0.0111,
+    BYN: 0.0374,
+    CNY: 0.0889
+  },
+  CNY: {
+    USD: 0.1451,
+    EUR: 0.1245,
+    BYN: 0.42,
+    RUB: 11.245
+  }
+}
 
-async function load(){
-    try {
-        let inputs = [...document.querySelectorAll(".currency-value input")];
-        let response = await fetch ('https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR,RUB,BYN');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const { quotes } = data;
+usdInput.addEventListener('keyup', (event) => {
+    const usdValue = Number(usdInput.value);
+    const eurValue = currencyExchange.USD.EUR * usdValue;
+    const bynValue = currencyExchange.USD.BYN * usdValue;
+    const rubValue = currencyExchange.USD.RUB * usdValue;
+    const cnyValue = currencyExchange.USD.CNY * usdValue;
 
-        let courses = {
-            "quotes" : {
-                "USDBYN" : 2.901379,
-                "USDEUR" : 0.86013,
-                "USDRUB" : 77.723991
-            },
-            "name" :
-            // ...
-        }
-        
-        console.log({ data });
-    
-        return `<input style='height:400px; width:auto; class="currency">${quotes}</input>`;
-        
-    } catch (error) {
-        console.error("Fetch error:", error);
-    }
+    console.log({ key: event.key, usdValue, eurValue, bynValue, rubValue, cnyValue});
+
+    eurInput.value = eurValue.toFixed(2);
+    bynInput.value = bynValue.toFixed(2);
+    rubInput.value = rubValue.toFixed(2);
+    cnyInput.value = cnyValue.toFixed(2);
+});
+
+eurInput.addEventListener('keyup', (event) => {
+    const eurValue = Number(eurInput.value);
+    const usdValue = currencyExchange.EUR.USD * eurValue;
+    const bynValue = currencyExchange.EUR.BYN * eurValue;
+    const rubValue = currencyExchange.EUR.RUB * eurValue;
+    const cnyValue = currencyExchange.EUR.CNY * eurValue;
+
+    console.log({ key: event.key, usdValue, eurValue, bynValue, rubValue, cnyValue });
+
+    usdInput.value = usdValue.toFixed(2);
+    bynInput.value = bynValue.toFixed(2);
+    rubInput.value = rubValue.toFixed(2);
+    cnyInput.value = cnyValue.toFixed(2);
+});
+
+bynInput.addEventListener('keyup', (event) => {
+    const bynValue = Number(bynInput.value); 
+    const usdValue = currencyExchange.BYN.USD * bynValue;
+    const eurValue = currencyExchange.BYN.EUR * bynValue;
+    const rubValue = currencyExchange.BYN.RUB * bynValue;
+    const cnyValue = currencyExchange.BYN.CNY * bynValue;
+
+    console.log({ key: event.key, usdValue, eurValue, bynValue, rubValue, cnyValue });
+
+    usdInput.value = usdValue.toFixed(2);
+    eurInput.value = eurValue.toFixed(2);
+    rubInput.value = rubValue.toFixed(2);
+    cnyInput.value = cnyValue.toFixed(2);
+});
+
+rubInput.addEventListener('keyup', (event) => {
+    const rubValue = Number(rubInput.value); 
+    const usdValue = currencyExchange.RUB.USD * rubValue;
+    const eurValue = currencyExchange.RUB.EUR * rubValue;
+    const bynValue = currencyExchange.RUB.BYN * rubValue;
+    const cnyValue = currencyExchange.RUB.CNY * rubValue;
+
+    console.log({ key: event.key, usdValue, eurValue, bynValue, rubValue, cnyValue });
+
+    usdInput.value = usdValue.toFixed(2);
+    eurInput.value = eurValue.toFixed(2);
+    bynInput.value = bynValue.toFixed(2);
+    cnyInput.value = cnyValue.toFixed(2);
+});
+
+cnyInput.addEventListener('keyup', (event) => {
+    const cnyValue = Number(cnyInput.value); 
+    const usdValue = currencyExchange.CNY.USD * cnyValue;
+    const eurValue = currencyExchange.CNY.EUR * cnyValue;
+    const bynValue = currencyExchange.CNY.BYN * cnyValue;
+    const rubValue = currencyExchange.CNY.RUB * cnyValue;
+
+    console.log({ key: event.key, usdValue, eurValue, bynValue, rubValue, cnyValue });
+
+    usdInput.value = usdValue.toFixed(2);
+    eurInput.value = eurValue.toFixed(2);
+    bynInput.value = bynValue.toFixed(2);
+    rubInput.value = rubValue.toFixed(2);
+});
+
+window.onload = function(){
+    setDefaultValue();
 };
-
-setTimeout(async () => {
-    try {
-        const сurrency_html = await load();
-        message.innerHTML = сurrency_html;
-
-    } catch (error) {
-
-        message.innerText = error.message;
-
-    } finally {
-        currencyList.append(message);
-        document.querySelector(".currency").remove();
-        document.querySelector(".currencyMessage").remove();
-    }
-}, 1000);
-
-
-let currency = JSON.parse(window.localStorage.getItem('quotes'));
-console.log(quotes);
-if(!quotes){
-    quotes = [];
-}
-
-function renderList(){
-    const list = $(".currency-input");
-    list.html(null);
-
-    quotes.forEach(function(item){
-        addCurrencyToInput(item);   
-    });
-}
-
-function addCurrencyToInput(currency){
-    const input = $(".currency-input");
-    const li = $(`<li class="${currency.name}">${currency.quotes}</li>`);
-
-currencyList.append(li);  
