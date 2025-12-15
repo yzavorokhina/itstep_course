@@ -226,4 +226,46 @@ render('Это сообщение');
     console.log(message);
 })(`Сумма чисел равна ${5 + 6}`);
 
-// TODO прочитать про Каррирование (Currying)
+// Каррирование (Currying)
+// Каррирование – это трансформация, которая превращает вызов f(a, b, c) в f(a)(b)(c) /
+// преобразование функции с несколькими аргументами в последовательность вложенных функций, каждая из которых принимает только один аргумент.
+// Каррированная функция «ожидает» аргументы по одному, последовательно. Ключевой механизм — замыкания: ранее полученные аргументы «ждут» в памяти до завершения вычислений.
+
+// Реализация обычно позволяет вызывать функцию обоими вариантами: либо нормально,
+// либо возвращает частично применённую функцию, если количество аргументов недостаточно.
+// Каррирование позволяет легко получать частичные функции: универсальная функция log(date, importance, message) после каррирования возвращает
+// частично применённую функцию, когда вызывается с одним аргументом, как log(date)
+// или двумя аргументами, как log(date, importance).
+
+//Каррирование возможно только для функций с фиксированным числом аргументов.
+// Функции без аргументов или с одним аргументом не требуют каррирования.
+// В JavaScript каррирование реализуется благодаря: 
+// - замыканиям (closure);
+// - функциям первого класса (можно передавать, возвращать, присваивать).
+
+
+// Обработка событий:
+// function handleClick(action) {
+//   return function(event) {
+//     console.log(`Performing ${action} action on button click.`);
+//   };
+// }
+
+// const handleSaveClick = handleClick('save');
+// const handleDeleteClick = handleClick('delete');
+
+// document.getElementById('saveButton').addEventListener('click', handleSaveClick);
+// document.getElementById('deleteButton').addEventListener('click', handleDeleteClick);
+
+
+// Для автоматического каррирования можно использовать библиотеки:
+// Lodash:
+// const { curry } = require('lodash');
+
+// function greet(greeting, name) {
+//   console.log(`${greeting}, ${name}!`);
+// }
+
+// const curriedGreet = curry(greet);
+// curriedGreet('Hello')('John'); // Hello, John!
+// curriedGreet('Hi')('Sarah');  // Hi, Sarah!
