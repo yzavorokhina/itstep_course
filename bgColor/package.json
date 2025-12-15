@@ -1,0 +1,24 @@
+{
+  "name": "bgcolor",
+  "version": "1.0.0",
+  "description": "bgcolor",
+  "keywords": [
+    "test",
+    "background",
+    "color"
+  ],
+  "license": "ISC",
+  "author": "Yuliya Zavorokhina",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack build",
+    "dev": "npx webpack --watch"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
