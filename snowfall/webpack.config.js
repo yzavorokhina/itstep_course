@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
@@ -6,10 +7,9 @@ module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
   output: {
-    filename: '[name].[fullhash].js',
+    filename: 'snowfall.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    assetModuleFilename: path.join('images', '[name].[contenthash][exit]'),
   },
   module: {
     rules: [
@@ -23,12 +23,16 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
-      }
+      },
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+      template: path.resolve(__dirname, 'index.html'),
+    }),
     new MiniCssExtractPlugin({
-      filename: '[name].[fullhash].css',
+      filename: 'snowfall.css',
       linkType: 'text/css',
     })
   ],

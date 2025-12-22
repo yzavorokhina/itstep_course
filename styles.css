@@ -1,6 +1,6 @@
 html, body{
     width: 100%;
-    height: 130%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -9,18 +9,26 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(235, 140, 51);
+    /* background-color: rgb(235, 140, 51); */
+    background-color: rgb(169, 194, 209);
 }
 .wrapper {
+    height: auto;
+    margin-top: 0;
     padding: 30px;
-    border: 1px solid rgb(224, 67, 5);
+    /* border: 1px solid rgb(224, 67, 5); */
+    border: 1px solid rgb(0, 137, 190);
+    border-radius: 30px;
 }
 .description {
-    width: 560px;
+    width: 600px;
+    display: none;
 }
 
 h1 {
     color:rgba(180, 43, 2, 0.911);
+    /* color:rgba(9, 134, 206, 0.911); */
+    font-size: 30px;
 }
 
 h2{
