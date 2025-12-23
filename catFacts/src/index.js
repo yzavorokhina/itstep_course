@@ -29,7 +29,7 @@ setInterval( () => {
 function renderCatsFacts(randomCatsFacts){
     console.log(randomCatsFacts);
 
-    const catsFactsCard = $(".cats-facts");
+    const catsFactsCard = $(".cats-facts-info");
     const { fact } = randomCatsFacts;
 
     let facts_html = `<div>
@@ -37,6 +37,10 @@ function renderCatsFacts(randomCatsFacts){
                     </div>`;
     catsFactsCard.html(facts_html); 
 }
+
+// TODO: сhange the images along with the facts
+// TODO: display a message indicating how long the fact will be displayed.
+// TODO: make the display time depend on the length of the text
 
 // const factsString = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
 

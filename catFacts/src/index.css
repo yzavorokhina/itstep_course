@@ -1,0 +1,26 @@
+.cats-facts-img1 {
+    background-image: url("../src/img/cats1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid grey;
+}
+
+.cats-facts-img2 {
+    background-image: url("../src/img/cats2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid grey;
+}
+
+.cats-facts-info {
+    background-color: rgb(243, 243, 243);
+    border: 2px solid grey;
+}
+
+p {
+    padding: 40px;
+    font-size: 28px;
+    color:  rgb(139, 112, 120);
+}
