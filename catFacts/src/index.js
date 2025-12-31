@@ -19,12 +19,7 @@ setInterval( () => {
     conn.open('GET', 'https://catfact.ninja/fact');
     conn.responseType = 'json';
     conn.send();
-    // changeRandomBackground();
-    //changeCatsFacts();
 }, 5000);
-
-// let response = fetch ('https://catfact.ninja/fact');
-// console.log(response);
 
 function renderCatsFacts(randomCatsFacts){
     console.log(randomCatsFacts);
@@ -39,46 +34,5 @@ function renderCatsFacts(randomCatsFacts){
 }
 
 // TODO: сhange the images along with the facts
-// TODO: display a message indicating how long the fact will be displayed.
+// TODO: display a message indicating how long the fact will be displayed
 // TODO: make the display time depend on the length of the text
-
-// const factsString = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
-
-//let jsonString = '[{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]';
-//let javascriptArray = JSON.parse(jsonString);
-
-//console.log(javascriptArray);
-// Вывод: [{name: "Alice", age: 30}, {name: "Bob", age: 25}]
-
-//console.log(javascriptArray[0].name); // "Alice"
-
-
-// function changeCatsFacts(){
-
-//     const rand = () => {
-//         return Math.floor(Math.random() * (factsString.length - 1));
-//     }
-
-//     // console.log(rand());
-
-//     $('[cats-facts]').each(function(){
-//         $(this).css('backgroundColor', factsString[rand()]);
-
-//     });
-// }
-// setInterval(changeCatsFacts,3000);
-
-
-// async function fetchData(url) {
-//     try {
-//       const response = await fetch(url);
-//       if (!response.ok) {
-//         throw new Error(`HTTP error! Status: ${response.status}`);
-//       }
-//       const data = await response.json();
-//       console.log(data);
-//     } catch (error) {
-//       console.error("Fetch error:", error.message);
-//     }
-//   }
-//   fetchData('https://');

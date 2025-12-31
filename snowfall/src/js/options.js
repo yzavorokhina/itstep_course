@@ -1,6 +1,6 @@
 const options = {
-    fonts : [10, 13, 16, 18],
-    snowflakes: ["&#10052","&#10053","&#10054"],
+    fonts : [10, 13, 16],
+    snowflakes: ["&#10052","&#10053","&#10054","&#183"],
     speeds: [2, 5, 8, 10, 15, 20],
     maxWidth: window.outerWidth,
     maxHeight: window.outerHeight,

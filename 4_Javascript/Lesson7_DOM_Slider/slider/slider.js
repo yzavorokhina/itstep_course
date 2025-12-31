@@ -19,3 +19,6 @@ function changeSlide(){
 }
 
 setInterval(changeSlide, 2000); //2000 милисекунд = 2 секунды
+
+// TODO: 
+// add titles above the image or below with slide titles

@@ -1,0 +1,51 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/custom.scss ***!
+  \***************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > div {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: pink;
+  /* text-decoration: line-through;
+  text-decoration-color: greenyellow; */
+}
+
+h2 {
+  margin-left: 40px !important;
+  padding-left: 40px !important;
+}
+
+.snowflake {
+  color: rgba(255, 102, 0, 0.7);
+  position: fixed;
+  transition: top 0.2s linear, left 2s linear;
+}

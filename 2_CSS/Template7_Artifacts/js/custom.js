@@ -126,3 +126,5 @@ $(document).ready(function(){
 
       return isValid;
   }
+
+//   TODO: check mobile version
