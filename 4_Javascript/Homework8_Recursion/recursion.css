@@ -2,12 +2,16 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+  /*background-color: rgb(193, 255, 123);*/
+  background-image: url("../../img/tetrad-v-kletochku.png");
 }
 
 body {
   border: 10px, solid, black;
   position: relative;
+  
 }

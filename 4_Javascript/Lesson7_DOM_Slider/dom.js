@@ -4,7 +4,7 @@ console.dir(ul);  // dir выводит  DOM-элементы как объек�
 
 ul.firstElementChild.getElementsByClassName.textTransform = 'uppercase'; // text-transform: uppercase
 
-ul.lastElementChild.style.color = 'red';
+ul.lastElementChild.style.color = 'green';
 
 //ul.innerHTML = '<li> Оставить только одну эту строку </li>';
 
@@ -16,8 +16,8 @@ console.log(ul.getAttribute('id'));
 
 //ul.setAttribute('class', 'superlist');  // добавили свойство superlist
 
-// ul.classList.add('normalized', 'underlined'); //добавили два класса
-ul.classList.add('normalized'); //добавили  класс
+// ul.classList.add('normalized', 'underlined'); // добавили два класса
+ul.classList.add('normalized'); // добавили  класс
 
 if(ul.classList.contains('underlined')){
     ul.classList.remove('underlined');
@@ -25,16 +25,17 @@ if(ul.classList.contains('underlined')){
     ul.classList.add('underlined');
 };
 
-//ul.classList.toggle('underlined');  //методом убрали один класс как remove(убрать класс или несколько классов)
+//ul.classList.toggle('underlined');  // методом убрали один класс как remove (убрать класс или несколько классов)
 
 //1
 let block = document.getElementById('flexbox');  // возвратит один уникальный элемент
 
 block.innerText = "Hello from founded block!";
 block.classList.add('bordered', 'd-flex');
+block.style.color = 'red';
 
 //2
-let blocks = document.getElementsByClassName('example');  //ElementsSSS!! - возвращает коллекцию
+let blocks = document.getElementsByClassName('example');  // ElementsSSS!! - возвращает коллекцию
 block = blocks[0];
 block.classList.add('padding-10');
 
@@ -43,8 +44,8 @@ block.classList.add('padding-10');
 blocks = document.getElementsByTagName('div');
 
 //самые универсальные методы:
-//block = document.querySelector('#flexbox'); //возвращает 1ый найденный элемент
-block = document.querySelector(' .example'); //возвращает 1ый найденный элемент
+//block = document.querySelector('#flexbox'); // возвращает 1ый найденный элемент
+block = document.querySelector(' .example'); // возвращает 1ый найденный элемент
 
 block.classList.remove('padding-10');
 
@@ -65,6 +66,3 @@ ul.lastElementChild.style.textAlign ='right';
 //ul.children[1].style.textAlign = 'center';
 let li = document.querySelector('#list li:nth-child(2)');
 li.style.textAlign = 'center';
-
-
-// Task Slider

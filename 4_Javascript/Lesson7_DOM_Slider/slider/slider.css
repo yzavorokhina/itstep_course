@@ -7,6 +7,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(83, 116, 116);
 }
 
 .slider{
@@ -14,7 +15,7 @@ body{
     max-width: 960px;
     position: relative;
     aspect-ratio: 3/2;
-    overflow: hidden;  /* скрывает вылазящие части */
+    overflow: hidden;  /* скрывает вылезающие за поля части изображения */
 }
 
 .slider img {

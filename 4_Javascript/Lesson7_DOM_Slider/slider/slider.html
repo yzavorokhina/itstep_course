@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
+    <link rel="icon" type="image/svg+xml" href="../../../img/orangeAutumn.png">
     <link rel="stylesheet" href="../../../normilize.css">
     <link rel="stylesheet" href="./slider.css">
+    <style>
+        .bordered {
+            border: 1px solid rgb(62, 121, 139);
+            height: 100px;
+        }
+
+        .padding-10 {
+            padding: 10px;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .titleSpace {
+            position: absolute;
+            z-index: 10;
+            bottom: 20px;
+            right: 20px;
+            width: 26%;
+            height: 6%;
+            background-color: rgba(122, 157, 168, 0.7);
+            border-radius: 16px;
+        }
+    </style>
 </head>
+
 <body>
-    
+
     <div class="slider">
 
-        <img src="https://vaguri.ru/d/d119258088834l.jpg" alt="" title="Beginning of autumn" class="active">
-        <img src="https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-t1gh-p-zastavki-na-rabochii-stol-pepe-3.jpg" alt="" title="Pepe So Sad">
-        <img src="https://vaguri.ru/d/d119258088354l.jpg" alt="" title="End of autumn">
-        <img src="https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-t3el-p-zastavki-na-rabochii-stol-pepe-7.jpg" alt="" title="Pepe Is Very Sad">
-    
+        <img src="https://vaguri.ru/d/d119258088834l.jpg" alt="some autumn draw" title="Beginning of autumn"
+            class="active">
+        <!-- <img src="https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-t1gh-p-zastavki-na-rabochii-stol-pepe-3.jpg"
+            alt="Pepe face" title="Pepe So Sad"> --> <!--Don't want to see when Pepe so sad-->
+        <img src="https://www.pbs.org/independentlens/wp-content/uploads/2020/09/pepe-playing-game-FGM.jpg"
+            alt="Pepe face" title="Pepe with friends">
+
+        <img src="https://vaguri.ru/d/d119258088354l.jpg" alt="some autumn draw" title="End of autumn">
+        <!-- <img src="https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-t3el-p-zastavki-na-rabochii-stol-pepe-7.jpg"
+            alt="Pepe face" title="Pepe Is Very Sad"> --> <!--Don't want to see when Pepe is very sad-->
+        <img src="https://media1.tenor.com/m/mSckXxBcu_oAAAAd/spooky-scary.gif" alt="Pepe and his nightmare"
+            title="Pepe is scared">
+
+        <img src="https://grizly.club/uploads/posts/2023-01/1672930019_grizly-club-p-tekstura-konfetti-4.jpg"
+            alt="festive confetti" title="Festive confetti">
+        <img src="https://public.bnbstatic.com/static/content/square/images/097717fc762b479ca15a7a6959c05a42.png"
+            alt="Pepe face" title="Pepe celebrates with friends">
+
+        <img src="https://static.vecteezy.com/system/resources/previews/000/101/686/large_2x/winter-holly-vector-seamless-pattern.jpg"
+            alt="new era" title="New Era for Pepe">
+        <img src="https://criptonizando.com/en/wp-content/uploads/2024/08/16-fImage.jpg" alt="Pepe so glad"
+            title="Happy Pepe">
+
+        <div id="flexbox" class="titleSpace"></div>
+
     </div>
-
-
 
     <script src="./slider.js"></script>
 </body>
+
 </html>
