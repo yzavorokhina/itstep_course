@@ -33,6 +33,6 @@ function renderCatsFacts(randomCatsFacts){
     catsFactsCard.html(facts_html); 
 }
 
-// TODO: сhange the images along with the facts
-// TODO: display a message indicating how long the fact will be displayed
-// TODO: make the display time depend on the length of the text
+// MY_TODO: сhange the images along with the facts
+// MY_TODO: display a message indicating how long the fact will be displayed
+// MY_TODO: make the display time depend on the length of the text

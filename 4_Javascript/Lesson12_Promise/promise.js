@@ -70,7 +70,7 @@ let result = document.querySelector("#result");
 
 // создание:
 button.addEventListener('click', () => {
-    //TODO очищать класс "animated"
+    //MY_TODO очищать класс "animated"
     result.classList.remove("animated");
     //console.log(num);
     let promise = new Promise((resolve, reject) =>{

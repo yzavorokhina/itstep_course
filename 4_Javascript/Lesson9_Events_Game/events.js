@@ -127,5 +127,5 @@ function moveBall(event){
 
 document.body.addEventListener('click', moveBall);
 
-// TODO: add some meaning to the ball on the grass
-// TODO: find jQuery games and play them
+// MY_TODO: add some meaning to the ball on the grass
+// MY_TODO: find jQuery games and play them

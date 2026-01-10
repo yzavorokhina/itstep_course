@@ -34,7 +34,7 @@ $(document).ready(function(){
     var brouserWidth = $(window).width();
         console.log({ brouserWidth });
 
-    //TODO Отображать навигацию кружочками по 4 шт
+    //MY_TODO Отображать навигацию кружочками по 4 шт
     if(brouserWidth <= mobileWidth) {
         options.items = 1;
         options.slideBy = 1;
@@ -127,4 +127,4 @@ $(document).ready(function(){
       return isValid;
   }
 
-//   TODO: check mobile version
+//   MY_TODO: check mobile version
