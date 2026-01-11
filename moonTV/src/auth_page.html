@@ -13,9 +13,46 @@
 </head>
 
 <body>
+
+   
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
+
+        <div class="buttons">
+            <a href="javascript:history.back()" class="btn-secondary">
+                <div class="arrow-1">
+                    <div></div>
+                </div>
+            </a>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
         <div class="form">
+            
             <form action="#" id="registration_form">
+
                 <img src="../src/img/logo_moon_1.png" alt="bootstrap-logo" class="auth_logo mx-auto"
                     style="width: 60px">
                 <h1>Вход в VK Planets</h1>
@@ -28,7 +65,7 @@
                 <button type="submit" class="button-2">Создать аккаунт с VK ID</button>
 
                 <div class="form-check">
-                    <input type="button" name="Rememberme" value="Забыли пароль?" checked /><br>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
                 </div>
 
                 <p class="copy">
@@ -128,8 +165,8 @@
                         </svg> -->
 
                         <!-- youtube icon-->
-                        <img src="../src/img/icons-youtube.svg" alt="social-button"
-                            class="social-button" style="width: 44px">
+                        <img src="../src/img/icons-youtube.svg" alt="social-button" class="social-button"
+                            style="width: 44px">
                     </a>
                     <a href="#">
 
