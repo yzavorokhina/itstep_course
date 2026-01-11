@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ModalWindow with jQuery</title>
+    <link rel="icon" type="image/svg+xml" href="../../../img/orangeAutumn.png">
     <link rel="stylesheet" href="../../normilize.css">
     <link rel="stylesheet" href="./modalWindow_with_jQuery.css">
-    <!--Можем подключить здесь так как используем обработчик событий ready и строим DOM-->
-    <script src="./jquery_3.7.1.min.js"></script>
-    <script src="./modalWindow_with_jQuery.js"></script> 
 
 </head>
+
 <body>
-    
-    <div id="block"></div>
 
+    <!-- #modal - это id элемента DIV, который будет определен в коде ниже -->
+    <a href="#modal" name="modal">Простое модельное окно</a>
 
+    <!-- #customize - здесь будет располагаться модальное окно -->
+    <div id="modal" class="modalwindow">
+
+        <!-- Заголовок модального окна -->
+        <h2>Простое jQuery модальное окно</h2>
+
+        <!-- кнопка закрытия окна определяется как класс close -->
+        <a href="#" class="close">X</a>
+
+        <div class="content">
+            <p>modal window</p>
+            <!-- Содержимое модального окна -->
+        </div>
+
+    </div>
+
+    <script src="./jquery_3.7.1.min.js"></script>
+    <script src="./modalWindow_with_jQuery.js"></script>
 </body>
+
 </html>
