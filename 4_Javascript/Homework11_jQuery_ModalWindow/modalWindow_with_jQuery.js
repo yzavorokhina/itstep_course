@@ -1,8 +1,3 @@
-// MY_TODO: 
-// modalWindow on bootstrap at the click of a button, 
-// with darkening around,
-// with_jQuery
-
 //выбираем все теги с именем  modal
 $('a[name=modal]').click(function (e) {
     //Отменяем поведение ссылки
