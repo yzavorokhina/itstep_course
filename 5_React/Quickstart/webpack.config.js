@@ -64,4 +64,13 @@ module.exports = {
       linkType: 'text/css',
     })
   ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    watchFiles:[path.join(__dirname, 'src')],
+    compress: true,
+    hot: true,
+    port: 9000,
+  },
 };

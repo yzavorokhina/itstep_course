@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Button({startCount, btnClass, step}) {
+function Input({startCount, btnClass, step}) {
   const [count, setCount] = useState(startCount);
   let buttonClass = "btn-danger";
 
@@ -10,10 +10,10 @@ function Button({startCount, btnClass, step}) {
   }
 
   return (
-    <button className={btnClass} onClick={handleClick}>
-      Clicked {count} times
-    </button>
+    <input className={btnClass}>
+     Добавить
+    </input>
   );
 }
 
-export default Button;
+export default Input;

@@ -1,32 +1,68 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
 }
 
-h1{
-    margin: 0;
-    padding: 0;
+body > div {
+  width: 50%;
+  border: 1px solid red;
+  flex-shrink: 0;
 }
 
-.btn-danger{
-    background-color: red;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-danger {
+  background-color: red;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-info {
+  background-color: aqua;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #app div {
-    background-color: chartreuse;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 30px 30px;
-    gap: 20px;
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 30px 30px;
+  gap: 20px;
+}
+
+#app-2 {
+  background-color: rgb(224, 148, 205);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px rgba(224, 148, 205, 0.5);
+}
+
+.todo h1 {
+  color: purple;
+  padding: 7px 25px;
 }
