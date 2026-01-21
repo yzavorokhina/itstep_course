@@ -1,7 +1,7 @@
 {
-  "name": "quickstart",
+  "name": "todo",
   "version": "1.0.0",
-  "description": "React quickstart",
+  "description": "React todo app",
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
   "scripts": {
