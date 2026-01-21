@@ -2,15 +2,16 @@ html,
 body {
     height: 100%;
 
-    font-family: "Silkscreen", sans-serif;
+    /* font-family: "Silkscreen", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
 
     /* font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal; */
 
     font-family: "Source Code Pro", monospace;
+
     /* font-family: "IBM Plex Mono", monospace; */
 }
 
@@ -91,7 +92,7 @@ header .container {
     max-height: 90px;
     margin: 0px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
 }
@@ -101,16 +102,120 @@ header .container a {
     padding-bottom: 35px;
 }
 
-.logo {
-    padding-left: 152px;
+.search {
+    /* min-width: 428px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 40px;
+    border: none;
 }
+
+.search input {
+     width: 368px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 40px;
+    color: #ffffff;
+    background-color: #1C173C;
+}
+
+.searchButton {
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+/* .search-input {
+    width: 368px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #1C173C;
+    color: #ffffff;
+    border: 1px solid #1C173C;
+    padding-left: 30px;
+
+    background-image: url('../src/img/search.svg');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 16px;
+}
+
+.search-input::placeholder {
+    border-radius: 40px;
+    background-color: #1C173C;
+    color: white;
+    border: 1px solid #1C173C;
+
+} */
+
+.input-group {
+    border-radius: 40px;
+}
+
+/* .logo-container{
+    width: 120px;
+    height: 80px;
+} */
+
+.logo-container img{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* MY TODO: find rounded font for logo */
+.logo {
+    /* padding-left: 422px;
+    padding-right: 508px; */
+    padding-left: 300px;
+    padding-right: 300px;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    padding-top: 0;
+    margin-top: 0;
+    /* vertical-align: middle; */
+    /* Moon glow: */
+    filter: drop-shadow(1px 1px 0 rgb(244, 245, 193, 0.5)) drop-shadow(-1px -1px 0 rgb(145, 145, 132, 0.5)) drop-shadow(0 0 25px rgba(255, 255, 255, 0.9));
+    /* animation: glow 6s infinite ease-in-out; */
+}
+
+/* @keyframes glow {
+    0% {
+        filter: drop-shadow(0px 0px 5px rgba(255, 254, 208, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+    }
+
+    100% {
+        filter: drop-shadow(0px 0px 5px rgba(255, 254, 208, 0.5));
+    }
+} */
 
 /*---------------------------------------------------------------*/
 
 /* menu*/
 .containerMenu {
-    min-width: 585px;
-    padding-right: 140px;
+    height: 60px;
+    min-width: 250px;
+    padding-right: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    padding-top: 13px;
 }
 
 nav {
@@ -120,7 +225,9 @@ nav {
 
 nav li {
     display: inline-block;
-    padding-left: 32px;
+    /* MY TODO: align with flex*/
+    /* padding-left: 34px; */
+    padding-left: 4px;
 }
 
 nav li:hover {
@@ -144,37 +251,44 @@ nav a:hover {
     color: #ffffff;
 }
 
+nav img:hover {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 36px;
+}
+
 .menuButton {
     display: flex;
-    max-width: 126px;
-    height: 46px;
+    width: 34px;
+    height: 34px;
     font-size: 1rem;
-    background-color: #E2552D;
-    border: 1px solid orangered;
+    background-color: #16122F;
+    border: 1px solid #16122F;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     cursor: pointer;
     /* border: none; */
     color: #ffffff;
-    border-radius: 16px;
+    border-radius: 34px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .menuButton:hover {
     display: flex;
-    max-width: 126px;
-    height: 46px;
+    width: 34px;
+    height: 34px;
     font-size: 1rem;
-    background-color: #1B1A1A;
+    /* MY TODO: create hover colors for all buttons: */
+    background-color: #5e549e;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     cursor: pointer;
     border: none;
     color: #ffffff;
-    border-radius: 16px;
+    border-radius: 34px;
     padding-left: 10px;
     padding-right: 10px;
 }

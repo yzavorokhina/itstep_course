@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { reactCompilerLoader } = require('react-compiler-webpack');
 
 
 module.exports = {
@@ -37,6 +38,7 @@ module.exports = {
         test: /\.[mc]?[jt]sx?$/i,
         exclude: /node_modules/,
         use: [
+          reactCompilerLoader,
           { 
             loader: 'babel-loader',
             options: {
