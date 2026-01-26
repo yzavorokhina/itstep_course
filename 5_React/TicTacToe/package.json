@@ -1,7 +1,7 @@
 {
-  "name": "todo",
+  "name": "tictactoe",
   "version": "1.0.0",
-  "description": "React todo app",
+  "description": "Tic-Tac-Toe",
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
   "scripts": {
