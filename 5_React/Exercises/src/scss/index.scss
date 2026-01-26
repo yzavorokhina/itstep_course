@@ -1,0 +1,64 @@
+*{
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+// body > div {
+//   width: 50%;
+//   border: 1px solid red;
+//   flex-shrink: 0;
+// }
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#app div {
+  background-color: rgb(179, 214, 143);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 30px 30px;
+  gap: 20px;
+}
+
+button {
+  width: 100px;
+  height: 60px;
+}
+
+.card{
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.card img{
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card .card-content{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-counter{
+  height: 40px;
+  width: 60px;
+}
