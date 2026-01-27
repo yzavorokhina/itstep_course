@@ -1,3 +1,34 @@
+// TODO:
+// Реализуйте компонент кнопки.
+// Требования: - принимает label (текст кнопки) - принимает onClick - поддерживает disabled
+// Ожидаемые навыки: - работа с props - обработка событий
+/*********************************************************************************************/
+
+import React from "react";
+import { useState } from "react";
+
+const style = {
+  buttonStyles: {
+    color: 'white',
+    backgroundColor: 'green',
+    borderRadius: '5px'
+  }
+}
+
+export default class Button extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // return <button onClick={this.props.handleClick} style={{color:'red'}}>{this.props.label}</button>;
+    return <button onClick={this.props.handleClick} style={style.buttonStyles}>{this.props.label}</button>;
+  }
+}
+
+// export default function Button({label, handleClick, disabled = null}){
+//     return (<button onClick={handleClick} disabled={disabled} style={style.buttonStyles}>{label}</button>);
+// }
+
 // function Button({startCount, btnClass, step}) {
 //   const [count, setCount] = useState(startCount);
 //   let buttonClass = "btn-danger";
@@ -14,22 +45,3 @@
 // }
 
 // export default Button;
-
-import React from "react";
-
-const style = {
-  buttonStyles: {
-    color: 'white',
-    backgroundColor: 'green'
-  }
-}
-
-export default class Button extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    // return <button onClick={this.props.handleClick} style={{color:'red'}}>{this.props.label}</button>;
-    return <button onClick={this.props.handleClick} style={style.buttonStyles}>{this.props.label}</button>;
-  }
-}

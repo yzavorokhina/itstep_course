@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -9,20 +9,24 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-// body > div {
-//   width: 50%;
-//   border: 1px solid red;
-//   flex-shrink: 0;
-// }
-
-h1 {
-  margin: 0;
-  padding: 0;
+body>div {
+  width: 90%;
+  height: auto;
+  border: 1px solid rgb(179, 214, 143);
+  flex-shrink: 0;
+  border-radius: 5px;
+  border-style: dashed;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
 }
 
-#app div {
+#app {
   background-color: rgb(179, 214, 143);
   display: flex;
   flex-direction: column;
@@ -30,35 +34,78 @@ h1 {
   justify-content: center;
   border-radius: 5px;
   padding: 30px 30px;
-  gap: 20px;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  // border: 1px solid red;
 }
 
 button {
-  width: 100px;
-  height: 60px;
+  max-width: 70px;
+  max-height: 50px;
+  margin: 10px;
+  font-size: 12px;
+  padding: 5px;
 }
 
-.card{
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.card-wrapper {
   width: 100%;
-  max-width: 360px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid red;
+}
+
+.card {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 1px solid black;
   border-radius: 5px;
 }
 
-.card img{
+.card img {
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  margin: 0;
 }
 
-.card .card-content{
+.card .card-content {
   padding-left: 10px;
   padding-right: 10px;
+  margin: 0;
 }
 
-.btn-counter{
+.counter {
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.btn-counter {
   height: 40px;
   width: 60px;
 }

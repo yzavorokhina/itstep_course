@@ -1,5 +1,11 @@
-export default function Title({text, level}) {
-    switch(level){
+// TODO:
+// Компонент заголовка страницы.
+// Требования: - принимает text - принимает level (1–3) - отображает соответствующий HTML-тег ( h1 , h2 , h3 )
+// Ожидаемые навыки: - динамический JSX
+/*********************************************************************************************/
+
+export default function Title({ text, level }) {
+    switch (level) {
         case 1:
             return (<h1>{text}</h1>);
         case 2:
@@ -13,6 +19,6 @@ export default function Title({text, level}) {
         case 6:
             return (<h6>{text}</h6>);
         default:
-            return(<h6>Неправильное значение пропса lebel</h6>)
+            return (<h6>Неправильное значение характеристики lebel</h6>)
     }
 }

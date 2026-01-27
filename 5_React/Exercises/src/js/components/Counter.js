@@ -1,30 +1,28 @@
-import React from "react";
+// TODO:
+// Counter
+// Описание: Счётчик с кнопками увеличения и уменьшения.
+// Требования: - хранит значение в state - кнопки "+" и "−" - значение не может быть меньше 0
+// (опционально)
+// Ожидаемые навыки: - useState - обновление состояния
+/*********************************************************************************************/
+
 import { useState } from "react";
 import Button from "./Button";
 
 
 export default function Counter() {
-
-    return(
-        <div>
-            <Button label="-" />
-            <input type="text"></input>
-            <Button label="+" />
-        </div>
-    )
-
-
-
-  const [count, setCount] = useState(startCount);
+  const [count, setCount] = useState(0);
   let buttonClass = "btn-counter";
 
-  function handleClick() {
-    setCount(count + step);
-  }
+  return(
+      <div className="counter">
+          <Button label="-" onClick={handleClick} />
+          <input type="text" value={count} />
+          <Button label="+" onClick={handleClick} />
+      </div>
+  )
 
-  return (
-    <button className={btnClass} onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
+  function handleClick() {
+    setCount(count + 1);
+  }
 }
