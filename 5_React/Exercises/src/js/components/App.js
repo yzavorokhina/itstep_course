@@ -5,6 +5,7 @@ import Card from "./Card";
 import Counter from "./Counter";
 import TextInput from "./TextInput";
 import LoginForm from "./LoginForm";
+import Timer from './Timer';
 
 const products = [
   { id: 1, name: 'Name of smthing1', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrU19hI7wyPYBvHmyarklEx4eKGsfJ6ziE6w&s', text: 'text1' },
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <Timer />
       <Title level={1} text={'Header'} />
       <Paragraph >
         Lorem Lorem Lorem LoremLorem
@@ -49,6 +51,7 @@ function App() {
       <Counter />
 
       <TextInput placeholder={"Write something here :-)"} />
+      {/* <TextInput value={10} onChange={(event) => console.log(event.target.value) /> */}
 
       <LoginForm />
 
