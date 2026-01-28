@@ -15,19 +15,19 @@ const style = {
   }
 }
 
-export default class Button extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    // return <button onClick={this.props.handleClick} style={{color:'red'}}>{this.props.label}</button>;
-    return <button onClick={this.props.handleClick} style={style.buttonStyles}>{this.props.label}</button>;
-  }
-}
-
-// export default function Button({label, handleClick, disabled = null}){
-//     return (<button onClick={handleClick} disabled={disabled} style={style.buttonStyles}>{label}</button>);
+// export default class Button extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     // return <button onClick={this.props.handleClick} style={{color:'red'}}>{this.props.label}</button>;
+//     return <button onClick={this.props.handleClick} style={style.buttonStyles}>{this.props.label}</button>;
+//   }
 // }
+
+export default function Button({label, handleClick, className, disabled = null, myStyle }){
+    return (<button className={className} onClick={handleClick} disabled={disabled} style={myStyle || style.buttonStyles}>{label}</button>);
+}
 
 // function Button({startCount, btnClass, step}) {
 //   const [count, setCount] = useState(startCount);

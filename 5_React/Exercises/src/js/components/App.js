@@ -3,6 +3,8 @@ import Button from "./Button";
 import Title from "./Title";
 import Card from "./Card";
 import Counter from "./Counter";
+import TextInput from "./TextInput";
+import LoginForm from "./LoginForm";
 
 const products = [
   { id: 1, name: 'Name of smthing1', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrU19hI7wyPYBvHmyarklEx4eKGsfJ6ziE6w&s', text: 'text1' },
@@ -10,6 +12,7 @@ const products = [
   { id: 3, name: 'Name of smthing3', image: 'https://s0.rbk.ru/v6_top_pics/media/img/5/34/347350386436345.jpeg', text: 'text3' },
   { id: 4, name: 'Name of smthing4', image: 'https://doninturflot.com/upload/dev2fun.imagecompress/webp/uf/259/259e77caabd4ed25f603ae099510e754/dd00421575cf7720c6a0a0012e21d1cb.webp', text: 'text4' }
 ];
+
 
 function App() {
   // const tovary = products.map(function (product) {
@@ -45,7 +48,9 @@ function App() {
 
       <Counter />
 
+      <TextInput placeholder={"Write something here :-)"} />
 
+      <LoginForm />
 
     </>
   );
