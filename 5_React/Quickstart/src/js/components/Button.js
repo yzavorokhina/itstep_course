@@ -3,6 +3,7 @@ import { useState } from "react";
 function Button({startCount, btnClass, step}) {
   const [count, setCount] = useState(startCount);
   let buttonClass = "btn-danger";
+  // let btnClass = "btn-danger";
 
   function handleClick() {
     // alert("You clicked me!");

@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
   //  const [value, setValue] = useState(null);
+  const btnColor = value === "X" ? 'red' : 'green';
 
   return (
-    <button className="square"
+    <button style={{ color: btnColor }} className="square"
       // onClick={handleClick}
       onClick={onSquareClick}>
       {value}
@@ -30,13 +31,13 @@ function Board({ xIsNext, squares, onPlay }) {
     onPlay(nextSquares);
   }
 
- /* MY TODO: if draw in the game, if there is a winner - render the 'Go to new game' button or render 'Go to game start' button again*/
+  /* MY TODO: if draw in the game, if there is a winner - render the 'Go to new game' button or render 'Go to game start' button again*/
   const winner = calculateWinner(squares);
   let status;
+
   if (winner) {
     status = "Winner: " + winner;
   } else {
-      /** MY TODO: set different colors in styles for X and O */
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
