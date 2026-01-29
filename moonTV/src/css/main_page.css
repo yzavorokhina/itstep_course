@@ -1,25 +1,20 @@
 html,
 body {
     height: 100%;
-
-    /* font-family: "Silkscreen", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
-
-    /* font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal; */
-
-    font-family: "Source Code Pro", monospace;
-
-    /* font-family: "IBM Plex Mono", monospace; */
 }
 
 body {
+    width: 100%;
+    max-height: 5400px;
+
     background-color: #343148;
-    /* background-image: url("../img/auth_background_2.png");
-    background-repeat: no-repeat;
-    background-size: cover; */
+    font-family: "Source Code Pro", monospace;
+    /* font-family: "Silkscreen", sans-serif;
+    /* font-family: "Press Start 2P", system-ui;
+    /* font-family: "IBM Plex Mono", monospace; */
+    /* To hide horizontal scrolling for the entire page: */
+    overflow-x: hidden;
+
     /* display: flex !important;
     align-items: center;
     align-items: center !important;
@@ -78,59 +73,68 @@ h1 {
 
 /* header */
 header {
-    width: 100%;
-    height: 90px;
     position: fixed;
     z-index: 6;
-    background-color: #343148;
-    color: #E2552D;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 90px;
     border: 1px solid lime;
+
+    background-color: #343148;
+
+    color: #E2552D;
 }
 
 header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     max-width: 1440px;
     max-height: 90px;
     margin: 0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
-}
-
-header .container a {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    border: 1px solid red;
 }
 
 .search {
-    /* min-width: 428px; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
-    padding: 5px;
+
+    /* min-width: 428px; */
     width: fit-content;
-    border-radius: 40px;
-    border: none;
+    margin-left: 50px;
+    border: 1px solid green;
 }
 
 .search input {
-     width: 368px;
+    width: 368px;
     height: 40px;
+    padding-left: 15px;
+    margin-right: 20px;
     border: none;
     outline: none;
-    padding-left: 15px;
+
     border-radius: 40px;
-    color: #ffffff;
     background-color: #1C173C;
+
+    color: #ffffff;
 }
 
-.searchButton {
-    border-radius: 40px;
-    height: 40px;
+.search-button {
     width: 40px;
+    height: 40px;
+    padding: 0;
     border: none;
+
+    border-radius: 40px;
     background-color: transparent;
 }
 
@@ -153,40 +157,26 @@ header .container a {
     border-radius: 40px;
     background-color: #1C173C;
     color: white;
-    border: 1px solid #1C173C;
+    border: 1px solid #1f01e0;
 
 } */
 
-.input-group {
-    border-radius: 40px;
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    /* width: 120px;
+    height: 80px; */
 }
 
-/* .logo-container{
-    width: 120px;
-    height: 80px;
-} */
-
-.logo-container img{
+.logo-container img {
     padding-bottom: 0;
     margin-bottom: 0;
-}
-
-/* MY TODO: find rounded font for logo */
-.logo {
-    /* padding-left: 422px;
-    padding-right: 508px; */
-    padding-left: 300px;
-    padding-right: 300px;
-    color: #ffffff;
-    font-size: 32px;
-    line-height: 32px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    padding-top: 0;
-    margin-top: 0;
-    /* vertical-align: middle; */
     /* Moon glow: */
-    filter: drop-shadow(1px 1px 0 rgb(244, 245, 193, 0.5)) drop-shadow(-1px -1px 0 rgb(145, 145, 132, 0.5)) drop-shadow(0 0 25px rgba(255, 255, 255, 0.9));
+    /* filter: drop-shadow(1px 1px 0 rgb(244, 245, 193, 0.5)) drop-shadow(-1px -1px 0 rgb(145, 145, 132, 0.5)) drop-shadow(0 0 25px rgba(255, 255, 255, 0.9)); */
     /* animation: glow 6s infinite ease-in-out; */
 }
 
@@ -204,93 +194,178 @@ header .container a {
     }
 } */
 
+/* MY TODO: find rounded font for logo */
+.logo {
+
+    padding-left: 198px;
+    padding-top: 0;
+    padding-right: 290px;
+    /* padding-left: 300px;
+    padding-right: 300px; */
+    margin-top: 0;
+    border: 1px solid magenta;
+
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    /* vertical-align: middle; */
+}
+
 /*---------------------------------------------------------------*/
 
 /* menu*/
-.containerMenu {
-    height: 60px;
-    min-width: 250px;
-    padding-right: 34px;
+.container-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 34px;
+
+    height: 60px;
+    min-width: 250px;
     padding-top: 13px;
+    padding-right: 34px;
+    border: 1px solid yellow;
 }
 
 nav {
-    background-color: transparent;
     margin-right: 0;
+
+    background-color: transparent;
 }
 
 nav li {
     display: inline-block;
-    /* MY TODO: align with flex*/
+
+    /* MY TODO: align with flex */
     /* padding-left: 34px; */
     padding-left: 4px;
 }
 
 nav li:hover {
-    color: #ffffff;
     position: relative;
+
+    color: #ffffff;
 }
 
 nav a {
     display: block;
+
+    color: #1B1A1A;
     font-size: 15px;
     font-family: "Poppins", normal;
     letter-spacing: 0.4px;
-    color: #1B1A1A;
 }
 
 nav a:hover {
     display: block;
+
+    color: #ffffff;
     font-size: 15px;
     font-family: "Poppins", normal;
     letter-spacing: 0.4px;
-    color: #ffffff;
 }
 
 nav img:hover {
-    background-color: white;
     border: 1px solid white;
     border-radius: 36px;
+
+    background-color: white;
 }
 
-.menuButton {
+.menu-button {
     display: flex;
-    width: 34px;
-    height: 34px;
-    font-size: 1rem;
-    background-color: #16122F;
-    border: 1px solid #16122F;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    cursor: pointer;
-    /* border: none; */
-    color: #ffffff;
-    border-radius: 34px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
-.menuButton:hover {
-    display: flex;
     width: 34px;
     height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #16122F;
+    /* border: none; */
+
+    border-radius: 34px;
+    background-color: #16122F;
+
+    color: #ffffff;
     font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 34px;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+
+    border-radius: 34px;
     /* MY TODO: create hover colors for all buttons: */
     background-color: #5e549e;
+
+    color: #ffffff;
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.login {
+    width: 60px;
+    height: 60px;
+    border: 1px solid blue;
+    margin-right: 50px;
+}
+
+.login-button {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    cursor: pointer;
-    border: none;
-    color: #ffffff;
-    border-radius: 34px;
+
+    width: 60px;
+    height: 60px;
     padding-left: 10px;
     padding-right: 10px;
+    border: 1px solid #16122F;
+    /* border: none; */
+
+    border-radius: 60px;
+    background-color: #16122F;
+
+    color: #ffffff;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+}
+
+.login-button:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 60px;
+    height: 60px;
+    border: 12px solid rgb(226, 85, 45);
+
+    border-radius: 60px;
+
+    box-shadow: -1px 1px 36px 8px rgba(94, 84, 158, 0.51);
+    -webkit-box-shadow: -1px 1px 36px 8px rgba(94, 84, 158, 0.51);
+    -moz-box-shadow: -1px 1px 36px 8px rgba(94, 84, 158, 0.51);
+
+    cursor: pointer;
 }
 
 /*---------------------------------------------------------------*/

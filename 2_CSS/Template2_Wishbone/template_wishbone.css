@@ -18,6 +18,7 @@ body {
     max-height: 6411px;
     background-color: #ffffff;
     font-family: "Poppins", normal;
+    /* To hide horizontal scrolling for the entire page: */
     overflow-x: hidden;
 }
 
