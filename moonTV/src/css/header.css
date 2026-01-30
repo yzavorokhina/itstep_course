@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    margin: 0;
 }
 
 body {
@@ -197,11 +198,9 @@ header .container {
 /* MY TODO: find rounded font for logo */
 .logo {
 
-    padding-left: 198px;
+    padding-left: 270px;
     padding-top: 0;
-    padding-right: 290px;
-    /* padding-left: 300px;
-    padding-right: 300px; */
+    padding-right: 270px;
     margin-top: 0;
     border: 1px solid magenta;
 
