@@ -1,0 +1,109 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \**************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* menu*/
+.containerMenu {
+  width: 100%;
+  padding: 5px;
+  background-color: grey;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.containerMenu a {
+  color: orangered;
+  text-decoration: none;
+}
+.containerMenu a.active {
+  color: blueviolet;
+}
+
+nav {
+  background-color: transparent;
+  margin-right: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding-left: 32px;
+}
+
+nav li:hover {
+  color: #ffffff;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  font-size: 15px;
+  font-family: "Poppins", normal;
+  letter-spacing: 0.4px;
+  color: #1B1A1A;
+}
+
+nav a:hover {
+  display: block;
+  font-size: 15px;
+  font-family: "Poppins", normal;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+}
+
+.menuButton {
+  display: flex;
+  max-width: 126px;
+  height: 46px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  border-radius: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menuButton:hover {
+  display: flex;
+  max-width: 126px;
+  height: 46px;
+  font-size: 1rem;
+  background-color: #1B1A1A;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  border-radius: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/react-slideshow-image/dist/styles.css ***!
+  \******************************************************************************************************/
+.react-slideshow-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}.react-slideshow-container .nav{z-index:10;position:absolute;cursor:pointer}.react-slideshow-container .nav:first-of-type{left:0}.react-slideshow-container .nav:last-of-type{right:0}.react-slideshow-container .default-nav{height:30px;background:rgba(255,255,255,0.6);width:30px;border:0;text-align:center;color:#fff;border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.react-slideshow-container .default-nav:hover,.react-slideshow-container .default-nav:focus{background:#fff;color:#666;outline:0}.react-slideshow-container .default-nav.disabled:hover{cursor:not-allowed}.react-slideshow-container .default-nav:first-of-type{margin-right:-30px;border-right:0;border-top:0}.react-slideshow-container .default-nav:last-of-type{margin-left:-30px}.react-slideshow-container+ul.indicators{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:20px}.react-slideshow-container+ul.indicators li{display:inline-block;position:relative;width:7px;height:7px;padding:5px;margin:0}.react-slideshow-container+ul.indicators .each-slideshow-indicator{border:0;opacity:.25;cursor:pointer;background:transparent;color:transparent}.react-slideshow-container+ul.indicators .each-slideshow-indicator:before{position:absolute;top:0;left:0;width:7px;height:7px;border-radius:50%;content:'';background:#000;text-align:center}.react-slideshow-container+ul.indicators .each-slideshow-indicator:hover,.react-slideshow-container+ul.indicators .each-slideshow-indicator.active{opacity:.75;outline:0}.react-slideshow-fadezoom-wrapper{width:100%;overflow:hidden}.react-slideshow-fadezoom-wrapper .react-slideshow-fadezoom-images-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.react-slideshow-fadezoom-wrapper .react-slideshow-fadezoom-images-wrap>div{position:relative;opacity:0}.react-slideshow-wrapper .react-slideshow-fade-images-wrap>div[aria-hidden='true']{display:none}.react-slideshow-wrapper.slide{width:100%;overflow:hidden}.react-slideshow-wrapper .images-wrap.horizontal{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;width:auto}.react-slideshow-wrapper .images-wrap>div[aria-hidden='true']{display:none}
+
