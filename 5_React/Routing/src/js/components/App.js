@@ -1,9 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import React from 'react';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
-
 import Main from "../pages/Main";
 import NotFound from "../pages/NotFound";
 import About from "../pages/About";
@@ -12,8 +7,29 @@ import Menu from "../components/Menu";
 import Portfolio from "../pages/Portfolio";
 import Sites from "../pages/Sites";
 
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+import "../../scss/index.scss";
+
 function App() {
 
+  /* slider: */
+  const spanStyle = {
+    padding: '20px',
+    background: '#efefef',
+    // background: 'none',
+    color: '#000000',
+    // color: 'transparent'
+  }
+
+  const divStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundSize: 'cover',
+    height: '400px'
+  }
   const slideImages = [
     {
       url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
@@ -29,18 +45,29 @@ function App() {
     },
   ];
 
-  const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    height: '400px'
+  const buttonStyle = {
+    width: "30px",
+    background: 'none',
+    border: '0px'
+};
+
+  const properties = {
+    duration: 2000,
+    arrows: true,
+    indicators: true,
+    autoplay: true,
+    infinite: true,
+    prevArrow: <button style={{ ...buttonStyle }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z"/></svg></button>,
+    nextArrow: <button style={{ ...buttonStyle }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M512 256L270 42.6v138.2H0v150.6h270v138z"/></svg></button>
   }
 
+  /* slider */
+
   let urls = [
-    { path: "/", element: <Main />, title: "Main" },
-    { path: "/about", element: <About />, title: "About us"},
-    { path: "/catalog", element: <Catalog />, title: "Catalog"},
+    { id: 1, path: "/", element: <Main />, title: "Main" },
+    { id: 2, path: "/about", element: <About />, title: "About us" },
+    { id: 3, path: "/catalog", element: <Catalog />, title: "Catalog" },
+    { id: 4, path: "/portfolio", element: <Portfolio />, title: "Portfolio" }
   ];
 
   let routes = urls.map(function (url) {
@@ -49,29 +76,30 @@ function App() {
 
   return (
     <>
-      {/* <Menu links={urls} /> */}
       <BrowserRouter>
-      <Menu links={urls} />
+        <Menu links={urls} />
         <Routes>
           {routes}
           {/* <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/catalog" element={<Catalog />} /> */}
-          <Route path="/portfolio" element={<Portfolio />} > 
-              <Route path="sites" element={<h2>Sites</h2>} /> 
+          <Route path="/portfolio" element={<Portfolio />}>
+            <Route path="sites" element={<Sites />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      <Slide>
-         {slideImages.map((slideImage, index)=> (
-            <div key={index}>
+      <div className="slide-container">
+        <Slide  {...properties}>
+          {slideImages.map((slideImage, index) => (
+            <div key={index} className="each-slide-effect">
               <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-                <span>{slideImage.caption}</span>
+                <span style={spanStyle}>{slideImage.caption}</span>
               </div>
             </div>
-          ))} 
+          ))}
         </Slide>
+      </div>
     </>
   );
 }

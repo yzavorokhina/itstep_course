@@ -1,7 +1,7 @@
 {
-  "name": "quickstart",
+  "name": "routing",
   "version": "1.0.0",
-  "description": "React quickstart",
+  "description": "React routing",
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
   "scripts": {

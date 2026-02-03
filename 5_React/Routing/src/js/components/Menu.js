@@ -1,44 +1,38 @@
 import { NavLink } from "react-router-dom";
 
+
 export default function Menu({ links }) {
-  let hrefs = links.map(function (link) {
+
+  let listItems = links.map(function (link) {
+    console.log({ link });
     return (
-      <>
-        {/* //     <li>
-    //     <button className="menuButton">
-    //       <a href={link.path} className={( {isActive }) => (isActive ? "active" : "")}>{link.title}</a>
-    //     </button>
-    //   </li> */}
-        <li>
-          <button className="menuButton">
-            <NavLink
-              to={link.path}
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              {link.title}
-            </NavLink>
-          </button>
-        </li>
-      </>
+      <li key={link.id} >
+        <button key={link.id} className="menuButton">
+          <NavLink key={link.id}
+            to={link.path}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            {link.title}
+          </NavLink>
+        </button>
+      </li>
     );
   });
 
   return (
-    <>
-      <div className="containerMenu">
-        {/* <nav>
-          <ul>{hrefs}</ul>
-        </nav> */}
-
-        {/* {hrefs}
-        <NavLink to="portfolio" className={({ isActive }) => (isActive ? "active" : "")}>Portfolio</NavLink> */}
-
-        {hrefs}
-        <NavLink to="portfolio" className={({ isActive }) => (isActive ? "active" : "")}>
-            Portfolio
-        </NavLink>
-
-      </div>
-    </>
+    <div className="containerMenu">
+      <nav>
+        <ul>
+          {listItems}
+          {/* <li>
+              <button className="menuButton">
+              <NavLink to="/portfolio" className={({ isActive }) => (isActive ? "active" : "")}>
+                Portfolio
+              </NavLink>
+            </button>
+          </li> */}
+        </ul>
+      </nav>
+    </div >
   );
 }

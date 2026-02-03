@@ -20,7 +20,7 @@ h1 {
 
 /* menu*/
 .containerMenu {
-  width:100%;
+  width: 100%;
   padding: 5px;
   background-color: grey;
   display: flex;
@@ -31,7 +31,7 @@ h1 {
     color: orangered;
     text-decoration: none;
 
-    &.active{
+    &.active {
       color: blueviolet;
     }
   }
@@ -100,4 +100,82 @@ nav a:hover {
   border-radius: 16px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+
+/* slider */
+
+.slide-container {
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.each-slide>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.each-fade {
+  display: flex;
+}
+
+.each-fade .image-container {
+  width: 75%;
+  overflow: hidden;
+}
+
+.each-fade .image-container img {
+  width: 100%;
+}
+
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
+
+.indicator {
+  width: 30px;
+  color: blue;
+  text-align: center;
+  cursor: pointer;
+  border: 1px blue solid;
+}
+
+.indicator.active {
+  background: #000;
+  color: #fff;
+}
+
+.each-slide-effect>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
 }

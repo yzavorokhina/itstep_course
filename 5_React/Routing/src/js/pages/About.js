@@ -3,8 +3,8 @@ import {loremIpsum} from 'lorem-ipsum';
 export default function About(){
     return (
         <>
-            <h1> О нас </h1>
-            <p>{loremIpsum({count: 5})}</p>
+            <h1> About us </h1>
+            <p>{loremIpsum({count: 10})}</p>
         </>
     )
 }
