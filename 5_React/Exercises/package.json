@@ -11,6 +11,7 @@
     "server": "npx webpack serve"
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
@@ -23,8 +24,8 @@
     "css-loader": "^7.1.2",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.5",
-    "react-compiler-webpack": "^1.0.0",
     "mini-css-extract-plugin": "^2.9.4",
+    "react-compiler-webpack": "^1.0.0",
     "sass": "^1.97.2",
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",

@@ -6,6 +6,10 @@ import Counter from "./Counter";
 import TextInput from "./TextInput";
 import LoginForm from "./LoginForm";
 import Timer from './Timer';
+import ToggleButton from "./Toggle";
+// import SimpleAlert from "./Alert";
+import Alert from "./Alert";
+
 
 const products = [
   { id: 1, name: 'Name of smthing1', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrU19hI7wyPYBvHmyarklEx4eKGsfJ6ziE6w&s', text: 'text1' },
@@ -49,11 +53,16 @@ function App() {
       </div>
 
       <Counter />
+      <ToggleButton />
 
       <TextInput placeholder={"Write something here :-)"} />
       {/* <TextInput value={10} onChange={(event) => console.log(event.target.value) /> */}
 
       <LoginForm />
+    
+    {/* <SimpleAlert /> */}
+    {/* <Alert type = {'warning'} title = {'Arert Title'} message = {'Alert Messages'} onClose = {'onClose'} /> */}
+    <Alert type="success" title="Success!" message="Your action was completed." onClose={true} />
 
     </>
   );
