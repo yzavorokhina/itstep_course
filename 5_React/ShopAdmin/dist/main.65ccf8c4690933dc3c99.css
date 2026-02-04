@@ -1,0 +1,114 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \**************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+body > div {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+#app div {
+  background-color: rgb(48, 82, 146);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+  gap: 20px;
+}
+
+#app-2 {
+  background-color: rgb(179, 192, 226);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  max-width: 70px;
+  max-height: 50px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid rgb(5, 26, 83);
+}
+
+.card {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0;
+}
+
+.card .card-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+.text-input {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.text-input::placeholder {
+  transform: translateY(-22px);
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+
+.strike {
+  text-decoration: line-through;
+}
