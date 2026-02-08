@@ -1,11 +1,11 @@
 import React from 'react';
 
-class Paragraph extends React.Component{
-    constructor(props){
+class Paragraph extends React.Component {
+    constructor(props) {
         super(props);
     }
 
-    render(){
+    render() {
         return (<p>{this.props.children}</p>);
     }
 }

@@ -1,4 +1,4 @@
-// MY TODO:
+// Text Input
 // Контролируемое поле ввода.
 // Требования: - принимает value - принимает onChange - отображает placeholder
 // Ожидаемые навыки: - controlled components
@@ -8,7 +8,8 @@ import Paragraph from "./Paragraph";
 
 const style = {
   input: {
-    height: "80px",
+    height: "60px",
+    width: "400px",
     margin: "12px",
     borderWidth: "1px",
     padding: "10px",
@@ -30,12 +31,15 @@ export default function TextInput({ placeholder, myStyle }) {
       <input
         className="text-input"
         type="text"
+        maxLength="60"
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
         style={myStyle || style.input}
       />
-      <Paragraph>{value}</Paragraph>
+      <div className="output-field">
+        <Paragraph>{value}</Paragraph>
+      </div>
     </>
   );
 }

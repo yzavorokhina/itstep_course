@@ -1,4 +1,5 @@
 // import React from 'react';
+import { useState, useEffect } from "react";
 
 // export default class Timer extends React.Component {
 //     constructor(props){
@@ -49,7 +50,6 @@
 //     }
 // }
 
-import { useState, useEffect } from "react";
 
 export default function Timer() {
   const [time, setTime] = useState(new Date());
