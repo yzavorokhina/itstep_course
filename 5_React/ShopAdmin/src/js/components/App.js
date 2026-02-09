@@ -3,7 +3,7 @@ import Button from "./Button";
 import Card from "./Card";
 import TextInput from "./TextInput";
 import ItemList from "./ItemList";
-// import ProductList from "./ItemList";
+import ProductList from "./ItemList";
 
 const products = [
   {
@@ -53,8 +53,10 @@ function App() {
 
   return (
     <>
-      <Title level={1} text={"Add a New Product:"} />
-      {/* 
+      <div class="left">
+
+        <Title level={1} text={"Add a New Product:"} />
+        {/* 
       <form action="/submit_page.php" method="post">
         <label for="name">name:</label>
         <input type="text" id="name" name="name" required>
@@ -75,29 +77,31 @@ function App() {
         <button type="submit">Add New Product</button>
       </form> */}
 
-      <form action="/submit_page.php" method="post">
-        <TextInput placeholder={"Product name"} />
-        <TextInput placeholder={"Product description"} />
-        <TextInput placeholder={"Product image url"} />
-        <TextInput placeholder={"Product Price"} />
-        <TextInput placeholder={"Product New Price"} />
+        <form action="/submit_page.php" method="post">
+          <TextInput placeholder={"Product name"} />
+          <TextInput placeholder={"Product description"} />
+          <TextInput placeholder={"Product image url"} />
+          <TextInput placeholder={"Product Price"} />
+          <TextInput placeholder={"Product New Price"} />
 
-        <div className="buttons">
-          <Button
-            disabled={false}
-            label="Add product"
-            handleClick={() => alert("clicked button")}
-          />
-        </div>
-      </form>
-
-      {/* <div className="card-wrapper">
+          <div className="buttons">
+            <Button
+              disabled={false}
+              label="Add product"
+              handleClick={() => alert("clicked button")}
+            />
+          </div>
+        </form>
+      </div>
+      <div class="right">
+        {/* <div className="card-wrapper">
         {tovary}
       </div> */}
 
-      {/* <ItemList /> */}
-      {/* <ProductList /> */}
-      {/* <Card /> */}
+        <ItemList />
+        {/* <ProductList /> */}
+        {/* <Card /> */}
+      </div>
     </>
   );
 }

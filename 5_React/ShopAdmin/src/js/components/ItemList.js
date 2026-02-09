@@ -1,4 +1,3 @@
-// MY TODO:
 // ItemList
 // Описание: Компонент отображения списка.
 // Требования: - принимает массив строк - использует key
@@ -7,7 +6,6 @@
 
 import React from "react";
 // import Card from './Card';
-
 // function ItemList() {
 //   const cars = ['Ford', 'BMW', 'Audi']; // The data array
 

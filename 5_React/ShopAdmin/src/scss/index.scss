@@ -12,43 +12,40 @@ body {
 }
 
 body > div {
-  width: 50%;
-  // border: 1px solid red;
+  width: 100%;
+  border: 1px solid rgb(230, 142, 11);
   flex-shrink: 0;
 }
 
-// .btn-danger {
-//   background-color: red;
-//   border: none;
-//   padding: 10px 30px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
+#app{
+  display: flex;
+  flex-direction: row;
+}
 
-// .btn-info {
-//   background-color: aqua;
-//   border: none;
-//   padding: 10px 30px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
-#app div {
-  background-color: rgb(48, 82, 146);
+.left {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // border-radius: 5px;
+  gap: 10px;
+  width: 50%;
+  // border: 1px solid red;
   padding: 30px 30px;
-  gap: 20px;
+  flex-shrink: 0;
+  background-color: rgb(48, 82, 146);
 }
 
-#app-2 {
-  background-color: rgb(179, 192, 226);
+.right {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  width: 50%;
+  // border: 1px solid red;
+  padding: 30px 30px;
+  flex-shrink: 0;
+  background-color: rgb(117, 197, 41);
 }
 
 .buttons {
@@ -113,7 +110,7 @@ h2 {
 
 .text-input {
   width: 300px;
-  height: 30px;
+  height: 10px;
   border-radius: 5px;
   margin-bottom: 0;
   margin-top: 0;
@@ -128,3 +125,19 @@ h2 {
 .strike {
   text-decoration: line-through;
 }
+
+// .btn-danger {
+//   background-color: red;
+//   border: none;
+//   padding: 10px 30px;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }
+
+// .btn-info {
+//   background-color: aqua;
+//   border: none;
+//   padding: 10px 30px;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }

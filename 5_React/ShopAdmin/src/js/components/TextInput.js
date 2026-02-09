@@ -1,4 +1,3 @@
-// MY TODO:
 // Контролируемое поле ввода.
 // Требования: - принимает value - принимает onChange - отображает placeholder
 // Ожидаемые навыки: - controlled components
@@ -8,7 +7,7 @@ import Paragraph from "./Paragraph";
 
 const style = {
   input: {
-    height: "80px",
+    height: "40px",
     margin: "12px",
     borderWidth: "1px",
     padding: "10px",
