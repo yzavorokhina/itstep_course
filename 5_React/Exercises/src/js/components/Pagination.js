@@ -68,7 +68,7 @@ const PaginationCompact = ({ totalPages, currentPage, onPageChange }) => {
 
   return (
     <div className="pagination">
-      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} style={{color:'orange'}}>
+      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} style={{ color: 'orange' }}>
         &laquo;
       </button>
 
@@ -82,7 +82,7 @@ const PaginationCompact = ({ totalPages, currentPage, onPageChange }) => {
         </button>
       ))}
 
-      <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} style={{color:'orange'}}>
+      <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} style={{ color: 'orange' }}>
         &raquo;
       </button>
     </div>

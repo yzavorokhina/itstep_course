@@ -23,6 +23,8 @@ import RatingIcons from "./Rating";
 import RatingWithFeedback from "./Rating";
 import Tabs from "./Tabs";
 import Search from "./Search";
+import TodoItem from './TodoItem';
+import TodoList from "./TodoList";
 
 
 const products = [
@@ -232,6 +234,8 @@ function App() {
           renderItem={(item) => <span>{item}</span>}
         />
       </div>
+
+      <TodoList />
 
     </>
   );

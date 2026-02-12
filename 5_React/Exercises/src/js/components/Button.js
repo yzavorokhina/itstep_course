@@ -25,8 +25,8 @@ const style = {
 //   }
 // }
 
-export default function Button({label, handleClick, className, disabled = null, myStyle }){
-    return (<button className={className} onClick={handleClick} disabled={disabled} style={myStyle || style.buttonStyles}>{label}</button>);
+export default function Button({ label, handleClick, className, disabled = null, myStyle }) {
+  return (<button className={className} onClick={handleClick} disabled={disabled} style={myStyle || style.buttonStyles}>{label}</button>);
 }
 
 // function Button({startCount, btnClass, step}) {

@@ -15,9 +15,9 @@ function ToggleButton() {
 
   return (
     <div className={isToggled ? 'active' : 'inactive'}>
-        <button onClick={handleToggle}>
+      <button onClick={handleToggle}>
         {isToggled ? 'ON' : 'OFF'}
-        </button>
+      </button>
     </div>
   );
 }

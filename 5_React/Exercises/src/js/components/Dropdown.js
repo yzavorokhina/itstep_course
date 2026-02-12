@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react';
 //   const [isOpen, setIsOpen] = useState(false);
 //   const ref = useRef(null);
 
-//   // Закрываем при клике вне компонента:
 //   useEffect(() => {
 //     const handleClickOutside = (e) => {
 //       if (ref.current && !ref.current.contains(e.target)) {
