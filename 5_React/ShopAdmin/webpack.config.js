@@ -8,7 +8,7 @@ module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
   output: {
-    filename: '[name].[fullhash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     assetModuleFilename: path.join('images', '[name].[contenthash][exit]'),
@@ -61,7 +61,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[fullhash].css',
+      filename: '[name].css',
       linkType: 'text/css',
     })
   ],
