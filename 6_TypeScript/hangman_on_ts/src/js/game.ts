@@ -1,14 +1,18 @@
 import '../scss/index.scss';
 
-// type State = {
-//     currentWord: string| null,
-//     wordLetters: string[] = [],
-//     topicIndex: number | null,
-//     wordIndex: number | null,
-//     selectedLetters: []
-// }
+interface StateData {
+    currentWord: string;
+    wordLetters: string[];
+    topicIndex: number;
+    wordIndex: number;
+    errorScore: number;
+    successScore: number;
+    totalErrorScore: number;
+    totalSuccessScore: number;
+    selectedLetters: string[];
+}
 
-let state = {
+let state: StateData = {
     currentWord: null,
     wordLetters: [],
     topicIndex: null,
@@ -20,9 +24,9 @@ let state = {
     selectedLetters: []
 }
 
-let currentWord:string| null= null;
-let wordLetters:Array<any>  = [];
-let selectedLetters:Array<string> = [];
+let currentWord: string | null = null;
+let wordLetters: Array<any> = [];
+let selectedLetters: Array<string> = [];
 let errorScore = 0;
 let successScore = 0;
 let totalErrorScore = 0;
@@ -39,8 +43,8 @@ const words: any = {
     "Спорт": ["футбол", "шахматы", "теннис", "бокс"]
 }
 
-type GameElements ={
-    topic:HTMLSpanElement,
+type GameElements = {
+    topic: HTMLSpanElement,
     word: HTMLDivElement,
     letters: HTMLDivElement,
     hungman: Array<any>
@@ -81,7 +85,7 @@ async function clearGameState() {
     totalErrorScore = 0;
     totalSuccessScore = 0;
 
-    window.localStorage.clear(localStorageKey);
+    window.localStorage.removeItem(localStorageKey);
     let loadState = JSON.parse(window.localStorage.getItem(localStorageKey));
     console.log({ clear: true, loadState });
 }
@@ -92,7 +96,7 @@ async function saveGameState() {
 
 async function loadGameState() {
     let loadState = JSON.parse(window.localStorage.getItem(localStorageKey));
-    
+
     console.log({ load: true, loadState });
 
     if (loadState) {
@@ -100,7 +104,7 @@ async function loadGameState() {
     }
 }
 
-async function init(): any {
+async function init(): Promise<any> {
     await loadGameState();
     console.log({ state });
     console.log({ currentWord, selectedLetters });
@@ -149,7 +153,6 @@ async function init(): any {
             button.disabled = true;
             await checkLetter(alphabet[i], true);
         }
-
         button.onclick = async () => {
             await checkLetter(alphabet[i]);
 
@@ -157,53 +160,53 @@ async function init(): any {
             button.classList.add('grey-letter');
             button.disabled = true;
         }
-
         gameElements.letters.append(button);
     }
 
-    document.addEventListener('keydown', async function(event) {
-        console.log(event.code);
+    document.addEventListener('keydown', async function (event) {
+        console.log({ code: event.code });
         if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
             alert('Отменить!')
         }
         let pressedLetter;
 
-        switch(event.code) {
+        switch (event.code) {
             case 'KeyQ':
                 pressedLetter = 'й';
                 break;
-            case 'KeyW': 
+            case 'KeyW':
                 pressedLetter = 'ц';
                 break;
             case 'KeyE':
                 pressedLetter = 'у';
                 break;
-            case 'KeyR': 
+            case 'KeyR':
                 pressedLetter = 'к';
                 break;
             case 'KeyT':
                 pressedLetter = 'е';
                 break;
-            case 'KeyY': 
+            case 'KeyY':
                 pressedLetter = 'н';
                 break;
             case 'KeyU':
                 pressedLetter = 'г';
                 break;
-            case 'KeyI': 
+            case 'KeyI':
                 pressedLetter = 'ш';
                 break;
             case 'KeyO':
                 pressedLetter = 'щ';
                 break;
-            case 'KeyP': 
+            case 'KeyP':
                 pressedLetter = 'з';
                 break;
-
             case 'Key{':
+            case 'BracketLeft':
                 pressedLetter = 'х';
                 break;
-            case 'Key}': 
+            case 'Key}':
+            case 'BracketRight':
                 pressedLetter = 'ъ';
                 break;
 
@@ -211,68 +214,69 @@ async function init(): any {
             case 'KeyA':
                 pressedLetter = 'ф';
                 break;
-            case 'KeyS': 
+            case 'KeyS':
                 pressedLetter = 'ы';
                 break;
             case 'KeyD':
                 pressedLetter = 'в';
                 break;
-            case 'KeyF': 
+            case 'KeyF':
                 pressedLetter = 'а';
                 break;
             case 'KeyG':
                 pressedLetter = 'п';
                 break;
-            case 'KeyH': 
+            case 'KeyH':
                 pressedLetter = 'р';
                 break;
             case 'KeyJ':
                 pressedLetter = 'о';
                 break;
-            case 'KeyK': 
+            case 'KeyK':
                 pressedLetter = 'л';
                 break;
             case 'KeyL':
                 pressedLetter = 'д';
                 break;
-
-            case 'Key:': 
+            case 'Key:':
+            case 'Semicolon':
                 pressedLetter = 'ж';
                 break;
-            case 'Key"': 
+            case 'Key"':
+            case 'Quote':
                 pressedLetter = 'э';
                 break;
-            case 'KeyZ': 
+
+
+            case 'KeyZ':
                 pressedLetter = 'я';
                 break;
-            case 'KeyX': 
+            case 'KeyX':
                 pressedLetter = 'ч';
                 break;
-            case 'KeyC': 
+            case 'KeyC':
                 pressedLetter = 'с';
                 break;
-            case 'KeyV': 
+            case 'KeyV':
                 pressedLetter = 'м';
                 break;
-            case 'KeyB': 
+            case 'KeyB':
                 pressedLetter = 'и';
                 break;
-            case 'KeyN': 
+            case 'KeyN':
                 pressedLetter = 'т';
                 break;
-            case 'KeyM': 
+            case 'KeyM':
                 pressedLetter = 'ь';
                 break;
-            case 'Comma': 
+            case 'Key<':
+            case 'Comma':
                 pressedLetter = 'б';
                 break;
-            case 'Period': 
+            case 'Key>':
+            case 'Period':
                 pressedLetter = 'ю';
                 break;
-
-            // case 'Key?': 
-            //     pressedLetter = '/';
-            //     break;
         }
 
         if (!pressedLetter) {
@@ -281,9 +285,8 @@ async function init(): any {
 
         await checkLetter(pressedLetter);
 
-        // make selected btn grey
         const btnId = 'key' + alphabet.indexOf(pressedLetter);
-        const button = document.getElementById(btnId);
+        const button = document.getElementById(btnId) as HTMLInputElement;
         button.classList.add('grey-letter');
         button.disabled = true;
     });
@@ -315,7 +318,7 @@ async function checkLetter(letter: string, init = false) {
         pos = foundPos + 1;
     }
 
-    console.log({indexes});
+    console.log({ indexes });
 
     if (!init) {
         selectedLetters.push(letter);
@@ -349,11 +352,11 @@ async function checkLetter(letter: string, init = false) {
     }
 }
 
-function gameOver(result: string | number | null): void {
-    let gameOverElement:HTMLDivElement = document.querySelector(".game-over");
+function gameOver(result: boolean): void {
+    let gameOverElement: HTMLDivElement = document.querySelector(".game-over");
     gameOverElement.classList.add("active");
 
-    if (result) { 
+    if (result) {
         //totalSuccessScore += 1;
         gameOverElement.innerText = 'Вы спасли человека!!';
         gameOverElement.classList.add('green-success');
