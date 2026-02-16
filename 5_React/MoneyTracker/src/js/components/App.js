@@ -64,16 +64,38 @@ export default function App() {
     <>
       {/* <H1 headerText={"ToDo"} /> */}
       {/* <H1 className="header">ToDo</H1> */}
-      <H1>ToDo</H1>
+      <H1>Money Tracker</H1>
       <form action="" className="form" onSubmit={addNewTask}>
         <input
+          type="date"
+          placeholder="Введите дату..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <input
           type="text"
-          placeholder="Новая задача..."
+          placeholder="Описание"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Сумма"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
         <button type="submit" className="button">
-          Добавить
+          Добавить в расходы
+        </button>
+
+        <input
+          type="number"
+          placeholder="Доход"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button type="submit" className="button">
+          Установить новую сумму
         </button>
       </form>
 

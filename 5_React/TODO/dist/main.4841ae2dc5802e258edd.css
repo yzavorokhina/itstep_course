@@ -1,4 +1,24 @@
-@import "normalize";
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
+  \**************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
 
 html,
 body {
@@ -25,41 +45,6 @@ h1 {
   margin: 0;
   padding: 0;
 }
-
-// .btn-danger {
-//   background-color: red;
-//   border: none;
-//   padding: 10px 30px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
-// .btn-info {
-//   background-color: aqua;
-//   border: none;
-//   padding: 10px 30px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
-// .todo {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 70%;
-//   height: 70%;
-//   border-radius: 15px;
-//   box-shadow: 0px 0px 5px 0px rgba(224, 148, 205, 0.5);
-// }
-
-// .todo h1 {
-//   color: purple;
-//   padding: 7px 25px;
-// }
-
-// .done {
-//   text-decoration: line-through;
-// }
 
 .todo {
   width: 500px;
@@ -95,7 +80,6 @@ li {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  // height: 200px;
 }
 
 .form input {
@@ -141,6 +125,7 @@ li {
   border-radius: 5px;
   padding: 5px;
 }
+
 .list button {
   background-color: transparent;
   border: none;
