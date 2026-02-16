@@ -1,7 +1,7 @@
 {
-  "name": "hangman_in_ts",
+  "name": "hangman_on_ts",
   "version": "1.0.0",
-  "description": "hangman_in_type script",
+  "description": "hangman_on_type script",
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
   "scripts": {
