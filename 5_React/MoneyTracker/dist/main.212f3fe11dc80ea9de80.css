@@ -22,17 +22,17 @@ a {
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 10px 0px 10px 0px;
+  padding: 0;
 }
 
 body {
-  background: #060a1f;
+  background: #0d4430;
 }
 
 body > div {
@@ -41,51 +41,88 @@ body > div {
   flex-shrink: 0;
 }
 
-h1 {
-  margin: 0;
-  padding-bottom: 10px;
-  color: #41569e;
-}
-
-h2 {
-  color: white;
-}
-
 .tracker {
-  width: 500px;
-  height: auto;
-  border: 1px solid rgb(82, 82, 97);
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #131930;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 1200px;
+  min-height: 900px;
+  border: 1px solid #16F529;
+  padding: 32px;
+  border-radius: 20px;
+  background-color: #03302c;
+  color: #419e87;
+}
+
+.blocks-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1136px;
+  min-height: 836px;
+}
+
+.block1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 60px;
+  min-height: 836px;
+  padding: 32px 64px 32px 32px;
+  border-right: 1px solid #16F529;
+}
+
+.block2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  min-height: 836px;
+  padding: 32px 32px 32px 64px;
+}
+
+h1 {
+  margin: 0;
+  color: #419e87;
+  -webkit-text-stroke: 1px #16F529;
+}
+
+h2 {
+  margin: 0;
+  color: #419e87;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .form input {
   width: 240px;
   height: 30px;
-  background: #060a1f;
+  background: #011d1b;
   border: 1px solid rgb(82, 82, 97);
   color: white;
   border-radius: 5px;
   padding-left: 15px;
 }
 
+.form input:hover {
+  border: 1px solid #419e87;
+  color: #419e87;
+}
+
 .form button {
   max-width: 180px;
-  height: 32px;
-  background: #41569e;
+  height: 36px;
+  background: #419e87;
   border: 1px solid rgb(82, 82, 97);
   color: white;
   border-radius: 5px;
@@ -93,26 +130,10 @@ h2 {
   font-size: 12px;
 }
 
-.in-progress button {
-  background: #c77757;
-  border: 1px solid rgb(82, 82, 97);
+.form button:hover {
+  background: #1a7a62;
+  border: 1px solid #0a5341;
   color: white;
-  border-radius: 5px;
-  margin-left: auto;
-}
-
-.done button {
-  background: #57c785;
-  border: 1px solid rgb(82, 82, 97);
-  color: white;
-  border-radius: 5px;
-}
-
-.list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
 }
 
 li {
@@ -120,12 +141,15 @@ li {
 }
 
 .list li {
-  background: #060a1f;
-  height: 50px;
-  width: 425px;
-  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #011d1b;
+  height: auto;
+  width: 702px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .list button {
