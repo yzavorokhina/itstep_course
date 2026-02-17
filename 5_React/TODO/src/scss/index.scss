@@ -15,78 +15,41 @@ body {
   background: #060a1f;
 }
 
-body > div {
+body>div {
   width: 50%;
   border: 1px solid red;
   flex-shrink: 0;
 }
 
+.wrapper {
+  padding-left: 16px;
+}
+
 h1 {
   margin: 0;
   padding: 0;
-}
-
-// .btn-danger {
-//   background-color: red;
-//   border: none;
-//   padding: 10px 30px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
-// .btn-info {
-//   background-color: aqua;
-//   border: none;
-//   padding: 10px 30px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
-// .todo {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 70%;
-//   height: 70%;
-//   border-radius: 15px;
-//   box-shadow: 0px 0px 5px 0px rgba(224, 148, 205, 0.5);
-// }
-
-// .todo h1 {
-//   color: purple;
-//   padding: 7px 25px;
-// }
-
-// .done {
-//   text-decoration: line-through;
-// }
-
-.todo {
-  width: 500px;
-  height: auto;
-  border: 1px solid rgb(82, 82, 97);
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #131930;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
+  color: #41569e;
+  margin-bottom: 16px;
 }
 
 h2 {
   color: white;
+  // margin-bottom: 20px;
 }
 
-li {
-  color: white;
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 500px;
+  height: auto;
+  border: 1px solid rgb(82, 82, 97);
+  padding: 20px;
+  margin-top: 16px;
+  border-radius: 20px;
+  background-color: #131930;
+  color: #41569e;
 }
 
 .form {
@@ -105,7 +68,9 @@ li {
   border: 1px solid rgb(82, 82, 97);
   color: white;
   border-radius: 5px;
-  padding-left: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 16px;
 }
 
 .form button {
@@ -115,7 +80,8 @@ li {
   border: 1px solid rgb(82, 82, 97);
   color: white;
   border-radius: 5px;
-  padding: 10px 10px 15px 10px;
+  padding: 6px 10px 20px 10px;
+  margin-bottom: 16px;
 }
 
 .in-progress button {
@@ -134,14 +100,27 @@ li {
 }
 
 .list li {
-  background: #060a1f;
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 40px;
   width: 425px;
+  padding: 5px;
   margin-top: 10px;
   border-radius: 5px;
-  padding: 5px;
+  background: #060a1f;
 }
+
 .list button {
   background-color: transparent;
   border: none;
+}
+
+li {
+  color: white;
+}
+
+.done {
+  text-decoration: line-through;
 }
