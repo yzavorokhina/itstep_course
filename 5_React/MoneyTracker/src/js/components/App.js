@@ -10,7 +10,9 @@ function uid() {
 export default function App() {
   const savedMoneyRecords = window.localStorage.getItem("moneyRecords");
 
-  const [moneyRecords, setMoneyRecords] = useState(savedMoneyRecords ? JSON.parse(savedMoneyRecords) : []);
+  const [moneyRecords, setMoneyRecords] = useState(
+    savedMoneyRecords ? JSON.parse(savedMoneyRecords) : []
+  );
 
   const [date, setDate] = useState("");
   const [text, setText] = useState("");
@@ -22,8 +24,12 @@ export default function App() {
   const [totalMoneyLeft, setTotalMoneyLeft] = useState(0);
 
   function calculateTotalSum() {
-    const totalMoneyOut = moneyRecords.reduce((sum, item) => { return +sum + +item.moneyOut }, 0);
-    const totalMoneyIn = moneyRecords.reduce((sum, item) => { return +sum + +item.moneyIn }, 0);
+    const totalMoneyOut = moneyRecords.reduce((sum, item) => {
+      return +sum + +item.moneyOut;
+    }, 0);
+    const totalMoneyIn = moneyRecords.reduce((sum, item) => {
+      return +sum + +item.moneyIn;
+    }, 0);
     setTotalMoneyOut(totalMoneyOut);
     setTotalMoneyIn(totalMoneyIn);
 
@@ -32,7 +38,17 @@ export default function App() {
 
   function addNewMoneyRecord(event) {
     event.preventDefault();
-    const newMoneyRecords = [...moneyRecords, { id: uid(), date: date, text: text, moneyOut: moneyOut, moneyIn: moneyIn, status: false }];
+    const newMoneyRecords = [
+      ...moneyRecords,
+      {
+        id: uid(),
+        date: date,
+        text: text,
+        moneyOut: moneyOut,
+        moneyIn: moneyIn,
+        status: false,
+      },
+    ];
     setMoneyRecords(newMoneyRecords);
     console.log(moneyRecords);
     setText("");
@@ -102,22 +118,67 @@ export default function App() {
           <H2>Расходы:</H2>
           <ul className="list">
             <li className="item">
-              <span style={{ width: '140px', textAlign: 'center', color: '#419e87' }}>Дата</span>
-              <span style={{ width: '140px', textAlign: 'left', color: '#419e87' }}>Описание</span>
-              <span style={{ width: '140px', textAlign: 'center', color: '#419e87' }}>Сумма расхода</span>
-              <span style={{ width: '140px', textAlign: 'center', color: '#419e87' }}>Сумма дохода</span>
-              <span style={{ width: '140px', textAlign: 'center', color: '#419e87' }}>Удалить</span>
+              <span
+                style={{
+                  width: "140px",
+                  textAlign: "center",
+                  color: "#419e87",
+                }}
+              >
+                Дата
+              </span>
+              <span
+                style={{ width: "140px", textAlign: "left", color: "#419e87" }}
+              >
+                Описание
+              </span>
+              <span
+                style={{
+                  width: "140px",
+                  textAlign: "center",
+                  color: "#419e87",
+                }}
+              >
+                Сумма расхода
+              </span>
+              <span
+                style={{
+                  width: "140px",
+                  textAlign: "center",
+                  color: "#419e87",
+                }}
+              >
+                Сумма дохода
+              </span>
+              <span
+                style={{
+                  width: "140px",
+                  textAlign: "center",
+                  color: "#419e87",
+                }}
+              >
+                Удалить
+              </span>
             </li>
             {moneyRecords.length > 0 ? (
               <>
                 {moneyRecords.map(function (moneyRecord) {
                   return (
                     <li className="item" key={moneyRecord.id}>
-                      <span style={{ width: '140px', textAlign: 'center' }}>{moneyRecord.date}</span>
-                      <span style={{ width: '140px', textAlign: 'left' }}>{moneyRecord.text}</span>
-                      <span style={{ width: '140px', textAlign: 'center' }}>{moneyRecord.moneyOut}</span>
-                      <span style={{ width: '140px', textAlign: 'center' }}>{moneyRecord.moneyIn}</span>
-                      <button style={{ width: '140px', textAlign: 'center' }}
+                      <span style={{ width: "140px", textAlign: "center" }}>
+                        {moneyRecord.date}
+                      </span>
+                      <span style={{ width: "140px", textAlign: "left" }}>
+                        {moneyRecord.text}
+                      </span>
+                      <span style={{ width: "140px", textAlign: "center" }}>
+                        {moneyRecord.moneyOut}
+                      </span>
+                      <span style={{ width: "140px", textAlign: "center" }}>
+                        {moneyRecord.moneyIn}
+                      </span>
+                      <button
+                        style={{ width: "140px", textAlign: "center" }}
                         onClick={() => {
                           deleteMoneyRecord(moneyRecord.id);
                         }}
@@ -127,7 +188,6 @@ export default function App() {
                     </li>
                   );
                 })}
-
               </>
             ) : (
               <li className="item">
@@ -135,23 +195,45 @@ export default function App() {
               </li>
             )}
             <li className="item">
-              <span style={{ width: '140px', textAlign: 'center', color: '#419e87' }}>Итого: </span>
-              <span style={{ width: '140px', textAlign: 'center' }}></span>
-              <span style={{ width: '140px', textAlign: 'center' }}>{totalMoneyOut}</span>
-              <span style={{ width: '140px', textAlign: 'center' }}>{totalMoneyIn}</span>
-              <span style={{ width: '140px', textAlign: 'center' }}></span>
+              <span
+                style={{
+                  width: "140px",
+                  textAlign: "center",
+                  color: "#419e87",
+                }}
+              >
+                Итого:{" "}
+              </span>
+              <span style={{ width: "140px", textAlign: "center" }}></span>
+              <span style={{ width: "140px", textAlign: "center" }}>
+                {totalMoneyOut}
+              </span>
+              <span style={{ width: "140px", textAlign: "center" }}>
+                {totalMoneyIn}
+              </span>
+              <span style={{ width: "140px", textAlign: "center" }}></span>
             </li>
             <li className="item">
-              <span style={{ width: '140px', textAlign: 'center', color: '#419e87' }}>Остаток: </span>
-              <span style={{ width: '140px', textAlign: 'center' }}></span>
-              <span style={{ width: '140px', textAlign: 'center' }}></span>
-              <span style={{ width: '140px', textAlign: 'center' }}>{totalMoneyLeft}</span>
-              <span style={{ width: '140px', textAlign: 'center' }}></span>
+              <span
+                style={{
+                  width: "140px",
+                  textAlign: "center",
+                  color: "#419e87",
+                }}
+              >
+                Остаток:{" "}
+              </span>
+              <span style={{ width: "140px", textAlign: "center" }}></span>
+              <span style={{ width: "140px", textAlign: "center" }}></span>
+              <span style={{ width: "140px", textAlign: "center" }}>
+                {totalMoneyLeft}
+              </span>
+              <span style={{ width: "140px", textAlign: "center" }}></span>
             </li>
           </ul>
-
         </div>
       </div>
     </>
+  // MY TODO: add different styles for positive and negative money balances
   );
 }

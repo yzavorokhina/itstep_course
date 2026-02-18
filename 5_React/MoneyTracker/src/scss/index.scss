@@ -15,7 +15,7 @@ body {
   background: #0d4430;
 }
 
-body>div {
+body > div {
   width: 50%;
   border: 1px solid red;
   flex-shrink: 0;
@@ -29,7 +29,7 @@ body>div {
   width: 1200px;
   min-height: 900px;
   // border: 1px solid rgb(82, 82, 97);
-  border: 1px solid #16F529;
+  border: 1px solid #16f529;
   padding: 32px;
   border-radius: 20px;
   background-color: #03302c;
@@ -56,7 +56,7 @@ body>div {
   // width: 370px;
   padding: 32px 64px 32px 32px;
   // border: 1px solid red;
-  border-right: 1px solid #16F529;
+  border-right: 1px solid #16f529;
 }
 
 .block2 {
@@ -74,7 +74,7 @@ body>div {
 h1 {
   margin: 0;
   color: #419e87;
-  -webkit-text-stroke: 1px #16F529;
+  -webkit-text-stroke: 1px #16f529;
 }
 
 h2 {
@@ -102,7 +102,6 @@ h2 {
 
 .form input:hover {
   border: 1px solid #419e87;
-  ;
   color: #419e87;
 }
 
@@ -123,23 +122,35 @@ h2 {
   color: white;
 }
 
-li {
-  color: white;
-}
+// li {
+//   color: white;
+// }
 
-.list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  background: #011d1b;
-  height: auto;
-  width: 702px;
-  border-radius: 5px;
-  padding: 10px;
+.list{
+   & li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #011d1b;
+    height: auto;
+    width: 702px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+   }
+
+  //  & button {
+  //   background-color: transparent;
+  //   border: none;
+  //  }
 }
 
 .list button {
   background-color: transparent;
   border: none;
 }
+
+// MY TODO: rewrite in scss syntax
+// add different styles for positive and negative money balances
+// .form {
