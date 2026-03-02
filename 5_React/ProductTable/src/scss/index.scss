@@ -1,0 +1,145 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+body>div {
+  width: 100%;
+  border: 2px solid #007bff;
+  flex-shrink: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0 0 20px 0;
+  color: #007bff;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 30%;
+  height: auto;
+  padding: 30px;
+  border: 2px solid #007bff;
+  background-color: rgb(158, 158, 158);
+}
+
+.add-item-form {
+  padding: 0 60px 0 60px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 70%;
+  height: auto;
+  padding: 60px 60px;
+  border: 2px solid #007bff;
+  background-color: rgb(158, 158, 158);
+}
+
+.output-field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  // border: 1px solid rgb(102, 255, 0);
+  border-radius: 5px;
+}
+
+.cards-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  // border: 1px solid rgb(5, 26, 83);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: auto;
+  max-width: 240px;
+  height: 400px;
+  border: 1px solid red;
+  padding-bottom: 0 20px 20px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.cards-wrapper:nth-child(even) {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item-image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0;
+}
+
+.item-name {
+  color: #007bff;
+  font-size: 18px;
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
+.item-info {
+  height: 200px;
+  padding: 10px 20px 20px 20px;
+}
+
+/* moving the contents of the input field to the next line: */
+.item-description {
+  height: 80px;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.input-style {
+  border-radius: 3px;
+}
