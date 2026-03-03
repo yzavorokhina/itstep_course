@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ProductForm from "./ProductForm";
-import ProductList from "./ProductList";
-import Table from "./Table";
+import StripedRowExample from "./Table";
+import AdvancedExample from "./Pagination";
 
 function App() {
 
+  
+  const itemsOnPage = 10;
+
   // State for stored products
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const deleteProduct = (id) => {
     console.log({ deleteProduct: id });
@@ -21,15 +25,14 @@ function App() {
         <ProductForm products={products} setProducts={setProducts} />
       </div>
       <div className="right">
-        <ProductList products={products} deleteProduct={deleteProduct} />
-        <StripedRowExample> 
-          products={[
-          { column: "id", label: "ID" },
-          { column: "name", label: "Product Name" },
-          { column: "count", label: "Count Product" },
-          { column: "price", label: "Product Price" },
-        ]}
-        </StripedRowExample> 
+        <StripedRowExample itemsOnPage={itemsOnPage} products={products} currentPage={currentPage} deleteProduct={deleteProduct}></StripedRowExample>
+        <AdvancedExample 
+          className="pagination" 
+          itemsOnPage={itemsOnPage}
+          products={products} 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage}
+        ></AdvancedExample>
       </div>
     </>
   );

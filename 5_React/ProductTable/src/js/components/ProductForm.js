@@ -5,11 +5,7 @@ const ProductForm = ({ products, setProducts }) => {
   const [product, setProduct] = useState({
     name: '',
     price: '',
-    newPrice: '',
-    description: '',
-    category: '',
-    inStock: true,
-    imageUrl: ''
+    count: '',
   });
 
   // Load products from localStorage on mount
@@ -58,14 +54,26 @@ const ProductForm = ({ products, setProducts }) => {
     setProduct({
       name: '',
       price: '',
-      description: '',
-      category: '',
-      inStock: true,
-      imageUrl: ''
+      count: '',
     });
 
     alert('Product added successfully!');
   };
+
+  const renderProducts = () => {
+    for (let i = 0 ; i < 10 ; i++) {
+      const newProduct = {
+        id: Date.now() + Math.random(0, 10000),
+        name: Math.random(0, 10000) + " stuf",
+        price: Math.random(0, 10000),
+        count: Math.random(0, 100),
+        createdAt: new Date().toISOString()
+      };
+
+      // Add to products list
+      setProducts(prev => [...prev, newProduct]);
+    }
+  }
 
   // Delete product
   const deleteProduct = (id) => {
@@ -109,77 +117,17 @@ const ProductForm = ({ products, setProducts }) => {
 
         <div style={{ marginBottom: '15px' }}>
           <label style={{ display: 'block', marginBottom: '5px' }}>
-            New Price ($):
+            Count:
           </label>
           <input className='input-style'
             type="number"
-            name="newPrice"
-            value={product.newPrice}
+            name="count"
+            value={product.count}
             onChange={handleChange}
             step="0.01"
             style={{ width: '100%', padding: '8px', border: '1px solid #ddd' }}
+            required
           />
-        </div>
-
-        <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>
-            Category:
-          </label>
-          <select className='input-style'
-            name="category"
-            value={product.category}
-            onChange={handleChange}
-            style={{ width: '100%', padding: '8px', border: '1px solid #ddd' }}
-          >
-            <option value="">Select category</option>
-            <option value="electronics">Electronics</option>
-            <option value="clothing">Clothing</option>
-            <option value="books">Books</option>
-            <option value="home">Home & Garden</option>
-          </select>
-        </div>
-
-        <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>
-            Description:
-          </label>
-          <textarea className='input-style'
-            maxLength="120"
-            name="description"
-            value={product.description}
-            onChange={handleChange}
-            rows={4}
-            style={{
-              width: '100%',
-              padding: '8px',
-              border: '1px solid #ddd',
-              resize: 'vertical'
-            }}
-          />
-        </div>
-
-        <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>
-            Image URL:
-          </label>
-          <input className='input-style'
-            type="url"
-            name="imageUrl"
-            value={product.imageUrl}
-            onChange={handleChange}
-            style={{ width: '100%', padding: '8px', border: '1px solid #ddd' }}
-          />
-        </div>
-
-        <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
-          <input
-            type="checkbox"
-            name="inStock"
-            checked={product.inStock}
-            onChange={handleChange}
-            style={{ marginRight: '10px' }}
-          />
-          <span>In Stock</span>
         </div>
 
         <button
@@ -196,6 +144,20 @@ const ProductForm = ({ products, setProducts }) => {
           Add Product
         </button>
       </form>
+        <button
+          type=""
+          onClick={renderProducts}
+          style={{
+            backgroundColor: '#007bff',
+            color: 'white',
+            padding: '10px 10px',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          Generate 10 Products
+        </button>
     </div>
   );
 };

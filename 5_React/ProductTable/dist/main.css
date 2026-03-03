@@ -11902,7 +11902,7 @@ h2,
   justify-content: flex-start;
   flex-shrink: 0;
   width: 30%;
-  height: auto;
+  height: 100vh;
   padding: 30px;
   border: 2px solid #007bff;
   background-color: rgb(158, 158, 158);
@@ -11916,12 +11916,13 @@ h2,
 
 .right {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
+  gap: 20px;
   flex-shrink: 0;
   width: 70%;
-  height: auto;
+  height: 100vh;
   padding: 60px 60px;
   border: 2px solid #007bff;
   background-color: rgb(158, 158, 158);
@@ -12003,4 +12004,9 @@ h2,
 
 .input-style {
   border-radius: 3px;
+}
+
+.pagination {
+  position: fixed;
+  bottom: 40px;
 }
