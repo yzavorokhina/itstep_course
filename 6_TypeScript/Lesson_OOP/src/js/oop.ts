@@ -211,3 +211,57 @@ let employeeTom: Employee = <Employee>tom;
 employeeTom.company = "Amazon";
 
 /* Обобщения: */
+function getId<T>(id: T): T{
+    return id;
+}
+
+console.log(getId<number>(5));
+console.log(getId<string>("string"));
+
+/* Обобщеннные классы и интерфейсы: */
+
+class Man<T>{
+    private _id: T;
+
+    constructor(id : T){
+        this._id = id;
+    }
+
+    getId(): T{
+        return this._id;
+    }
+}
+
+let m: Man<number> = new Man<number>(5);
+let n = new Man<string>("dfvdfvd");
+
+console.log(m.getId());
+console.log(n.getId());
+
+type Person = {
+    name: string;
+}
+
+let p: Person = {
+    name:"Ivan"
+}
+
+function  compareName<T extends Person>(obj1: T, obj2: T): void{
+    if(obj1.name === obj2.name){
+        console.log("имена совпадают");
+    } else {
+        console.log("имена не совпадают");
+    }
+}
+
+let pp: Person = {
+    name: "Petr"
+}
+
+let ppp: {age:number} = {
+    age: 25
+}
+
+// console.log(compareName(p, pp));
+// console.log(compareName(p, ppp));
+compareName(p, pp);

@@ -1,7 +1,7 @@
 {
-  "name": "lesson_on_ts",
+  "name": "product_table_on_ts",
   "version": "1.0.0",
-  "description": "lesson_on_type script",
+  "description": "Product Table on Type Script for Shop Admin",
   "license": "ISC",
   "author": "Yuliya Zavorokhina",
   "scripts": {
@@ -11,7 +11,9 @@
     "server": "npx webpack serve"
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "react": "^19.2.3",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
@@ -31,7 +33,6 @@
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
-    "typescript": "^5.9.3",
     "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.3"
