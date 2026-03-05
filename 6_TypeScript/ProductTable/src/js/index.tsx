@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import Table from './components/Table';
 import '../scss/index.scss';
 
-const tableElement: HTMLElement = document.getElementById('table');
+const tableElement: any = document.getElementById('table');
 
 const root: any = createRoot(tableElement);
 
